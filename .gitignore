@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vscode/
+.idea/
+*.swp
+.cache/
+
+# Sous-sites déployés séparément (la carte du portfolio pointe vers leur URL live)
+sites/
+

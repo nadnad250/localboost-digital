@@ -2499,3 +2499,213 @@ em { font-style: normal; }
 @media (min-width: 1025px) {
   .testimonials-stage { padding-bottom: 0; }
 }
+
+/* ============================================
+   MAX WOW — PACK AMÉLIORATIONS V2
+   1. Skip-link accessibilité
+   2. Custom cursor blob (desktop hover only)
+   3. Scroll-driven animations CSS
+   4. Hero photo parallax
+   5. Magnetic CTA renforcé + Ripple
+   ============================================ */
+
+/* ── 1. SKIP-LINK ─────────────────────────── */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  transition: top 0.2s var(--ease);
+  /* Visible uniquement au focus clavier */
+}
+.skip-link:focus {
+  top: 16px;
+  outline: 3px solid var(--accent-deep);
+  outline-offset: 2px;
+}
+
+/* ── 2. CUSTOM CURSOR BLOB ──────────────────
+   Actif uniquement sur appareils avec hover précis (souris)
+   Masqué sur touch / mobile
+   ─────────────────────────────────────────── */
+@media (hover: hover) and (pointer: fine) {
+  /* Cache le curseur natif sur tout le document */
+  html,
+  html * {
+    cursor: none !important;
+  }
+
+  /* Restaure curseur texte sur les champs */
+  input, textarea, select, [contenteditable] {
+    cursor: text !important;
+  }
+
+  /* Point central — suit le curseur en temps réel */
+  .cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    pointer-events: none;
+    z-index: 9998;
+    /* Offset de -3px pour centrer (moitié de 6px) */
+    transform: translate(-3px, -3px);
+    mix-blend-mode: difference;
+    transition: width 0.18s var(--ease), height 0.18s var(--ease), opacity 0.18s var(--ease);
+    will-change: transform;
+  }
+
+  /* Anneau extérieur — lag élastique ~120ms via JS */
+  .cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-18px, -18px);
+    transition:
+      width 0.3s var(--ease),
+      height 0.3s var(--ease),
+      background 0.25s var(--ease),
+      border-color 0.25s var(--ease),
+      transform 0.12s linear,
+      opacity 0.25s var(--ease);
+    will-change: transform;
+    opacity: 0.7;
+  }
+
+  /* État hover sur éléments interactifs */
+  html.cursor-hover .cursor-dot {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  html.cursor-hover .cursor-ring {
+    width: 60px;
+    height: 60px;
+    transform: translate(-30px, -30px);
+    background: rgba(245, 197, 24, 0.15);
+    border-color: var(--accent);
+    opacity: 1;
+  }
+
+  /* Etat "click" — compression rapide */
+  html.cursor-click .cursor-ring {
+    width: 28px;
+    height: 28px;
+    transform: translate(-14px, -14px);
+    background: rgba(245, 197, 24, 0.35);
+    transition-duration: 0.08s;
+  }
+}
+
+/* Sur touch : les éléments cursor sont cachés sans JS */
+@media (hover: none) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+}
+
+/* ── 3. SCROLL-DRIVEN ANIMATIONS CSS ─────────
+   Utilise animation-timeline: view() natif (Chrome 115+)
+   Wrapper @supports pour fallback gracieux
+   ─────────────────────────────────────────── */
+@supports (animation-timeline: view()) {
+  /* Reveal natif CSS sur .reveal — complète le JS IntersectionObserver */
+  @keyframes sd-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Sur les sections de contenu : fade natif relié au scroll */
+  .works, .testimonials, .services, .process, .faq, .contact-section {
+    /* Les enfants directs .reveal bénéficient déjà du JS observer —
+       on laisse le CSS scroll-driven agir en complément sur les éléments non-reveal */
+  }
+
+  /* Work-cards : scale subtil lié au scroll de chaque carte */
+  @keyframes sd-card-scale {
+    entry 0%   { opacity: 0.6; transform: scale(0.97) translateY(20px); }
+    entry 40%  { opacity: 1;   transform: scale(1) translateY(0); }
+    exit  80%  { opacity: 1;   transform: scale(1); }
+    exit  100% { opacity: 0.8; transform: scale(0.98); }
+  }
+
+  .work-card {
+    animation: sd-card-scale linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 30%;
+  }
+
+  /* Désactiver si l'observer JS a déjà géré l'animation (évite les conflits) */
+  .work-card.in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* prefers-reduced-motion : désactive tous les scroll-driven */
+@media (prefers-reduced-motion: reduce) {
+  @supports (animation-timeline: view()) {
+    .work-card {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}
+
+/* ── 4. HERO PHOTO PARALLAX ─────────────────
+   translateY mis à jour par rAF JS via --scroll-y
+   Désactivé si prefers-reduced-motion
+   ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-photo {
+    /* La valeur --scroll-y (0 à 1, fraction du scroll) est injectée par JS */
+    will-change: transform;
+  }
+  .hero-photo img {
+    /* La transformation réelle est appliquée par JS via style.transform */
+  }
+}
+
+/* ── 5. RIPPLE EFFECT SUR .btn-primary ──────
+   Cercle d'expansion au clic depuis le point cliqué
+   ─────────────────────────────────────────── */
+.btn-primary {
+  /* overflow:hidden requis pour contenir le ripple */
+  overflow: hidden;
+}
+
+/* Pseudo-élément ripple — créé dynamiquement par JS */
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  transform: scale(0);
+  animation: ripple-expand 0.55s var(--ease) forwards;
+}
+@keyframes ripple-expand {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Renforcement visuel : btn-primary est déjà position:relative ?
+   On s'assure qu'il l'est bien */
+.btn.btn-primary { position: relative; }

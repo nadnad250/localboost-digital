@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Fond dark principal -->
+    <rect id="bg" width="1200" height="630" fill="#0B0B10"/>
+
+    <!-- Gradient radial or top-right -->
+    <radialGradient id="grad-gold" cx="85%" cy="12%" r="55%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F5C518" stop-opacity="0.28"/>
+      <stop offset="45%"  stop-color="#E8B176" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0B0B10" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradient radial secondaire bas-gauche -->
+    <radialGradient id="grad-warm" cx="10%" cy="90%" r="45%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#C97A52" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0B0B10" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grain texture SVG -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- Fond noir -->
+  <rect width="1200" height="630" fill="#0B0B10"/>
+
+  <!-- Gradients lumineux -->
+  <rect width="1200" height="630" fill="url(#grad-gold)"/>
+  <rect width="1200" height="630" fill="url(#grad-warm)"/>
+
+  <!-- Ligne décorative subtile en haut -->
+  <line x1="60" y1="1" x2="1140" y2="1" stroke="#F5C518" stroke-opacity="0.18" stroke-width="1"/>
+
+  <!-- Logo M en haut à gauche — cercle jaune avec M stylisé -->
+  <g transform="translate(60, 52)">
+    <!-- Cercle fond accent -->
+    <circle cx="22" cy="22" r="22" fill="#F5C518"/>
+    <!-- Lettre M vectorisée -->
+    <path d="M11 32 L11 14 L22 26 L33 14 L33 32" stroke="#0B0B10" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Nom de la marque à côté du logo -->
+  <text x="100" y="82" font-family="'Cal Sans', 'Inter', system-ui, sans-serif" font-size="22" font-weight="600" fill="#FAFAFB" letter-spacing="-0.02em" opacity="0.9">LocalBoost Digital</text>
+
+  <!-- Séparateur horizontal léger -->
+  <line x1="60" y1="120" x2="540" y2="120" stroke="#FAFAFB" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Titre principal — Cal Sans display -->
+  <text x="60" y="240" font-family="'Cal Sans', 'Inter', system-ui, sans-serif" font-size="72" font-weight="400" fill="#FAFAFB" letter-spacing="-0.035em">Ton site vitrine</text>
+  <!-- Ligne italique accent — Instrument Serif simulé par un style italic -->
+  <text x="60" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="400" font-style="italic" fill="#F5C518" letter-spacing="-0.02em">en 7 jours.</text>
+
+  <!-- Tagline -->
+  <text x="60" y="398" font-family="'Inter', system-ui, sans-serif" font-size="28" font-weight="400" fill="#FAFAFB" opacity="0.70" letter-spacing="-0.01em">Dès 390€ · Pour artisans et TPE · Devis gratuit 24h</text>
+
+  <!-- Ligne séparateur avant badge -->
+  <line x1="60" y1="460" x2="400" y2="460" stroke="#F5C518" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Badge PARIS · VERSAILLES en bas à gauche -->
+  <g transform="translate(60, 480)">
+    <!-- Fond pill -->
+    <rect x="0" y="0" width="268" height="44" rx="22" fill="#F5C518" fill-opacity="0.10" stroke="#F5C518" stroke-opacity="0.30" stroke-width="1"/>
+    <!-- Dot vert pulsant (statique ici) -->
+    <circle cx="22" cy="22" r="5" fill="#22c55e"/>
+    <!-- Texte -->
+    <text x="38" y="28" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="14" font-weight="500" fill="#F5C518" letter-spacing="0.12em" text-transform="uppercase">PARIS · VERSAILLES</text>
+  </g>
+
+  <!-- Stats 3 colonnes en bas à droite -->
+  <g transform="translate(760, 360)">
+    <!-- Stat 1 -->
+    <text x="0"   y="0"  font-family="'Cal Sans', 'Inter', sans-serif" font-size="48" font-weight="400" fill="#F5C518" letter-spacing="-0.03em">13</text>
+    <text x="0"   y="28" font-family="'Inter', sans-serif" font-size="13" fill="#FAFAFB" opacity="0.55" letter-spacing="0.06em">SITES LIVRÉS</text>
+    <!-- Séparateur -->
+    <line x1="90" y1="-36" x2="90" y2="32" stroke="#FAFAFB" stroke-opacity="0.12" stroke-width="1"/>
+    <!-- Stat 2 -->
+    <text x="108" y="0"  font-family="'Cal Sans', 'Inter', sans-serif" font-size="48" font-weight="400" fill="#F5C518" letter-spacing="-0.03em">7j</text>
+    <text x="108" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#FAFAFB" opacity="0.55" letter-spacing="0.06em">DÉLAI MOYEN</text>
+    <!-- Séparateur -->
+    <line x1="195" y1="-36" x2="195" y2="32" stroke="#FAFAFB" stroke-opacity="0.12" stroke-width="1"/>
+    <!-- Stat 3 -->
+    <text x="212" y="0"  font-family="'Cal Sans', 'Inter', sans-serif" font-size="48" font-weight="400" fill="#F5C518" letter-spacing="-0.03em">4,9</text>
+    <text x="212" y="28" font-family="'Inter', sans-serif" font-size="13" fill="#FAFAFB" opacity="0.55" letter-spacing="0.06em">AVIS GOOGLE</text>
+  </g>
+
+  <!-- URL en bas à droite -->
+  <text x="1140" y="590" font-family="'JetBrains Mono', monospace" font-size="13" fill="#FAFAFB" opacity="0.35" text-anchor="end" letter-spacing="0.04em">nadnad250.github.io/localboost-digital</text>
+
+  <!-- Ligne décorative subtile en bas -->
+  <line x1="60" y1="629" x2="1140" y2="629" stroke="#F5C518" stroke-opacity="0.18" stroke-width="1"/>
+</svg>

@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="LocalBoost Digital — Site vitrine pour artisans, livré en 7 jours dès 390€" />
 <meta property="og:description" content="Studio web freelance à Paris/Versailles. Site vitrine professionnel pour TPE et artisans, livré en 7 jours à partir de 390€. Devis gratuit en 24h." />
-<meta property="og:image" content="assets/images/og-image.png" />
+<meta property="og:image" content="assets/images/og-image.svg" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:locale:alternate" content="en_US" />
 
@@ -21,33 +21,254 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="LocalBoost Digital — Site vitrine pour artisans, livré en 7 jours dès 390€" />
 <meta name="twitter:description" content="Studio web freelance à Paris/Versailles. Site vitrine professionnel pour TPE et artisans, livré en 7 jours à partir de 390€. Devis gratuit en 24h." />
-<meta name="twitter:image" content="assets/images/og-image.png" />
+<meta name="twitter:image" content="assets/images/og-image.svg" />
 
-<!-- Schema.org JSON-LD -->
+<!-- Schema.org JSON-LD — ProfessionalService enrichi -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "LocalBoost Digital",
-  "description": "Studio web freelance spécialisé dans la création de sites vitrines pour TPE et artisans. Livraison en 7 jours, à partir de 390€.",
-  "url": "https://localboost.digital",
-  "email": "merouaninadir@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Place du Marché",
-    "addressLocality": "Paris",
-    "addressRegion": "Île-de-France",
-    "postalCode": "75001",
-    "addressCountry": "FR"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "12"
-  },
-  "priceRange": "390-890€",
-  "areaServed": ["Paris", "Versailles", "Île-de-France"],
-  "serviceType": "Création de site web"
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://nadnad250.github.io/localboost-digital/#business",
+      "name": "LocalBoost Digital",
+      "description": "Studio web freelance spécialisé dans la création de sites vitrines pour TPE et artisans. Livraison en 7 jours, à partir de 390€.",
+      "url": "https://nadnad250.github.io/localboost-digital/",
+      "email": "merouaninadir@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Place du Marché",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "postalCode": "75001",
+        "addressCountry": "FR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "12"
+      },
+      "priceRange": "390-890€",
+      "areaServed": ["Paris", "Versailles", "Île-de-France"],
+      "serviceType": "Création de site web"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://nadnad250.github.io/localboost-digital/#realisations",
+      "name": "Réalisations LocalBoost Digital",
+      "description": "Sites vitrines livrés pour TPE et artisans en Île-de-France",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Artisan Volt — Électricien Versailles",
+          "url": "https://nadou25.github.io/artisan-volt/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/artisan-volt.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Prestige Drive — VTC Premium Paris",
+          "url": "https://nadou25.github.io/prestige-drive/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/prestige-drive.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Massage Évasion — Bien-être Paris 8e",
+          "url": "https://nadnad250.github.io/massage-evasion-paris/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/massage-evasion.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "AquaPro Plomberie — Plombier urgence Paris",
+          "url": "https://nadnad250.github.io/aquapro-plomberie/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/aquapro-plomberie.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Storehouse — Céramique artisanale Paris",
+          "url": "https://nadnad250.github.io/storehouse-ceramique/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/clay-storehouse.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Patte & Plume — Clinique vétérinaire Paris 11e",
+          "url": "https://nadnad250.github.io/clinique-veterinaire/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/clinique-veterinaire.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Max Torres Coach — Coach sportif Paris 8e",
+          "url": "https://nadnad250.github.io/max-torres-coach/",
+          "image": "https://nadnad250.github.io/localboost-digital/assets/images/max-torres-coach.webp"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nadnad250.github.io/localboost-digital/#service-essentiel",
+      "name": "Formule Essentiel",
+      "description": "Site vitrine 1 page livré en 7 jours. Formulaire de contact, 100% mobile responsive.",
+      "provider": { "@id": "https://nadnad250.github.io/localboost-digital/#business" },
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "390",
+          "priceCurrency": "EUR",
+          "minPrice": "390"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nadnad250.github.io/localboost-digital/#service-pro",
+      "name": "Formule Pro",
+      "description": "Site multipage 5 sections, SEO local, Google My Business, hébergement 1ère année offert, WhatsApp.",
+      "provider": { "@id": "https://nadnad250.github.io/localboost-digital/#business" },
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "590",
+          "priceCurrency": "EUR",
+          "minPrice": "590"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://nadnad250.github.io/localboost-digital/#service-premium",
+      "name": "Formule Premium",
+      "description": "Tout inclus : animations sur mesure, multilingue FR/EN, blog, maintenance 3 mois.",
+      "provider": { "@id": "https://nadnad250.github.io/localboost-digital/#business" },
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "890",
+          "priceCurrency": "EUR",
+          "minPrice": "890"
+        }
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://nadnad250.github.io/localboost-digital/#review-1",
+      "reviewBody": "Mon site rapporte 3 fois plus de devis qu'avant. Le rendu est plus pro que ce que j'avais avec mon ancienne agence à 3 000€.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Thomas Berger" },
+      "itemReviewed": { "@id": "https://nadnad250.github.io/localboost-digital/#business" }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://nadnad250.github.io/localboost-digital/#review-2",
+      "reviewBody": "Mes clients commentent la qualité du site dès le 1er trajet. Un autre standing pour mon entreprise — et ça se voit sur les réservations.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Karim Benali" },
+      "itemReviewed": { "@id": "https://nadnad250.github.io/localboost-digital/#business" }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://nadnad250.github.io/localboost-digital/#review-3",
+      "reviewBody": "Le site reflète enfin mon univers. Mes réservations ont doublé en deux mois, et plusieurs clientes parlent directement du site en arrivant.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Sophie Marchand" },
+      "itemReviewed": { "@id": "https://nadnad250.github.io/localboost-digital/#business" }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://nadnad250.github.io/localboost-digital/#review-4",
+      "reviewBody": "Le téléphone n'arrête plus depuis la mise en ligne. ROI atteint en 3 semaines — je ne regrette pas l'investissement.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Driss El Amrani" },
+      "itemReviewed": { "@id": "https://nadnad250.github.io/localboost-digital/#business" }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://nadnad250.github.io/localboost-digital/#review-5",
+      "reviewBody": "Design éditorial sublime, exactement ce que je voulais. Les visites en showroom ont triplé depuis la mise en ligne.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Élodie Vasseur" },
+      "itemReviewed": { "@id": "https://nadnad250.github.io/localboost-digital/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nadnad250.github.io/localboost-digital/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "En combien de temps mon site sera-t-il en ligne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ton site est en ligne en 7 jours calendaires après validation de la maquette. Pour la formule Essentiel, c'est même souvent moins. Le délai commence dès que tu me fournis ton contenu (textes, logo, photos)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se passe le paiement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "50% à la commande, 50% à la livraison. Tu peux aussi payer en 2× sans frais sur toutes les formules. Virement bancaire ou PayPal acceptés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui s'occupe de l'hébergement et du nom de domaine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je m'occupe de tout. L'hébergement 1ère année est offert sur les formules Pro et Premium. Le nom de domaine peut être fourni par toi ou acheté pour toi. À partir de la 2ème année, l'hébergement revient à environ 5€/mois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je modifier mon site moi-même après la livraison ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, une formation de 30 minutes est incluse dans chaque formule. Tu apprends à modifier tes textes, tes images et tes coordonnées sans toucher au code. Tu restes autonome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que le site sera visible sur Google ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tous mes sites sont optimisés pour le SEO local dès la livraison : balises meta, Schema.org, sitemap, Google My Business (Pro et Premium). Tes clients te trouvent quand ils cherchent ton métier dans ta ville."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon site sera-t-il adapté aux mobiles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, tous mes sites sont conçus en mobile-first. Ils s'adaptent parfaitement à tous les écrans : smartphone, tablette, ordinateur. 60% de tes visiteurs arrivent sur mobile — c'est ma priorité numéro 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les petites modifications (texte, photo, horaire) sont comprises pendant 1 mois après livraison. Au-delà, je facture 40€/heure. La formule Premium inclut 3 mois de maintenance complète."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À qui appartient le site une fois livré ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le site t'appartient à 100% dès la livraison et le paiement final. Tu reçois tous les accès (hébergement, domaine, code source). Aucun abonnement mensuel caché."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -84,6 +305,13 @@
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+
+<!-- Skip-link accessibilité WCAG 2.1 AA -->
+<a class="skip-link" href="#works">Aller au contenu</a>
+
+<!-- Custom cursor (desktop uniquement, masqué sur touch) -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
 
 <!-- Fond animé SVG blobs -->
 <div class="bg-layer" aria-hidden="true">

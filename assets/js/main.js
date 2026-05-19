@@ -13,8 +13,8 @@
   const I18N = {
     fr: {
       /* Meta */
-      'meta.title': 'LocalBoost Digital — Site vitrine pour artisans, livré en 7 jours dès 390€',
-      'meta.desc': 'Studio web freelance à Paris/Versailles. Site vitrine professionnel pour TPE et artisans, livré en 7 jours à partir de 390€. Devis gratuit en 24h.',
+      'meta.title': 'LocalBoost Digital — Site vitrine pour artisans, livré en 7 jours dès 390 EUR',
+      'meta.desc': 'Studio web freelance à Paris/Versailles. Site vitrine professionnel pour TPE et artisans, livré en 7 jours à partir de 390 EUR. Devis gratuit en 24h.',
 
       /* Brand */
       'brand.name': 'LocalBoost',
@@ -34,7 +34,7 @@
       'hero.badge3': 'Basé à Paris / Versailles',
       'hero.h1.l1': 'Ton site vitrine',
       'hero.h1.em1': 'en 7 jours.',
-      'hero.sub': 'À partir de 390€. Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.',
+      'hero.sub': 'À partir de 390 EUR. Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.',
       'hero.cta1': 'Demander un devis gratuit',
       'hero.cta2': 'Voir 7 sites livrés',
       'hero.stat1': 'Sites livrés',
@@ -224,9 +224,9 @@
       'form.label.plan': 'Type de projet',
       'form.label.message': 'Votre projet *',
       'form.plan.choose': 'Choisir une formule',
-      'form.plan.essentiel': 'Essentiel — 390€',
-      'form.plan.pro': 'Pro — 590€',
-      'form.plan.premium': 'Premium — 890€',
+      'form.plan.essentiel': 'Essentiel — 390 EUR',
+      'form.plan.pro': 'Pro — 590 EUR',
+      'form.plan.premium': 'Premium — 890 EUR',
       'form.plan.custom': 'Sur-mesure',
       'form.submit': 'Envoyer la demande',
       'form.success.title': 'Message envoyé !',
@@ -260,7 +260,7 @@
     en: {
       /* Meta */
       'meta.title': 'LocalBoost Digital — Professional showcase website for tradespeople, delivered in 7 days from £390',
-      'meta.desc': 'Freelance web studio in Paris/Versailles. Professional showcase websites for SMEs and tradespeople, delivered in 7 days from 390€. Free quote in 24h.',
+      'meta.desc': 'Freelance web studio in Paris/Versailles. Professional showcase websites for SMEs and tradespeople, delivered in 7 days from EUR 390. Free quote in 24h.',
 
       /* Brand */
       'brand.name': 'LocalBoost',
@@ -280,7 +280,7 @@
       'hero.badge3': 'Based in Paris / Versailles',
       'hero.h1.l1': 'Your business website',
       'hero.h1.em1': 'in 7 days.',
-      'hero.sub': 'From €390. For tradespeople and SMBs across Île-de-France. Free quote in 24h.',
+      'hero.sub': 'From EUR 390. For tradespeople and SMBs across Île-de-France. Free quote in 24h.',
       'hero.cta1': 'Request a free quote',
       'hero.cta2': 'See 7 live sites',
       'hero.stat1': 'Sites delivered',
@@ -470,9 +470,9 @@
       'form.label.plan': 'Project type',
       'form.label.message': 'Your project *',
       'form.plan.choose': 'Choose a plan',
-      'form.plan.essentiel': 'Essential — €390',
-      'form.plan.pro': 'Pro — €590',
-      'form.plan.premium': 'Premium — €890',
+      'form.plan.essentiel': 'Essential — EUR 390',
+      'form.plan.pro': 'Pro — EUR 590',
+      'form.plan.premium': 'Premium — EUR 890',
       'form.plan.custom': 'Custom',
       'form.submit': 'Send request',
       'form.success.title': 'Message sent!',

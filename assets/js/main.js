@@ -566,75 +566,41 @@
   }
 
   /* ──────────────────────────────────────────────
-     MAX WOW — CUSTOM CURSOR BLOB
-     Actif uniquement sur pointer:fine (souris desktop)
+     MAX WOW — BACKGROUND 3D PARALLAX (mouse-tracking)
+     La scène 3D tilt subtilement selon la position souris
+     via custom props CSS --mx et --my (en %).
+     Off sur touch + reduced-motion.
      ────────────────────────────────────────────── */
   const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (supportsHover) {
-    const cursorDot  = document.querySelector('.cursor-dot');
-    const cursorRing = document.querySelector('.cursor-ring');
-    const htmlEl     = document.documentElement;
+  if (supportsHover && !prefersReducedMotion) {
+    const bg3dScene = document.querySelector('.bg-3d-scene');
+    if (bg3dScene) {
+      let pendingRAF = null;
+      let targetMx = 50, targetMy = 50;
+      let currMx = 50, currMy = 50;
 
-    /* Position cible (dot, suit en temps réel) */
-    let mouseX = -100, mouseY = -100;
-    /* Position du ring (lag élastique) */
-    let ringX  = -100, ringY  = -100;
+      /* Mouse → update target % */
+      document.addEventListener('mousemove', (e) => {
+        targetMx = (e.clientX / window.innerWidth)  * 100;
+        targetMy = (e.clientY / window.innerHeight) * 100;
+        if (!pendingRAF) pendingRAF = requestAnimationFrame(updateScene);
+      }, { passive: true });
 
-    /* Mise à jour position souris */
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      if (cursorDot) {
-        cursorDot.style.transform = `translate(${mouseX - 3}px, ${mouseY - 3}px)`;
-      }
-    }, { passive: true });
-
-    /* Lag élastique du ring via rAF */
-    const animateRing = () => {
-      /* Interpolation : 0.12 = vitesse de suivi (lag ~120ms) */
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      if (cursorRing) {
-        const halfW = cursorRing.offsetWidth  / 2;
-        const halfH = cursorRing.offsetHeight / 2;
-        cursorRing.style.transform = `translate(${ringX - halfW}px, ${ringY - halfH}px)`;
-      }
-      requestAnimationFrame(animateRing);
-    };
-    if (!prefersReducedMotion) requestAnimationFrame(animateRing);
-
-    /* Hover sur éléments interactifs : dot disparait, ring s'élargit */
-    const hoverTargets = 'a, button, .work-card, [data-magnetic], input, textarea, select, label';
-    document.addEventListener('mouseover', (e) => {
-      if (e.target.closest(hoverTargets)) {
-        htmlEl.classList.add('cursor-hover');
-      }
-    }, { passive: true });
-    document.addEventListener('mouseout', (e) => {
-      if (e.target.closest(hoverTargets)) {
-        htmlEl.classList.remove('cursor-hover');
-      }
-    }, { passive: true });
-
-    /* Click : compression rapide du ring */
-    document.addEventListener('mousedown', () => {
-      htmlEl.classList.add('cursor-click');
-    });
-    document.addEventListener('mouseup', () => {
-      htmlEl.classList.remove('cursor-click');
-    });
-
-    /* Curseur quitte la fenêtre */
-    document.addEventListener('mouseleave', () => {
-      if (cursorDot)  cursorDot.style.opacity  = '0';
-      if (cursorRing) cursorRing.style.opacity = '0';
-    });
-    document.addEventListener('mouseenter', () => {
-      if (cursorDot)  cursorDot.style.opacity  = '';
-      if (cursorRing) cursorRing.style.opacity = '';
-    });
+      /* Easing : interpolation linéaire douce vers cible */
+      const updateScene = () => {
+        currMx += (targetMx - currMx) * 0.06;
+        currMy += (targetMy - currMy) * 0.06;
+        bg3dScene.style.setProperty('--mx', currMx.toFixed(2) + '%');
+        bg3dScene.style.setProperty('--my', currMy.toFixed(2) + '%');
+        pendingRAF = null;
+        /* Continue tant qu'on n'a pas atteint la cible */
+        if (Math.abs(targetMx - currMx) > 0.1 || Math.abs(targetMy - currMy) > 0.1) {
+          pendingRAF = requestAnimationFrame(updateScene);
+        }
+      };
+    }
   }
 
   /* ──────────────────────────────────────────────

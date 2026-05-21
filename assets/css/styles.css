@@ -169,12 +169,21 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;          /* opsz auto sur Fraunces variable */
   font-synthesis: none;                /* jamais de faux bold/italic */
+  scroll-padding-top: 84px;            /* compense le header sticky pour les ancres */
 }
+body {
+  /* iOS notch safe area */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+/* Empêche les inputs/selects d'agrandir le viewport sur iOS (font-size < 16px) */
+input, textarea, select { font-size: 16px; }
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -1140,15 +1149,24 @@ em { font-style: normal; }
 @media (max-width: 1180px) {
   .works-grid { grid-template-columns: repeat(2, 1fr); }
 }
-/* Orphan handler : si la dernière card est seule sur sa rangée, on la centre */
+/* Orphan handler — uniquement quand la grille est multi-colonnes (desktop / tablet) */
 .works-grid > .work-card:last-child:nth-child(3n + 1) { grid-column: 2 / 3; }
-@media (max-width: 1180px) {
+@media (max-width: 1180px) and (min-width: 1025px) {
   .works-grid > .work-card:last-child:nth-child(2n + 1) {
     grid-column: 1 / -1;
     max-width: calc(50% - var(--sp-6) / 2);
     margin: 0 auto;
   }
   .works-grid > .work-card:last-child:nth-child(3n + 1) { grid-column: auto; }
+}
+/* Sur tablet (<=1024) la grille bascule en 1 colonne — on reset l'orphan */
+@media (max-width: 1024px) {
+  .works-grid > .work-card:last-child:nth-child(3n + 1),
+  .works-grid > .work-card:last-child:nth-child(2n + 1) {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
 }
 .work-card {
   position: relative;
@@ -2459,10 +2477,45 @@ em { font-style: normal; }
   .hero-badge { font-size: 10.5px; padding: 5px 10px; }
   .hero-stats { gap: 20px; }
   .stat-sep { display: none; }
-  .work-meta { padding: 20px; }
-  .work-title { font-size: 22px; }
-  .work-card--wide .work-meta { padding: 20px; }
-  .works-grid { gap: 16px; }
+
+  /* Work cards : padding serré, image plein cadre, pas de coupure de mots */
+  .work-card { border-radius: var(--r-xl); }
+  .work-meta { padding: 22px 20px; }
+  .work-title { font-size: clamp(22px, 6vw, 28px); }
+  .work-card--wide .work-meta { padding: 22px 20px; }
+  .work-card--wide .work-title { font-size: clamp(22px, 6vw, 28px); }
+  .works-grid { gap: 20px; }
+  .work-visual { aspect-ratio: 16 / 10; }
+  .work-visual img { object-position: top center; }
+  .work-tags {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .tag { font-size: 11px; padding: 4px 10px; }
+  .work-desc {
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .work-result {
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .work-result span { hyphens: none; -webkit-hyphens: none; }
+  .tag-metric {
+    top: 12px; right: 12px;
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
   .services-grid { gap: 24px; }
   .process-timeline { grid-template-columns: 1fr; }
   .timeline-line { display: none; }
@@ -2480,18 +2533,65 @@ em { font-style: normal; }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: clamp(28px, 9vw, 40px); }
-  .hero-cta { flex-direction: column; width: 100%; }
-  .hero-cta .btn { justify-content: center; width: 100%; }
+  /* Hero — compact + CTAs full width */
+  .hero-title { font-size: clamp(34px, 12vw, 48px); line-height: 1.04; }
+  .hero-sub { font-size: 15px; }
+  .hero-cta { flex-direction: column; width: 100%; gap: 10px; }
+  .hero-cta .btn { justify-content: center; width: 100%; padding: 14px 20px; }
+  .hero-stats { gap: 14px; }
   .hero-photo { max-width: 100%; }
-  .nav-inner { gap: 12px; }
+  .hero-photo-card { padding: 10px 14px; }
+  .nav-inner { gap: 12px; padding: 12px 16px; }
   .lang-toggle { display: none; }
   .hero-badges { display: none; }
-  .faq-question { font-size: 14px; padding: 16px 18px; }
-  .work-filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: var(--sp-2); scrollbar-width: none; -ms-overflow-style: none; }
+  /* drop-cap réduite */
+  .has-dropcap::first-letter {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+    margin: 0.1em 0.1em -0.05em 0;
+  }
+  /* FAQ */
+  .faq-question { font-size: 14px; padding: 16px 18px; line-height: 1.4; }
+  .faq-answer p { font-size: 14px; }
+  /* Filters Works — scroll horizontal */
+  .work-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: var(--sp-2);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -16px var(--sp-4);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .work-filters::-webkit-scrollbar { display: none; }
-  .pill-tab { flex-shrink: 0; }
+  .pill-tab { flex-shrink: 0; font-size: 12px; padding: 6px 12px; }
+  /* About stats */
   .about-stats { flex-direction: column; gap: var(--sp-4); }
+  /* Services / tarifs */
+  .service-card { padding: 22px 18px; }
+  .service-price { font-size: clamp(40px, 13vw, 56px); }
+  .service-list li { font-size: 14px; line-height: 1.45; }
+  /* Marquee */
+  .marquee-track { font-size: 12px; gap: 24px; }
+  /* Section paddings */
+  .section-title { font-size: clamp(28px, 8vw, 36px); }
+  .section-sub { font-size: 14px; }
+  /* Footer */
+  .footer-brand { font-size: 18px; }
+  .footer-tag { font-size: 12px; }
+  /* Touch targets minimum 44px sur les buttons/links principaux */
+  .btn-primary, .btn-ghost, .work-link, .pill-tab,
+  .nav-mobile a, .lang-btn, .filter-pill { min-height: 40px; }
+}
+
+/* Très petits écrans (≤ 360px) — iPhone SE, Galaxy A20 */
+@media (max-width: 360px) {
+  .hero-title { font-size: clamp(28px, 12vw, 36px); }
+  .work-meta { padding: 18px 16px; }
+  .work-card--wide .work-meta { padding: 18px 16px; }
+  .service-card { padding: 20px 14px; }
+  .nav-inner { padding: 10px 12px; gap: 8px; }
+  .footer-inner { padding: 0 12px; }
 }
 
 @media (min-width: 1025px) {

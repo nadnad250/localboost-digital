@@ -823,6 +823,49 @@ em { font-style: normal; }
   left: auto;
 }
 
+/* Tablet : photo plus petite + au-dessus du texte */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .hero-photo {
+    max-width: 360px;
+    aspect-ratio: 4/5;
+    margin: 0 auto;
+    order: -1;
+  }
+}
+
+/* Mobile : photo compacte carrée + AU-DESSOUS du texte (pitch d'abord) */
+@media (max-width: 480px) {
+  .hero-photo {
+    max-width: 280px !important;
+    aspect-ratio: 1/1;
+    margin: 8px auto 0;
+    order: 1;                 /* sous le contenu, pas au-dessus */
+    transform: none !important; /* kill parallax sur mobile */
+    will-change: auto;
+  }
+  .hero-photo img {
+    object-position: center top;
+  }
+  .hero-photo > .about-photo-tag {
+    top: 10px; left: 10px;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  .hero-photo > .about-photo-card {
+    bottom: 10px; right: 10px;
+    padding: 8px 12px;
+  }
+  .hero-photo-card-value { font-size: 18px; }
+  .hero-photo-card-label { font-size: 10px; }
+}
+
+/* Très petit (≤360px) : encore plus compact */
+@media (max-width: 360px) {
+  .hero-photo {
+    max-width: 240px !important;
+  }
+}
+
 .hero-scroll-hint {
   position: absolute;
   bottom: 28px;

@@ -611,7 +611,9 @@
      Désactivé si prefers-reduced-motion
      ────────────────────────────────────────────── */
   const heroPhoto = document.querySelector('.hero-photo');
-  if (heroPhoto && !prefersReducedMotion) {
+  /* Parallax désactivé sur mobile (<=480px) et touch — UX + perf */
+  const isMobileViewport = window.matchMedia('(max-width: 480px)').matches;
+  if (heroPhoto && !prefersReducedMotion && !isMobileViewport && supportsHover) {
     let heroScrollRAF = null;
     let heroScrollY   = 0;
 

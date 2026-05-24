@@ -833,36 +833,54 @@ em { font-style: normal; }
   }
 }
 
-/* Mobile : photo compacte carrée + AU-DESSOUS du texte (pitch d'abord) */
+/* Mobile : photo en PORTRAIT pro éditorial (3/4) + dimension dominante */
 @media (max-width: 480px) {
   .hero-photo {
-    max-width: 280px !important;
-    aspect-ratio: 1/1;
-    margin: 8px auto 0;
-    order: 1;                 /* sous le contenu, pas au-dessus */
-    transform: none !important; /* kill parallax sur mobile */
+    max-width: 340px !important;
+    width: 86%;                   /* respire sur les côtés mais reste présente */
+    aspect-ratio: 3/4;             /* portrait pro (vs carré "photo d'identité") */
+    margin: 12px auto 8px;
+    order: 1;                      /* sous le pitch, pas au-dessus */
+    transform: none !important;    /* kill parallax sur mobile */
     will-change: auto;
+    border-radius: 24px;
+    /* Ombre douce pour décoller du fond clair */
+    box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.25),
+                0 6px 20px -8px rgba(0, 0, 0, 0.12);
   }
   .hero-photo img {
-    object-position: center top;
+    border-radius: 24px;
+    /* Cadrage du visage : descendre un peu (moins de head room en haut) */
+    object-position: center 25%;
+    /* B&W plus dense pour le contraste sur fond clair */
+    filter: contrast(1.04) brightness(0.98);
   }
   .hero-photo > .about-photo-tag {
-    top: 10px; left: 10px;
+    top: 12px; left: 12px;
     font-size: 10px;
-    padding: 4px 8px;
+    padding: 5px 10px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(245, 197, 24, 0.92);
+    color: var(--accent-ink);
+    border-radius: 999px;
   }
   .hero-photo > .about-photo-card {
-    bottom: 10px; right: 10px;
-    padding: 8px 12px;
+    bottom: 12px; right: 12px;
+    padding: 8px 14px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.92);
   }
   .hero-photo-card-value { font-size: 18px; }
   .hero-photo-card-label { font-size: 10px; }
 }
 
-/* Très petit (≤360px) : encore plus compact */
+/* Très petit (≤360px) : portrait 3/4 conservé, juste un peu moins large */
 @media (max-width: 360px) {
   .hero-photo {
-    max-width: 240px !important;
+    max-width: 300px !important;
+    width: 88%;
   }
 }
 

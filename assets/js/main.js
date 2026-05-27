@@ -36,7 +36,7 @@
       'hero.h1.em1': 'en 7 jours.',
       'hero.sub': 'À partir de 390 EUR. Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.',
       'hero.cta1': 'Demander un devis gratuit',
-      'hero.cta2': 'Voir 7 sites livrés',
+      'hero.cta2': 'Voir 8 sites livrés',
       'hero.stat1': 'Sites livrés',
       'hero.stat2': 'Délai moyen',
       'hero.stat3': 'Avis Google',
@@ -46,7 +46,7 @@
       /* Works */
       'works.title.l1': 'Réalisations',
       'works.title.l2': 'récentes',
-      'works.sub': 'Sept secteurs. Sept identités visuelles. Une même exigence.',
+      'works.sub': 'Huit secteurs. Huit identités visuelles. Une même exigence.',
       'work.view': 'Voir le site',
       'work.view.live': 'Voir le site live →',
 
@@ -102,6 +102,13 @@
       'work.mt.metric': '+12 clients en file',
       'work.mt.desc':   "Max voulait un site qui pré-qualifie ses prospects avant le premier appel. Typo massive, garantie résultats affichée, formulaire intégré. Plus de coaching, moins de SAV téléphonique.",
       'work.mt.result': "87 avis Google 4,9/5 · file d'attente pleine en 2 mois",
+
+      'work.mo.tag1':   'Salon coiffure',
+      'work.mo.tag2':   'Lyon 2ᵉ',
+      'work.mo.tag3':   'Nouveau',
+      'work.mo.metric': 'Éditorial premium',
+      'work.mo.desc':   "Salon mixte au cœur de Lyon — Sofia voulait un site éditorial qui reflète la qualité du travail. Hero vidéo, galerie filtrée par type de coupe, carousel avis Google, formulaire RDV qui pré-qualifie.",
+      'work.mo.result': "Tarif moyen ×1,4 en 3 mois · Réservations en ligne ×3",
 
       /* Témoignages */
       'testi.title.l1': 'Ils ont',
@@ -283,7 +290,7 @@
       'hero.h1.em1': 'in 7 days.',
       'hero.sub': 'From EUR 390. For tradespeople and SMBs across Île-de-France. Free quote in 24h.',
       'hero.cta1': 'Request a free quote',
-      'hero.cta2': 'See 7 live sites',
+      'hero.cta2': 'See 8 live sites',
       'hero.stat1': 'Sites delivered',
       'hero.stat2': 'Avg. delivery',
       'hero.stat3': 'Google reviews',
@@ -293,7 +300,7 @@
       /* Works */
       'works.title.l1': 'Recent',
       'works.title.l2': 'work',
-      'works.sub': 'Seven sectors. Seven identities. One same demand.',
+      'works.sub': 'Eight sectors. Eight identities. One same demand.',
       'work.view': 'View site',
       'work.view.live': 'View live site →',
 
@@ -349,6 +356,13 @@
       'work.mt.metric': '+12 clients waitlist',
       'work.mt.desc':   "Max wanted a site that pre-qualifies prospects before the first call. Bold typography, results guarantee on display, integrated booking. More coaching, less phone screening.",
       'work.mt.result': "87 Google reviews 4.9/5 · waitlist full within 2 months",
+
+      'work.mo.tag1':   'Hair salon',
+      'work.mo.tag2':   'Lyon 2nd',
+      'work.mo.tag3':   'New',
+      'work.mo.metric': 'Editorial premium',
+      'work.mo.desc':   "Unisex salon in central Lyon — Sofia wanted an editorial site reflecting craftsmanship. Hero video, cut-style filtered gallery, Google reviews carousel, booking form that pre-qualifies leads.",
+      'work.mo.result': "Average ticket ×1.4 in 3 months · Online bookings ×3",
 
       /* Testimonials */
       'testi.title.l1': 'They loved',

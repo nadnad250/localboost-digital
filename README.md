@@ -59,7 +59,7 @@ Puis ouvrir http://localhost:8004
 - HTML5 sémantique (WAI-ARIA complet)
 - CSS3 (Custom Properties, Grid, Flexbox, Backdrop-filter, dark mode)
 - Vanilla JS (IntersectionObserver, i18n, lightbox, form validation)
-- Google Fonts (Fraunces, Inter, JetBrains Mono) — chargement non-bloquant
+- Google Fonts (Cal Sans, Instrument Serif, Inter, JetBrains Mono) — chargement non-bloquant
 - Plausible Analytics (RGPD-friendly, no cookies)
 - Zero dépendance, zero framework
 

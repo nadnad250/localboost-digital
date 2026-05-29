@@ -803,23 +803,24 @@
   const burger = document.getElementById('burger');
   const navMobile = document.getElementById('navMobile');
   if (burger && navMobile) {
-    burger.addEventListener('click', () => {
-      const on = burger.classList.toggle('on');
+    const setMenu = (on) => {
+      burger.classList.toggle('on', on);
       navMobile.classList.toggle('on', on);
       burger.setAttribute('aria-expanded', String(on));
       burger.setAttribute('aria-label', on ? 'Fermer le menu' : 'Ouvrir le menu');
       navMobile.setAttribute('aria-hidden', String(!on));
       document.body.style.overflow = on ? 'hidden' : '';
-    });
+    };
+    burger.addEventListener('click', () => setMenu(!burger.classList.contains('on')));
     navMobile.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        burger.classList.remove('on');
-        navMobile.classList.remove('on');
-        burger.setAttribute('aria-expanded', 'false');
-        burger.setAttribute('aria-label', 'Ouvrir le menu');
-        navMobile.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      });
+      a.addEventListener('click', () => setMenu(false));
+    });
+    /* Fermeture au clavier (Échap) + retour du focus sur le burger */
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && burger.classList.contains('on')) {
+        setMenu(false);
+        burger.focus();
+      }
     });
   }
 
@@ -848,6 +849,8 @@
 
     const startAuto = () => {
       stopAuto();
+      /* Respecte « prefers-reduced-motion » : pas de défilement automatique */
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       timer = setInterval(() => { if (!isPaused) goTo(current + 1); }, INTERVAL);
     };
     const stopAuto = () => { if (timer) { clearInterval(timer); timer = null; } };
@@ -973,8 +976,11 @@
       e.preventDefault();
       openLightbox(card);
     });
-    /* Keyboard */
+    /* Keyboard + sémantique « bouton » pour lecteurs d'écran */
     card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    const _wt = card.querySelector('.work-title');
+    card.setAttribute('aria-label', 'Voir le projet ' + (_wt ? _wt.textContent.trim() : '') + ' en détail');
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(card); }
     });

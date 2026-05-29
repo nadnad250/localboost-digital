@@ -315,6 +315,9 @@ em { font-style: normal; }
   border-radius: 4px;
 }
 
+/* Landmark focusé via skip-link : pas d'anneau autour de toute la page */
+#main:focus, #main:focus-visible { outline: none; }
+
 /* Selection */
 ::selection { background: var(--accent); color: var(--accent-ink); }
 

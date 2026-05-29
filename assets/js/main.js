@@ -261,6 +261,7 @@
       /* Footer */
       'footer.tag': 'Studio indépendant · Paris · Versailles',
       'footer.rights': 'Tous droits réservés',
+      'footer.legal': 'Mentions légales',
       'footer.avail': 'Disponible 2 projets ce mois-ci · Paris & Versailles',
       'footer.response': 'Réponse sous 24h',
     },
@@ -515,6 +516,7 @@
       /* Footer */
       'footer.tag': 'Independent studio · Paris · Versailles',
       'footer.rights': 'All rights reserved',
+      'footer.legal': 'Legal notice',
       'footer.avail': 'Available 2 projects this month · Paris & Versailles',
       'footer.response': 'Response within 24h',
     }

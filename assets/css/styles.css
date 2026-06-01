@@ -1155,37 +1155,21 @@ em { font-style: normal; }
    ============================================ */
 /* Fix #2 — Buffer post-marquee pour la grille Works */
 .works { padding: calc(var(--pad-sec) + var(--sp-6)) 0 var(--pad-sec); }
-/* Grille uniforme : 3 colonnes desktop, 2 colonnes tablet, 1 colonne mobile */
+/* Showcase éditorial : grandes lignes pleine largeur empilées (1 site / ligne),
+   visuel alterné gauche / droite — voir .work-card ci-dessous. */
 .works-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-6);
-}
-@media (max-width: 1180px) {
-  .works-grid { grid-template-columns: repeat(2, 1fr); }
-}
-/* Orphan handler — uniquement quand la grille est multi-colonnes (desktop / tablet) */
-.works-grid > .work-card:last-child:nth-child(3n + 1) { grid-column: 2 / 3; }
-@media (max-width: 1180px) and (min-width: 1025px) {
-  .works-grid > .work-card:last-child:nth-child(2n + 1) {
-    grid-column: 1 / -1;
-    max-width: calc(50% - var(--sp-6) / 2);
-    margin: 0 auto;
-  }
-  .works-grid > .work-card:last-child:nth-child(3n + 1) { grid-column: auto; }
-}
-/* Sur tablet (<=1024) la grille bascule en 1 colonne — on reset l'orphan */
-@media (max-width: 1024px) {
-  .works-grid > .work-card:last-child:nth-child(3n + 1),
-  .works-grid > .work-card:last-child:nth-child(2n + 1) {
-    grid-column: auto;
-    max-width: none;
-    margin: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4.5vw, 64px);
+  counter-reset: work;
 }
 .work-card {
   position: relative;
-  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: stretch;
+  counter-increment: work;
+  border-radius: clamp(20px, 2.2vw, 32px);
   overflow: hidden;
   background: var(--bg-2);
   border: 1px solid var(--border);
@@ -1193,7 +1177,6 @@ em { font-style: normal; }
   transition: transform var(--d-slow) var(--ease), border-color var(--d-mid) var(--ease),
               background var(--d-mid) var(--ease), box-shadow var(--d-mid) var(--ease),
               opacity var(--d-mid) var(--ease);
-  transform-style: preserve-3d;
   will-change: transform;
   isolation: isolate;
 }
@@ -1223,11 +1206,16 @@ em { font-style: normal; }
 .work-card:hover .work-visual img { transform: scale(1.03); }
 .work-card:hover .work-overlay { opacity: 1; }
 .work-card:hover .work-link svg { transform: translate(2px, -2px); }
+.work-card:hover .work-link { border-color: var(--accent); color: var(--accent-text); }
+
+/* Rythme éditorial : une ligne sur deux place le visuel à droite */
+.work-card:nth-child(even) .work-visual { order: 2; }
 
 /* Visual */
 .work-visual {
   position: relative;
-  aspect-ratio: 4/3;
+  height: 100%;
+  min-height: clamp(300px, 30vw, 460px);
   overflow: hidden;
   background: var(--bg-3);
 }
@@ -1302,8 +1290,22 @@ em { font-style: normal; }
   line-height: 1;
 }
 
-/* Meta */
-.work-meta { padding: var(--pad-card); }
+/* Meta — colonne texte centrée verticalement, numéro éditorial en tête */
+.work-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 60px);
+}
+.work-meta::before {
+  content: counter(work, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--accent-text);
+  margin-bottom: var(--sp-4);
+}
 .work-tags {
   display: flex;
   gap: var(--sp-2);
@@ -1345,18 +1347,19 @@ em { font-style: normal; }
 }
 .work-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 2.5vw, 40px);
+  font-size: clamp(30px, 3.2vw, 50px);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.02;
   letter-spacing: -0.03em;
   margin-bottom: var(--sp-3);
   color: var(--fg);
 }
 .work-desc {
-  font-size: 14px;
+  font-size: clamp(15px, 1.1vw, 16.5px);
   color: var(--fg-2);
-  line-height: 1.6;
-  margin-bottom: var(--sp-3);
+  line-height: 1.65;
+  max-width: 46ch;
+  margin-bottom: var(--sp-4);
 }
 
 /* Résultat business sous chaque carte */
@@ -1379,12 +1382,13 @@ em { font-style: normal; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  align-self: flex-start;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg);
-  padding: 8px 14px;
+  padding: 12px 22px;
   border-radius: 100px;
   background: var(--surface-2);
   border: 1px solid var(--border);
@@ -1394,21 +1398,8 @@ em { font-style: normal; }
 }
 .work-link svg { transition: transform var(--d-mid) var(--ease); }
 
-/* Carte pleine largeur */
-.work-card--wide {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-}
-.work-card--wide .work-visual { aspect-ratio: auto; height: 100%; }
-.work-card--wide .work-meta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 48px;
-}
-.work-card--wide .work-title { font-size: 36px; }
-.work-card--wide .work-desc { font-size: 15px; max-width: 440px; }
+/* (.work-card--wide fusionné dans .work-card : toutes les lignes sont
+   désormais pleine largeur et alternées — plus de classe dédiée nécessaire.) */
 
 /* Filtres */
 .work-filters {
@@ -2461,10 +2452,12 @@ em { font-style: normal; }
   .hero-stats { flex-wrap: wrap; }
   .about-inner { grid-template-columns: 1fr; gap: var(--sp-7); }
   .about-photo { max-width: 420px; margin: 0 auto; }
-  .works-grid { grid-template-columns: 1fr; }
-  .work-card--wide { grid-template-columns: 1fr; grid-column: auto; }
-  .work-card--wide .work-meta { padding: 32px; }
-  .work-card--wide .work-title { font-size: 30px; }
+  /* Showcase : repli en 1 colonne (visuel au-dessus du texte) */
+  .work-card { grid-template-columns: 1fr; }
+  .work-card:nth-child(even) .work-visual { order: 0; }
+  .work-visual { min-height: 0; height: auto; aspect-ratio: 16 / 10; }
+  .work-meta { padding: clamp(28px, 5vw, 40px); }
+  .work-title { font-size: clamp(28px, 4vw, 38px); }
   .services-grid { grid-template-columns: 1fr; gap: var(--sp-7); }
   .service-featured { transform: none; order: -1; margin-top: 24px; }
   .service-featured:hover { transform: translateY(-8px); }
@@ -2489,11 +2482,9 @@ em { font-style: normal; }
 
   /* Work cards : padding serré, image plein cadre, pas de coupure de mots */
   .work-card { border-radius: var(--r-xl); }
-  .work-meta { padding: 22px 20px; }
-  .work-title { font-size: clamp(22px, 6vw, 28px); }
-  .work-card--wide .work-meta { padding: 22px 20px; }
-  .work-card--wide .work-title { font-size: clamp(22px, 6vw, 28px); }
-  .works-grid { gap: 20px; }
+  .work-meta { padding: 24px 20px; }
+  .work-title { font-size: clamp(22px, 6vw, 30px); }
+  .works-grid { gap: 28px; }
   .work-visual { aspect-ratio: 16 / 10; }
   .work-visual img { object-position: top center; }
   .work-tags {
@@ -2602,7 +2593,6 @@ em { font-style: normal; }
 @media (max-width: 360px) {
   .hero-title { font-size: clamp(28px, 12vw, 36px); }
   .work-meta { padding: 18px 16px; }
-  .work-card--wide .work-meta { padding: 18px 16px; }
   .service-card { padding: 20px 14px; }
   .nav-inner { padding: 0 12px; gap: 8px; }
   .footer-inner { padding: 0 12px; }

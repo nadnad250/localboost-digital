@@ -34,12 +34,14 @@
       'hero.badge3': 'Basé à Paris / Versailles',
       'hero.h1.l1': 'Ton site vitrine',
       'hero.h1.em1': 'en 7 jours.',
-      'hero.sub': 'À partir de 390 EUR. Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.',
+      'hero.sub': 'Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.',
+      'hero.price.amount': 'À partir de 390 € TTC',
+      'hero.price.terms': 'Paiement en 2× sans frais',
       'hero.cta1': 'Demander un devis gratuit',
       'hero.cta2': 'Voir 8 sites livrés',
       'hero.stat1': 'Sites livrés',
       'hero.stat2': 'Délai moyen',
-      'hero.stat3': 'Avis Google',
+      'hero.stat3': '4,9/5 sur Google',
       'hero.scroll': 'Défiler',
       'hero.photo.tag': '2 projets max ce mois-ci',
 
@@ -115,6 +117,8 @@
       'testi.title.l2': 'aimé',
       'testi.title.l3': 'travailler avec moi.',
       'testi.sub': "Cinq clients, cinq histoires. Voici ce qu'ils en disent.",
+      'testi.google': 'Note moyenne 4,9/5 sur Google',
+      'ctabar.cta': 'Devis gratuit — réponse 24h',
       'testi.t1.quote': "« Mon site rapporte 3 fois plus de devis qu'avant. Le rendu est plus pro que ce que j'avais avec mon ancienne agence à 3 000 €. »",
       'testi.t1.name': 'Thomas Berger',
       'testi.t1.role': 'Gérant Artisan Volt',
@@ -162,7 +166,8 @@
       'services.p2.f4': 'Hébergement 1ère année offerte',
       'services.p2.f5': 'Formulaire + bouton WhatsApp',
       'services.p2.cta': 'Choisir Pro',
-      'services.p2.guarantee': 'Hébergement 1ère année offert',
+      'services.p2.guarantee': 'Devis gratuit sous 24h · Sans engagement',
+      'services.pay2x': 'Paiement en 2× sans frais',
 
       'services.p3.badge': 'Tout inclus',
       'services.p3.name': 'Premium',
@@ -174,7 +179,6 @@
       'services.p3.f5': 'Maintenance 3 mois incluse',
       'services.p3.cta': 'Choisir Premium',
 
-      'services.note': 'Paiement en 2× sans frais · Hébergement 1ère année offerte sur Pro et Premium',
 
       /* Process */
       'process.title.l1': 'Comment on travaille',
@@ -185,7 +189,7 @@
       'process.s1.text': "On échange 15 min sur ton projet, je te livre un plan. Même si on ne bosse pas ensemble, tu repars avec des pistes concrètes.",
       'process.s2.time': 'Maquette (Jour 2-3)',
       'process.s2.title': 'Maquette',
-      'process.s2.text': "Tu vois ton futur site en taille réelle, on ajuste ensemble. Pas de « tu verras à la fin », tu valides avant qu'on code.",
+      'process.s2.text': "Tu vois ton futur site en taille réelle, on ajuste ensemble. Pas de « tu verras à la fin », tu valides avant qu'on code.",
       'process.s3.time': 'Développement (Jour 4-6)',
       'process.s3.title': 'Développement',
       'process.s3.text': "Je code ton site avec ton contenu validé. HTML sémantique, CSS optimisé, performances natives. Aucune dépendance inutile.",
@@ -196,21 +200,21 @@
       /* FAQ */
       'faq.title.l1': 'Questions',
       'faq.title.l2': 'fréquentes',
-      'faq.q1': 'En combien de temps mon site sera-t-il en ligne ?',
+      'faq.q1': 'En combien de temps mon site sera-t-il en ligne ?',
       'faq.a1': 'Ton site est en ligne en 7 jours calendaires après validation de la maquette. Pour la formule Essentiel, c\'est même souvent moins. Le délai commence dès que tu me fournis ton contenu (textes, logo, photos).',
-      'faq.q2': 'Comment se passe le paiement ?',
+      'faq.q2': 'Comment se passe le paiement ?',
       'faq.a2': '50% à la commande, 50% à la livraison. Tu peux aussi payer en 2× sans frais sur toutes les formules. Virement bancaire ou PayPal acceptés.',
-      'faq.q3': "Qui s'occupe de l'hébergement et du nom de domaine ?",
+      'faq.q3': "Qui s'occupe de l'hébergement et du nom de domaine ?",
       'faq.a3': "Je m'occupe de tout. L'hébergement 1ère année est offert sur les formules Pro et Premium. Le nom de domaine peut être fourni par toi ou acheté pour toi. À partir de la 2ème année, l'hébergement revient à environ 5€/mois.",
-      'faq.q4': 'Puis-je modifier mon site moi-même après la livraison ?',
+      'faq.q4': 'Puis-je modifier mon site moi-même après la livraison ?',
       'faq.a4': 'Oui, une formation de 30 minutes est incluse dans chaque formule. Tu apprends à modifier tes textes, tes images et tes coordonnées sans toucher au code. Tu restes autonome.',
-      'faq.q5': 'Est-ce que le site sera visible sur Google ?',
+      'faq.q5': 'Est-ce que le site sera visible sur Google ?',
       'faq.a5': 'Tous mes sites sont optimisés pour le SEO local dès la livraison : balises meta, Schema.org, sitemap, Google My Business (Pro et Premium). Tes clients te trouvent quand ils cherchent ton métier dans ta ville.',
-      'faq.q6': 'Mon site sera-t-il adapté aux mobiles ?',
+      'faq.q6': 'Mon site sera-t-il adapté aux mobiles ?',
       'faq.a6': 'Oui, tous mes sites sont conçus en mobile-first. Ils s\'adaptent parfaitement à tous les écrans : smartphone, tablette, ordinateur. 60% de tes visiteurs arrivent sur mobile — c\'est ma priorité numéro 1.',
-      'faq.q7': 'Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?',
+      'faq.q7': 'Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?',
       'faq.a7': 'Les petites modifications (texte, photo, horaire) sont comprises pendant 1 mois après livraison. Au-delà, je facture 40€/heure. La formule Premium inclut 3 mois de maintenance complète.',
-      'faq.q8': 'À qui appartient le site une fois livré ?',
+      'faq.q8': 'À qui appartient le site une fois livré ?',
       'faq.a8': 'Le site t\'appartient à 100% dès la livraison et le paiement final. Tu reçois tous les accès (hébergement, domaine, code source). Aucun abonnement mensuel caché.',
 
       /* Contact */
@@ -231,12 +235,13 @@
       'form.label.plan': 'Type de projet',
       'form.label.message': 'Votre projet *',
       'form.plan.choose': 'Choisir une formule',
-      'services.ttc': 'TTC · paiement en 2× sans frais',
-      'form.plan.essentiel': 'Essentiel — 390 EUR',
-      'form.plan.pro': 'Pro — 590 EUR',
-      'form.plan.premium': 'Premium — 890 EUR',
+      'services.ttc': 'TTC',
+      'form.plan.essentiel': 'Essentiel — 390 €',
+      'form.plan.pro': 'Pro — 590 €',
+      'form.plan.premium': 'Premium — 890 €',
       'form.plan.custom': 'Sur-mesure',
-      'form.submit': 'Envoyer la demande',
+      'form.submit': 'Recevoir mon devis gratuit',
+      'form.reassure': '✓ Gratuit · ✓ Réponse sous 24h · ✓ Sans engagement',
       'form.success.title': 'Message envoyé !',
       'form.success.text': 'Je vous recontacte sous 24h avec votre devis gratuit.',
       'form.error.required': 'Ce champ est obligatoire.',
@@ -289,12 +294,14 @@
       'hero.badge3': 'Based in Paris / Versailles',
       'hero.h1.l1': 'Your business website',
       'hero.h1.em1': 'in 7 days.',
-      'hero.sub': 'From EUR 390. For tradespeople and SMBs across Île-de-France. Free quote in 24h.',
+      'hero.sub': 'For tradespeople and SMBs across Île-de-France. Free quote within 24h.',
+      'hero.price.amount': 'From €390 incl. VAT',
+      'hero.price.terms': 'Pay in 2× at no extra cost',
       'hero.cta1': 'Request a free quote',
       'hero.cta2': 'See 8 live sites',
       'hero.stat1': 'Sites delivered',
       'hero.stat2': 'Avg. delivery',
-      'hero.stat3': 'Google reviews',
+      'hero.stat3': '4.9/5 on Google',
       'hero.scroll': 'Scroll',
       'hero.photo.tag': '2 projects max this month',
 
@@ -370,6 +377,8 @@
       'testi.title.l2': 'working',
       'testi.title.l3': 'with me.',
       'testi.sub': 'Five clients, five stories. Here\'s what they say.',
+      'testi.google': 'Average rating 4.9/5 on Google',
+      'ctabar.cta': 'Free quote — 24h reply',
       'testi.t1.quote': '« My site brings in 3× more quotes than before. The result is more polished than my previous €3,000 agency. »',
       'testi.t1.name': 'Thomas Berger',
       'testi.t1.role': 'Owner Artisan Volt',
@@ -417,7 +426,8 @@
       'services.p2.f4': '1st year hosting included',
       'services.p2.f5': 'Form + WhatsApp button',
       'services.p2.cta': 'Choose Pro',
-      'services.p2.guarantee': 'Free 1st year hosting',
+      'services.p2.guarantee': 'Free quote within 24h · No commitment',
+      'services.pay2x': 'Pay in 2× at no extra cost',
 
       'services.p3.badge': 'All inclusive',
       'services.p3.name': 'Premium',
@@ -429,7 +439,6 @@
       'services.p3.f5': '3 months maintenance included',
       'services.p3.cta': 'Choose Premium',
 
-      'services.note': 'Pay in 2 instalments, no fees · Free 1st year hosting on Pro & Premium',
 
       /* Process */
       'process.title.l1': 'How we work',
@@ -486,12 +495,13 @@
       'form.label.plan': 'Project type',
       'form.label.message': 'Your project *',
       'form.plan.choose': 'Choose a plan',
-      'services.ttc': 'VAT incl. · pay in 2× interest-free',
-      'form.plan.essentiel': 'Essential — EUR 390',
-      'form.plan.pro': 'Pro — EUR 590',
-      'form.plan.premium': 'Premium — EUR 890',
+      'services.ttc': 'incl. VAT',
+      'form.plan.essentiel': 'Essential — €390',
+      'form.plan.pro': 'Pro — €590',
+      'form.plan.premium': 'Premium — €890',
       'form.plan.custom': 'Custom',
-      'form.submit': 'Send request',
+      'form.submit': 'Get my free quote',
+      'form.reassure': '✓ Free · ✓ Reply within 24h · ✓ No commitment',
       'form.success.title': 'Message sent!',
       'form.success.text': 'I\'ll get back to you within 24h with your free quote.',
       'form.error.required': 'This field is required.',
@@ -733,6 +743,13 @@
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        /* Stagger discret des work-cards : la 2e colonne suit de 90ms.
+           Delay inline temporaire → n'affecte pas les transitions hover ensuite. */
+        if (entry.target.matches('.works-grid .work-card')) {
+          const idx = Array.prototype.indexOf.call(entry.target.parentElement.children, entry.target);
+          entry.target.style.transitionDelay = ((idx % 2) * 90) + 'ms';
+          setTimeout(() => { entry.target.style.transitionDelay = ''; }, 900);
+        }
         entry.target.classList.add('in');
         io.unobserve(entry.target);
       }
@@ -851,6 +868,8 @@
       stopAuto();
       /* Respecte « prefers-reduced-motion » : pas de défilement automatique */
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      /* Desktop ≥1025px : grille statique 3 colonnes, pas de rotation */
+      if (window.matchMedia('(min-width: 1025px)').matches) return;
       timer = setInterval(() => { if (!isPaused) goTo(current + 1); }, INTERVAL);
     };
     const stopAuto = () => { if (timer) { clearInterval(timer); timer = null; } };
@@ -879,6 +898,24 @@
       entries.forEach(e => { if (e.isIntersecting) startAuto(); else stopAuto(); });
     }, { threshold: 0.3 });
     ioCar.observe(carousel);
+  }
+
+  /* ──────────────────────────────────────────────
+     BARRE CTA MOBILE — apparaît après la sortie du hero
+     (chemin permanent vers le devis sur une page de ~9500px)
+     ────────────────────────────────────────────── */
+  const ctaBar = document.getElementById('ctaBarMobile');
+  const heroSection = document.getElementById('hero');
+  if (ctaBar && heroSection && 'IntersectionObserver' in window) {
+    const ioBar = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const show = !entry.isIntersecting;
+        ctaBar.classList.toggle('show', show);
+        ctaBar.setAttribute('aria-hidden', String(!show));
+        document.body.classList.toggle('has-cta-bar', show);
+      });
+    }, { threshold: 0 });
+    ioBar.observe(heroSection);
   }
 
   /* ──────────────────────────────────────────────
@@ -1063,14 +1100,27 @@
         `Formule : ${data.get('plan') || 'non précisé'}\n\n` +
         `Message :\n${data.get('message')}`
       );
-      window.location.href = `mailto:merouaninadir@gmail.com?subject=${subject}&body=${body}`;
 
-      /* Afficher message de succès */
-      if (formSuccess) {
-        formSuccess.classList.add('visible');
-        formSuccess.setAttribute('aria-hidden', 'false');
-        contactForm.setAttribute('aria-hidden', 'true');
+      /* Chorégraphie d'envoi : état « Envoi… » bref, puis succès —
+         l'utilisateur voit que son action a été prise en compte. */
+      const submitBtn = contactForm.querySelector('.form-submit');
+      const submitLabel = submitBtn ? submitBtn.querySelector('[data-i18n="form.submit"]') : null;
+      const isFr = (document.documentElement.lang || 'fr').startsWith('fr');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        if (submitLabel) submitLabel.textContent = isFr ? 'Envoi…' : 'Sending…';
       }
+
+      setTimeout(() => {
+        window.location.href = `mailto:merouaninadir@gmail.com?subject=${subject}&body=${body}`;
+
+        /* Afficher message de succès */
+        if (formSuccess) {
+          formSuccess.classList.add('visible');
+          formSuccess.setAttribute('aria-hidden', 'false');
+          contactForm.setAttribute('aria-hidden', 'true');
+        }
+      }, 700);
     });
   }
 

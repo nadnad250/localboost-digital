@@ -217,7 +217,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "En combien de temps mon site sera-t-il en ligne ?",
+          "name": "En combien de temps mon site sera-t-il en ligne ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Ton site est en ligne en 7 jours calendaires après validation de la maquette. Pour la formule Essentiel, c'est même souvent moins. Le délai commence dès que tu me fournis ton contenu (textes, logo, photos)."
@@ -225,7 +225,7 @@
         },
         {
           "@type": "Question",
-          "name": "Comment se passe le paiement ?",
+          "name": "Comment se passe le paiement ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "50% à la commande, 50% à la livraison. Tu peux aussi payer en 2× sans frais sur toutes les formules. Virement bancaire ou PayPal acceptés."
@@ -233,7 +233,7 @@
         },
         {
           "@type": "Question",
-          "name": "Qui s'occupe de l'hébergement et du nom de domaine ?",
+          "name": "Qui s'occupe de l'hébergement et du nom de domaine ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Je m'occupe de tout. L'hébergement 1ère année est offert sur les formules Pro et Premium. Le nom de domaine peut être fourni par toi ou acheté pour toi. À partir de la 2ème année, l'hébergement revient à environ 5€/mois."
@@ -241,7 +241,7 @@
         },
         {
           "@type": "Question",
-          "name": "Puis-je modifier mon site moi-même après la livraison ?",
+          "name": "Puis-je modifier mon site moi-même après la livraison ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Oui, une formation de 30 minutes est incluse dans chaque formule. Tu apprends à modifier tes textes, tes images et tes coordonnées sans toucher au code. Tu restes autonome."
@@ -249,7 +249,7 @@
         },
         {
           "@type": "Question",
-          "name": "Est-ce que le site sera visible sur Google ?",
+          "name": "Est-ce que le site sera visible sur Google ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Tous mes sites sont optimisés pour le SEO local dès la livraison : balises meta, Schema.org, sitemap, Google My Business (Pro et Premium). Tes clients te trouvent quand ils cherchent ton métier dans ta ville."
@@ -257,7 +257,7 @@
         },
         {
           "@type": "Question",
-          "name": "Mon site sera-t-il adapté aux mobiles ?",
+          "name": "Mon site sera-t-il adapté aux mobiles ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Oui, tous mes sites sont conçus en mobile-first. Ils s'adaptent parfaitement à tous les écrans : smartphone, tablette, ordinateur. 60% de tes visiteurs arrivent sur mobile — c'est ma priorité numéro 1."
@@ -265,7 +265,7 @@
         },
         {
           "@type": "Question",
-          "name": "Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?",
+          "name": "Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Les petites modifications (texte, photo, horaire) sont comprises pendant 1 mois après livraison. Au-delà, je facture 40€/heure. La formule Premium inclut 3 mois de maintenance complète."
@@ -273,7 +273,7 @@
         },
         {
           "@type": "Question",
-          "name": "À qui appartient le site une fois livré ?",
+          "name": "À qui appartient le site une fois livré ?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Le site t'appartient à 100% dès la livraison et le paiement final. Tu reçois tous les accès (hébergement, domaine, code source). Aucun abonnement mensuel caché."
@@ -386,7 +386,7 @@
         <button data-lang="en" aria-pressed="false">EN</button>
       </div>
 
-      <a href="#contact" class="btn btn-primary" data-magnetic data-event="cta_click_devis">
+      <a href="#contact" class="btn btn-primary" data-event="cta_click_devis">
         <span data-i18n="nav.cta">Devis gratuit</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -436,16 +436,23 @@
           </span>
         </h1>
 
-        <p class="hero-sub fade-up d4 has-dropcap" data-i18n="hero.sub">
-          À partir de 390 EUR. Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.
+        <p class="hero-sub fade-up d4" data-i18n="hero.sub">
+          Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.
+        </p>
+
+        <!-- Pastille prix — l'offre scannable en 2 secondes -->
+        <p class="hero-price-pill fade-up d4">
+          <strong data-i18n="hero.price.amount">À partir de 390&nbsp;€ TTC</strong>
+          <span class="hero-price-sep" aria-hidden="true">·</span>
+          <span data-i18n="hero.price.terms">Paiement en 2× sans frais</span>
         </p>
 
         <div class="hero-cta fade-up d5">
-          <a href="#contact" class="btn btn-primary btn-lg" data-magnetic data-event="cta_click_devis">
+          <a href="#contact" class="btn btn-primary btn-lg" data-event="cta_click_devis">
             <span data-i18n="hero.cta1">Demander un devis gratuit</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#works" class="btn btn-ghost btn-lg" data-magnetic>
+          <a href="#works" class="btn btn-ghost btn-lg">
             <span data-i18n="hero.cta2">Voir 8 sites livrés</span>
           </a>
         </div>
@@ -461,10 +468,13 @@
             <span class="stat-label" data-i18n="hero.stat2">Délai moyen</span>
           </div>
           <div class="stat-sep" aria-hidden="true"></div>
-          <div class="stat">
-            <span class="stat-num">4,9<i>/5</i></span>
-            <span class="stat-label" data-i18n="hero.stat3">Avis Google</span>
-          </div>
+          <a class="stat google-badge" href="#testimonials" aria-label="Voir les avis clients — note 4,9 sur 5 sur Google">
+            <span class="google-badge-row" aria-hidden="true">
+              <svg class="google-g" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+              <span class="google-stars">★★★★★</span>
+            </span>
+            <span class="stat-label" data-i18n="hero.stat3">4,9/5 sur Google</span>
+          </a>
         </div>
       </div>
 
@@ -542,7 +552,7 @@
              data-href="https://nadou25.github.io/artisan-volt/"
              data-live="https://nadou25.github.io/artisan-volt/"
              data-result="+40% de demandes de devis via Google en 3 mois">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="artisan-volt.fr">
             <img src="assets/images/artisan-volt.webp" alt="Capture du site Artisan Volt — électricien à Versailles" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.av.metric">+47% demandes</span>
             <div class="work-overlay" aria-hidden="true">
@@ -573,7 +583,7 @@
              data-href="https://nadou25.github.io/prestige-drive/"
              data-live="https://nadou25.github.io/prestige-drive/"
              data-result="1ère réservation reçue 48h après mise en ligne">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="prestige-drive.fr">
             <img src="assets/images/prestige-drive.webp" alt="Capture du site Prestige Drive — VTC premium Paris" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.pd.metric">Réservation 60s</span>
             <div class="work-overlay" aria-hidden="true">
@@ -604,7 +614,7 @@
              data-href="https://nadnad250.github.io/massage-evasion-paris/"
              data-live="https://nadnad250.github.io/massage-evasion-paris/"
              data-result="Taux de remplissage planning +35% en 2 mois">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="massage-evasion.fr">
             <img src="assets/images/massage-evasion.webp" alt="Capture du site Massage Évasion Paris — salon de bien-être" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.me.metric">Conversion ×2</span>
             <div class="work-overlay" aria-hidden="true">
@@ -635,7 +645,7 @@
              data-href="https://nadnad250.github.io/aquapro-plomberie/"
              data-live="https://nadnad250.github.io/aquapro-plomberie/"
              data-result="#1 sur 'plombier 24h Paris' depuis 4 mois">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="aquapro-plomberie.fr">
             <img src="assets/images/aquapro-plomberie.webp" alt="Capture du site AquaPro Plomberie — plombier urgence Paris" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.ap.metric">#1 Google</span>
             <div class="work-overlay" aria-hidden="true">
@@ -666,7 +676,7 @@
              data-href="https://nadnad250.github.io/storehouse-ceramique/"
              data-live="https://nadnad250.github.io/storehouse-ceramique/"
              data-result="Trafic Google multiplié par 4 en 6 mois">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="storehouse-ceramique.fr">
             <img src="assets/images/clay-storehouse.webp" alt="Capture du showroom Storehouse — céramique artisanale Paris" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.cl.metric">Trafic ×4</span>
             <div class="work-overlay" aria-hidden="true">
@@ -697,7 +707,7 @@
              data-href="https://nadnad250.github.io/clinique-veterinaire/"
              data-live="https://nadnad250.github.io/clinique-veterinaire/"
              data-result="230 RDV pris en ligne le 1er mois, multilingue actif">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="patte-et-plume.fr">
             <img src="assets/images/clinique-veterinaire.webp" alt="Capture du site Patte et Plume — clinique vétérinaire Paris" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.vc.metric">Trilingue · 4,9/5</span>
             <div class="work-overlay" aria-hidden="true">
@@ -729,7 +739,7 @@
              data-href="https://nadnad250.github.io/max-torres-coach/"
              data-live="https://nadnad250.github.io/max-torres-coach/"
              data-result="87 avis Google · 4,9/5 · 12 clients actifs en file d'attente">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="maxtorres-coach.fr">
             <img src="assets/images/max-torres-coach.webp" alt="Capture du site Max Torres — coach sportif personnel Paris" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.mt.metric">+12 clients en file</span>
             <div class="work-overlay" aria-hidden="true">
@@ -761,7 +771,7 @@
              data-href="https://nadnad250.github.io/maison-onde/"
              data-live="https://nadnad250.github.io/maison-onde/"
              data-result="Hero vidéo + carousel témoignages + form RDV intégré · multilingue FR/EN">
-          <div class="work-visual">
+          <div class="work-visual" data-domain="maison-onde.fr">
             <img src="assets/images/maison-onde.webp" alt="Capture du site Maison Ondé — salon de coiffure mixte Lyon" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="750" />
             <span class="tag-metric" data-i18n="work.mo.metric">Éditorial premium</span>
             <div class="work-overlay" aria-hidden="true">
@@ -931,6 +941,13 @@
         </div>
 
       </div>
+
+      <!-- Preuve Google (TODO Nadir : lien vers la fiche Google Business dès qu'elle existe) -->
+      <div class="testi-google reveal">
+        <svg class="google-g" viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <span class="google-stars" aria-hidden="true">★★★★★</span>
+        <span data-i18n="testi.google">Note moyenne 4,9/5 sur Google</span>
+      </div>
     </div>
   </section>
 
@@ -956,7 +973,7 @@
             <span class="service-name" data-i18n="services.p1.name">Essentiel</span>
             <span class="service-price">
               <span class="price-new">390<i>EUR</i></span>
-              <span class="price-ttc" data-i18n="services.ttc">TTC · paiement en 2× sans frais</span>
+              <span class="price-ttc" data-i18n="services.ttc">TTC</span>
             </span>
           </div>
           <p class="service-tag" data-i18n="services.p1.tag">Site 1 page · livré en 7 jours</p>
@@ -966,7 +983,8 @@
             <li data-i18n="services.p1.f3">100% mobile responsive</li>
             <li data-i18n="services.p1.f4">Mise en ligne sous 7 jours</li>
           </ul>
-          <a href="#contact" class="btn btn-ghost service-cta" data-i18n="services.p1.cta" data-magnetic data-event="cta_click_tarif_essentiel">Choisir Essentiel</a>
+          <a href="#contact" class="btn btn-ghost service-cta" data-i18n="services.p1.cta" data-event="cta_click_tarif_essentiel">Choisir Essentiel</a>
+          <span class="guarantee"><span class="guarantee-icon" aria-hidden="true">✓</span> <span data-i18n="services.pay2x">Paiement en 2× sans frais</span></span>
         </div>
 
         <!-- PRO featured -->
@@ -976,7 +994,7 @@
             <span class="service-name" data-i18n="services.p2.name">Pro</span>
             <span class="service-price">
               <span class="price-new">590<i>EUR</i></span>
-              <span class="price-ttc" data-i18n="services.ttc">TTC · paiement en 2× sans frais</span>
+              <span class="price-ttc" data-i18n="services.ttc">TTC</span>
             </span>
           </div>
           <p class="service-tag" data-i18n="services.p2.tag">Site multipage · livré en 7 jours</p>
@@ -987,8 +1005,8 @@
             <li data-i18n="services.p2.f4">Hébergement 1ère année offerte</li>
             <li data-i18n="services.p2.f5">Formulaire + bouton WhatsApp</li>
           </ul>
-          <a href="#contact" class="btn btn-primary service-cta" data-i18n="services.p2.cta" data-magnetic data-event="cta_click_tarif_pro">Choisir Pro</a>
-          <span class="guarantee"><span class="guarantee-icon" aria-hidden="true">✓</span> <span data-i18n="services.p2.guarantee">Hébergement 1ère année offert</span></span>
+          <a href="#contact" class="btn btn-primary service-cta" data-i18n="services.p2.cta" data-event="cta_click_tarif_pro">Choisir Pro</a>
+          <span class="guarantee"><span class="guarantee-icon" aria-hidden="true">✓</span> <span data-i18n="services.p2.guarantee">Devis gratuit sous 24h · Sans engagement</span></span>
         </div>
 
         <!-- PREMIUM -->
@@ -1000,7 +1018,7 @@
             <span class="service-name" data-i18n="services.p3.name">Premium</span>
             <span class="service-price">
               <span class="price-new">890<i>EUR</i></span>
-              <span class="price-ttc" data-i18n="services.ttc">TTC · paiement en 2× sans frais</span>
+              <span class="price-ttc" data-i18n="services.ttc">TTC</span>
             </span>
           </div>
           <p class="service-tag" data-i18n="services.p3.tag">Pro + animations + maintenance</p>
@@ -1011,13 +1029,10 @@
             <li data-i18n="services.p3.f4">Module blog intégré</li>
             <li data-i18n="services.p3.f5">Maintenance 3 mois incluse</li>
           </ul>
-          <a href="#contact" class="btn btn-ghost service-cta" data-i18n="services.p3.cta" data-magnetic data-event="cta_click_tarif_premium">Choisir Premium</a>
+          <a href="#contact" class="btn btn-ghost service-cta" data-i18n="services.p3.cta" data-event="cta_click_tarif_premium">Choisir Premium</a>
+          <span class="guarantee"><span class="guarantee-icon" aria-hidden="true">✓</span> <span data-i18n="services.pay2x">Paiement en 2× sans frais</span></span>
         </div>
       </div>
-
-      <p class="services-note reveal" data-i18n="services.note">
-        Paiement en 2× sans frais · Hébergement 1ère année offerte sur Pro et Premium
-      </p>
     </div>
   </section>
 
@@ -1059,7 +1074,7 @@
           <div class="process-step-body">
             <span class="process-step-time" data-i18n="process.s2.time">Maquette (Jour 2-3)</span>
             <h3 data-i18n="process.s2.title">Maquette</h3>
-            <p data-i18n="process.s2.text">Tu vois ton futur site en taille réelle, on ajuste ensemble. Pas de « tu verras à la fin », tu valides avant qu'on code.</p>
+            <p data-i18n="process.s2.text">Tu vois ton futur site en taille réelle, on ajuste ensemble. Pas de « tu verras à la fin », tu valides avant qu'on code.</p>
           </div>
         </div>
 
@@ -1107,7 +1122,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q1">En combien de temps mon site sera-t-il en ligne ?</span>
+            <span data-i18n="faq.q1">En combien de temps mon site sera-t-il en ligne ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1119,7 +1134,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q2">Comment se passe le paiement ?</span>
+            <span data-i18n="faq.q2">Comment se passe le paiement ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1131,7 +1146,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q3">Qui s'occupe de l'hébergement et du nom de domaine ?</span>
+            <span data-i18n="faq.q3">Qui s'occupe de l'hébergement et du nom de domaine ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1143,7 +1158,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q4">Puis-je modifier mon site moi-même après la livraison ?</span>
+            <span data-i18n="faq.q4">Puis-je modifier mon site moi-même après la livraison ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1155,7 +1170,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q5">Est-ce que le site sera visible sur Google ?</span>
+            <span data-i18n="faq.q5">Est-ce que le site sera visible sur Google ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1167,7 +1182,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q6">Mon site sera-t-il adapté aux mobiles ?</span>
+            <span data-i18n="faq.q6">Mon site sera-t-il adapté aux mobiles ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1179,7 +1194,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q7">Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?</span>
+            <span data-i18n="faq.q7">Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1191,7 +1206,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span data-i18n="faq.q8">À qui appartient le site une fois livré ?</span>
+            <span data-i18n="faq.q8">À qui appartient le site une fois livré ?</span>
             <span class="faq-chevron" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
@@ -1251,9 +1266,9 @@
               <label for="contactPlan" data-i18n="form.label.plan">Type de projet</label>
               <select id="contactPlan" name="plan" aria-describedby="contactPlan-desc">
                 <option value="" data-i18n="form.plan.choose">Choisir une formule</option>
-                <option value="essentiel" data-i18n="form.plan.essentiel">Essentiel — 390 EUR</option>
-                <option value="pro" data-i18n="form.plan.pro">Pro — 590 EUR</option>
-                <option value="premium" data-i18n="form.plan.premium">Premium — 890 EUR</option>
+                <option value="essentiel" data-i18n="form.plan.essentiel">Essentiel — 390 €</option>
+                <option value="pro" data-i18n="form.plan.pro">Pro — 590 €</option>
+                <option value="premium" data-i18n="form.plan.premium">Premium — 890 €</option>
                 <option value="custom" data-i18n="form.plan.custom">Sur-mesure</option>
               </select>
             </div>
@@ -1270,10 +1285,11 @@
               <label for="website">Ne pas remplir</label>
               <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
             </div>
-            <button type="submit" class="btn btn-primary btn-lg form-submit" data-i18n="form.submit">
-              Envoyer la demande
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              <span data-i18n="form.submit">Recevoir mon devis gratuit</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
+            <p class="form-reassure" data-i18n="form.reassure">✓ Gratuit · ✓ Réponse sous 24h · ✓ Sans engagement</p>
           </form>
           <!-- Message de succès -->
           <div class="form-success" id="formSuccess" aria-live="polite" aria-hidden="true">
@@ -1360,6 +1376,16 @@
     </div>
   </div>
 </footer>
+
+<!-- Barre CTA mobile — chemin permanent vers le devis (apparaît après le hero) -->
+<div class="cta-bar-mobile" id="ctaBarMobile" aria-hidden="true">
+  <a href="#contact" class="btn btn-primary cta-bar-btn" data-event="cta_click_devis">
+    <span data-i18n="ctabar.cta">Devis gratuit — réponse 24h</span>
+  </a>
+  <a href="https://wa.me/33612345678" target="_blank" rel="noopener noreferrer" class="cta-bar-wa" aria-label="Contacter via WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
 
 <script src="assets/js/main.js" defer></script>
 

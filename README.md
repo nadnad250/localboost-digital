@@ -1,4 +1,4 @@
-# LocalBoost Digital — Landing Portfolio
+# Clicboost — Landing Portfolio
 
 Landing page premium bilingue (FR/EN) — Studio web freelance spécialisé TPE & artisans.
 
@@ -46,11 +46,11 @@ Puis ouvrir http://localhost:8004
 
 ## Personnalisation rapide
 
-- **Nom de marque** : "LocalBoost Digital" — déjà mis à jour partout
+- **Nom de marque** : "Clicboost" — déjà mis à jour partout
 - **Tarifs** : section `.services-grid` dans `index.html`
 - **Email** : `merouaninadir@gmail.com`
 - **WhatsApp** : remplacer `33612345678` dans `index.html` (2 occurrences) et `main.js`
-- **Calendly** : remplacer `https://calendly.com/localboost/15min`
+- **Calendly** : remplacer `https://calendly.com/merouaninadir`
 - **Couleur principale** : `--accent: #F5C518` dans `styles.css`
 - **Dark mode par défaut** : changer `data-theme="light"` en `data-theme="dark"` sur `<html>`
 

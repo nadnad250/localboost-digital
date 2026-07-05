@@ -1,5 +1,5 @@
 /* ============================================
-   LOCALBOOST DIGITAL — Landing JS
+   CLICBOOST — Landing JS
    i18n · Dark mode · Magnetic · Tilt · Reveal
    Lightbox · FAQ · Contact form · WhatsApp
    ============================================ */
@@ -13,11 +13,11 @@
   const I18N = {
     fr: {
       /* Meta */
-      'meta.title': 'LocalBoost Digital — Site vitrine pour artisans, livré en 7 jours dès 390 EUR',
+      'meta.title': 'Clicboost — Site vitrine pour artisans, livré en 7 jours dès 390 EUR',
       'meta.desc': 'Studio web freelance à Paris/Versailles. Site vitrine professionnel pour TPE et artisans, livré en 7 jours à partir de 390 EUR. Devis gratuit en 24h.',
 
       /* Brand */
-      'brand.name': 'LocalBoost',
+      'brand.name': 'Clic',
 
       /* Nav */
       'nav.works': 'Réalisations',
@@ -273,11 +273,11 @@
 
     en: {
       /* Meta */
-      'meta.title': 'LocalBoost Digital — Professional showcase website for tradespeople, delivered in 7 days from £390',
+      'meta.title': 'Clicboost — Professional showcase website for tradespeople, delivered in 7 days from £390',
       'meta.desc': 'Freelance web studio in Paris/Versailles. Professional showcase websites for SMEs and tradespeople, delivered in 7 days from EUR 390. Free quote in 24h.',
 
       /* Brand */
-      'brand.name': 'LocalBoost',
+      'brand.name': 'Clic',
 
       /* Nav */
       'nav.works': 'Work',
@@ -1092,7 +1092,7 @@
 
       /* Simulation envoi (ici: mailto fallback ou fetch API) */
       const data = new FormData(contactForm);
-      const subject = encodeURIComponent('Nouvelle demande de devis — LocalBoost Digital');
+      const subject = encodeURIComponent('Nouvelle demande de devis — Clicboost');
       const body = encodeURIComponent(
         `Nom : ${data.get('name')}\n` +
         `Email : ${data.get('email')}\n` +

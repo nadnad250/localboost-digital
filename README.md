@@ -48,7 +48,7 @@ Puis ouvrir http://localhost:8004
 
 - **Nom de marque** : "Clicboost" — déjà mis à jour partout
 - **Tarifs** : section `.services-grid` dans `index.html`
-- **Email** : `merouaninadir@gmail.com`
+- **Email** : `contact@clicboost.fr`
 - **WhatsApp** : remplacer `33612345678` dans `index.html` (2 occurrences) et `main.js`
 - **Calendly** : remplacer `https://calendly.com/merouaninadir`
 - **Couleur principale** : `--accent: #F5C518` dans `styles.css`

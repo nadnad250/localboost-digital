@@ -1116,7 +1116,7 @@
       }
 
       setTimeout(() => {
-        window.location.href = `mailto:merouaninadir@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:contact@clicboost.fr?subject=${subject}&body=${body}`;
 
         /* Afficher message de succès */
         if (formSuccess) {

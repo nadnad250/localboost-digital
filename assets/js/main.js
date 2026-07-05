@@ -44,6 +44,8 @@
       'hero.stat3': '4,9/5 sur Google',
       'hero.scroll': 'Défiler',
       'hero.photo.tag': '2 projets max ce mois-ci',
+      'hero.showcase.badge': 'Livré en 7 jours',
+      'hero.showcase.metric': 'de demandes de devis',
 
       /* Works */
       'works.title.l1': 'Réalisations',
@@ -304,6 +306,8 @@
       'hero.stat3': '4.9/5 on Google',
       'hero.scroll': 'Scroll',
       'hero.photo.tag': '2 projects max this month',
+      'hero.showcase.badge': 'Delivered in 7 days',
+      'hero.showcase.metric': 'more quote requests',
 
       /* Works */
       'works.title.l1': 'Recent',

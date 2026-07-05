@@ -290,7 +290,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <!-- Preload critique LCP -->
-<link rel="preload" as="image" href="assets/images/profile.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/images/artisan-volt.webp" fetchpriority="high" />
 <link rel="preload" as="style" href="assets/css/styles.css" fetchpriority="high" />
 
 <!-- Fonts chargement non-bloquant -->
@@ -478,21 +478,25 @@
         </div>
       </div>
 
-      <!-- Photo profil -->
-      <div class="hero-photo fade-up d3">
-        <picture>
-          <source srcset="assets/images/profile-mobile.webp" media="(max-width: 768px)" type="image/webp" />
-          <img
-            src="assets/images/profile.webp"
-            alt="Portrait de Nadir Merouani, créateur de Clicboost, studio web freelance à Paris et Versailles"
-            fetchpriority="high"
-            width="900" height="1125"
-          />
-        </picture>
-        <span class="about-photo-tag" role="status">
-          <span class="dot-pulse" aria-hidden="true"></span>
-          <span data-i18n="hero.photo.tag">2 projets max ce mois-ci</span>
-        </span>
+      <!-- Aperçu produit : un site livré dans un navigateur (remplace la photo) -->
+      <div class="hero-showcase fade-up d3">
+        <div class="hero-window">
+          <div class="hero-window-bar" aria-hidden="true">
+            <span class="hw-dot"></span><span class="hw-dot"></span><span class="hw-dot"></span>
+            <span class="hw-url">artisan-volt.fr</span>
+          </div>
+          <div class="hero-window-shot">
+            <img src="assets/images/artisan-volt.webp" alt="Exemple de site vitrine livré par Clicboost" width="1200" height="750" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+        <div class="hero-float hero-float-top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="hero.showcase.badge">Livré en 7 jours</span>
+        </div>
+        <div class="hero-float hero-float-bottom">
+          <span class="hero-float-metric">+40%</span>
+          <span data-i18n="hero.showcase.metric">de demandes de devis</span>
+        </div>
       </div>
     </div>
 

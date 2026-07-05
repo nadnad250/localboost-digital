@@ -581,6 +581,19 @@ em { font-style: normal; }
   padding: 140px 0 80px;
   overflow: hidden;
 }
+/* Grille de points subtile — texture « tech » épurée */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(10, 10, 10, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 72% 62% at 50% 42%, #000 28%, transparent 78%);
+          mask-image: radial-gradient(ellipse 72% 62% at 50% 42%, #000 28%, transparent 78%);
+}
+[data-theme="dark"] .hero::before { background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px); }
 
 /* Blobs décoratifs hero */
 .hero-blobs {
@@ -803,89 +816,81 @@ em { font-style: normal; }
 }
 
 /* Photo hero */
-.hero-photo {
+/* ══ Hero showcase — aperçu d'un site livré (remplace la photo) ══ */
+.hero-showcase {
   position: relative;
-  border-radius: var(--r-2xl);
-  overflow: visible;
-  aspect-ratio: 4/5;
-  background: var(--bg-2);
-  box-shadow: var(--shadow-card);
-}
-.hero-photo img {
+  justify-self: end;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--r-2xl);
-  display: block;
+  max-width: 520px;
+  animation: heroFloat 6.5s var(--ease) infinite;
 }
-.hero-photo > .about-photo-tag {
-  position: absolute;
-  top: 20px; left: 20px;
+@keyframes heroFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+.hero-window {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  box-shadow: 0 44px 84px -34px rgba(10, 10, 10, 0.34), 0 12px 30px -14px rgba(10, 10, 10, 0.14);
+  transform: perspective(1400px) rotateY(-7deg) rotateX(3deg);
+  transition: transform 0.6s var(--ease);
 }
-.hero-photo > .about-photo-card {
-  position: absolute;
-  bottom: 20px; right: 20px;
-  left: auto;
+.hero-window:hover { transform: perspective(1400px) rotateY(0deg) rotateX(0deg); }
+[data-theme="dark"] .hero-window { box-shadow: 0 44px 90px -34px rgba(0, 0, 0, 0.7); }
+
+.hero-window-bar {
+  display: flex; align-items: center; gap: 7px;
+  height: 34px; padding: 0 14px;
+  background: var(--surface-1);
+  border-bottom: 1px solid var(--border);
+}
+.hw-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.hw-dot:nth-child(1) { background: #FF5F57; }
+.hw-dot:nth-child(2) { background: #FEBC2E; }
+.hw-dot:nth-child(3) { background: #28C840; }
+.hw-url {
+  margin-left: 10px; flex: 1;
+  font-family: var(--font-mono); font-size: 11px; color: var(--fg-3);
+  background: var(--bg); border-radius: 6px; padding: 3px 12px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hero-window-shot { aspect-ratio: 16 / 10; overflow: hidden; }
+.hero-window-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+
+/* Cartes flottantes — réassurance + résultat mesuré */
+.hero-float {
+  position: absolute; z-index: 3;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 14px; border-radius: 13px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 36px -14px rgba(10, 10, 10, 0.24);
+  font-size: 13px; font-weight: 600; color: var(--fg); white-space: nowrap;
+  animation: heroFloat 6.5s var(--ease) infinite;
+}
+[data-theme="dark"] .hero-float { background: rgba(20, 20, 27, 0.9); }
+.hero-float svg { flex-shrink: 0; }
+.hero-float-top { top: -18px; left: -26px; animation-delay: -1.2s; }
+.hero-float-bottom { bottom: -20px; right: -20px; animation-delay: -3.4s; }
+.hero-float-metric { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--accent-deep); }
+[data-theme="dark"] .hero-float-metric { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-showcase, .hero-float { animation: none; }
 }
 
-/* Tablet : photo plus petite + au-dessus du texte */
-@media (max-width: 1024px) and (min-width: 481px) {
-  .hero-photo {
-    max-width: 360px;
-    aspect-ratio: 4/5;
-    margin: 0 auto;
-    order: -1;
-  }
+/* Tablette / mobile : visuel centré sous le texte, à plat (plus propre) */
+@media (max-width: 1024px) {
+  .hero-showcase { justify-self: center; max-width: 480px; margin-top: 14px; animation: none; }
+  .hero-window { transform: none; }
+  .hero-float-top { left: 0; }
+  .hero-float-bottom { right: 0; }
 }
-
-/* Mobile : photo en BANDEAU compact (16/10, ≤30vh) — l'offre reste au premier écran */
-@media (max-width: 480px) {
-  .hero-photo {
-    max-width: 100% !important;
-    width: 100%;
-    aspect-ratio: 16/10;           /* bandeau : le visage rassure sans manger l'écran */
-    max-height: 30vh;
-    margin: 0 auto 6px;
-    transform: none !important;    /* kill parallax sur mobile */
-    will-change: auto;
-    border-radius: 20px;
-    /* Ombre douce pour décoller du fond clair */
-    box-shadow: 0 18px 44px -22px rgba(0, 0, 0, 0.22),
-                0 5px 16px -8px rgba(0, 0, 0, 0.10);
-  }
-  .hero-photo img {
-    border-radius: 20px;
-    /* Cadrage bandeau : viser le visage (haut de l'image) */
-    object-position: center 22%;
-    /* B&W plus dense pour le contraste sur fond clair */
-    filter: contrast(1.04) brightness(0.98);
-  }
-  .hero-photo > .about-photo-tag {
-    top: 12px; left: 12px;
-    font-size: 10px;
-    padding: 5px 10px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background: rgba(245, 197, 24, 0.92);
-    color: var(--accent-ink);
-    border-radius: 999px;
-  }
-  .hero-photo > .about-photo-card {
-    bottom: 12px; right: 12px;
-    padding: 8px 14px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background: rgba(255, 255, 255, 0.92);
-  }
-  .hero-photo-card-value { font-size: 18px; }
-  .hero-photo-card-label { font-size: 10px; }
-}
-
-/* Très petit (≤360px) : bandeau conservé, hauteur réduite */
-@media (max-width: 360px) {
-  .hero-photo {
-    max-height: 26vh;
-  }
+@media (max-width: 560px) {
+  .hero-showcase { max-width: 100%; }
+  .hero-float { display: none; }   /* épuré sur petit écran */
+  .hero-window-bar { height: 30px; }
 }
 
 .hero-scroll-hint {

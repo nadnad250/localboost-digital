@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nadnad250.github.io/localboost-digital/sitemap.xml
+Sitemap: https://clicboost.fr/sitemap.xml

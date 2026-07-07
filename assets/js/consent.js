@@ -2,7 +2,8 @@
    Clicboost — Bandeau de consentement (cookies & mesure d'audience)
    Autonome : fonctionne sur toutes les pages (home + mentions).
    - Mémoire du choix : localStorage « cb-consent » (accepted | refused)
-   - Google Analytics (gtag) chargé UNIQUEMENT si accepté (dépose des cookies)
+   - Google Analytics en Consent Mode v2 : balise présente sur toutes les pages
+     mais « denied » par défaut (aucun cookie) ; passe en « granted » à l'acceptation
    - Les préférences fonctionnelles (thème, langue) restent exemptées
    - Réouvrable via tout élément [data-cb-open-consent]
    ============================================================ */
@@ -10,7 +11,6 @@
   'use strict';
 
   var KEY = 'cb-consent';
-  var GA_ID = 'G-4MEBVWBRNJ';
 
   var T = {
     fr: {
@@ -45,23 +45,17 @@
     try { localStorage.setItem(KEY, v); } catch (e) {}
   }
 
-  var analyticsLoaded = false;
-  function loadAnalytics() {
-    if (analyticsLoaded) return;
-    analyticsLoaded = true;
-    // Google Analytics 4 (gtag) — chargé uniquement après consentement
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GA_ID, { anonymize_ip: true });
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
-    // Les clics déjà instrumentés (data-event) sont transmis à GA
-    window.plausible = function (name) { try { gtag('event', name); } catch (e) {} };
+  // gtag est initialisé dans le <head> (Consent Mode, « denied » par défaut).
+  // Ici on ne fait que mettre à jour l'état du consentement.
+  function updateConsent(granted) {
+    try {
+      if (window.gtag) window.gtag('consent', 'update', {
+        analytics_storage: granted ? 'granted' : 'denied'
+      });
+    } catch (e) {}
   }
+  // Les clics instrumentés (data-event) sont transmis à GA
+  window.plausible = function (name) { try { if (window.gtag) window.gtag('event', name); } catch (e) {} };
 
   var bannerEl = null;
   var lastFocus = null;
@@ -77,7 +71,7 @@
 
   function decide(choice) {
     write(choice);
-    if (choice === 'accepted') loadAnalytics();
+    updateConsent(choice === 'accepted');
     removeBanner();
   }
 
@@ -151,7 +145,7 @@
 
   // Décision initiale
   var choice = read();
-  if (choice === 'accepted') { loadAnalytics(); return; }
-  if (choice === 'refused') { return; }
+  if (choice === 'accepted') { updateConsent(true); return; }
+  if (choice === 'refused') { updateConsent(false); return; }
   buildBanner();
 })();

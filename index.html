@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#F5C518" />
 
+<!-- Google Analytics 4 (Consent Mode v2 — cookies uniquement apres consentement) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",wait_for_update:500});
+  try{if(localStorage.getItem("cb-consent")==="accepted"){gtag("consent","update",{analytics_storage:"granted"});}}catch(e){}
+  gtag("js",new Date());
+  gtag("config","G-4MEBVWBRNJ",{anonymize_ip:true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MEBVWBRNJ"></script>
+
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
@@ -302,7 +313,7 @@
 <!-- Preload critique LCP -->
 <link rel="preload" as="image" href="assets/images/wall/artisan-volt.webp" fetchpriority="high" />
 <link rel="preload" as="image" href="assets/images/wall/clay-storehouse.webp" fetchpriority="high" />
-<link rel="preload" as="style" href="assets/css/styles.css?v=12" fetchpriority="high" />
+<link rel="preload" as="style" href="assets/css/styles.css?v=13" fetchpriority="high" />
 
 <!-- Fonts chargement non-bloquant -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -326,7 +337,7 @@
   button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 </style>
 
-<link rel="stylesheet" href="assets/css/styles.css?v=12" />
+<link rel="stylesheet" href="assets/css/styles.css?v=13" />
 </head>
 <body class="has-wall-hero">
 
@@ -1494,6 +1505,6 @@
 
 <script src="assets/js/main.js?v=12" defer></script>
 <!-- Plausible : chargé par assets/js/consent.js uniquement après consentement (RGPD) -->
-<script src="assets/js/consent.js?v=2" defer></script>
+<script src="assets/js/consent.js?v=3" defer></script>
 </body>
 </html>

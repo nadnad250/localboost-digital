@@ -21,6 +21,7 @@
 
       /* Nav */
       'nav.works': 'Réalisations',
+      'nav.servicespage': 'Services',
       'nav.about': 'À propos',
       'nav.testi': 'Avis',
       'nav.services': 'Tarifs',
@@ -321,6 +322,7 @@
 
       /* Nav */
       'nav.works': 'Work',
+      'nav.servicespage': 'Services',
       'nav.about': 'About',
       'nav.testi': 'Reviews',
       'nav.services': 'Pricing',

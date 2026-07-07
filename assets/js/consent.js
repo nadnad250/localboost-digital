@@ -2,7 +2,7 @@
    Clicboost — Bandeau de consentement (cookies & mesure d'audience)
    Autonome : fonctionne sur toutes les pages (home + mentions).
    - Mémoire du choix : localStorage « cb-consent » (accepted | refused)
-   - Plausible (mesure d'audience sans cookie) chargé UNIQUEMENT si accepté
+   - Google Analytics (gtag) chargé UNIQUEMENT si accepté (dépose des cookies)
    - Les préférences fonctionnelles (thème, langue) restent exemptées
    - Réouvrable via tout élément [data-cb-open-consent]
    ============================================================ */
@@ -10,12 +10,12 @@
   'use strict';
 
   var KEY = 'cb-consent';
-  var DOMAIN = 'clicboost.fr';
+  var GA_ID = 'G-4MEBVWBRNJ';
 
   var T = {
     fr: {
       title: 'Votre vie privée',
-      body: 'Ce site utilise une mesure d’audience anonyme (sans cookie publicitaire, sans revente de données) et conserve vos préférences (thème, langue). Vous pouvez accepter ou refuser la mesure d’audience.',
+      body: 'Ce site utilise des cookies de mesure d’audience (Google Analytics) pour améliorer votre expérience, et conserve vos préférences (thème, langue). Vous pouvez accepter ou refuser ces cookies.',
       accept: 'Tout accepter',
       refuse: 'Refuser',
       more: 'En savoir plus',
@@ -23,7 +23,7 @@
     },
     en: {
       title: 'Your privacy',
-      body: 'This site uses privacy-friendly, cookieless analytics (no ad cookies, no data resale) and remembers your preferences (theme, language). You can accept or decline analytics.',
+      body: 'This site uses analytics cookies (Google Analytics) to improve your experience, and remembers your preferences (theme, language). You can accept or decline these cookies.',
       accept: 'Accept all',
       refuse: 'Decline',
       more: 'Learn more',
@@ -45,16 +45,22 @@
     try { localStorage.setItem(KEY, v); } catch (e) {}
   }
 
-  var plausibleLoaded = false;
-  function loadPlausible() {
-    if (plausibleLoaded) return;
-    plausibleLoaded = true;
-    window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
+  var analyticsLoaded = false;
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+    // Google Analytics 4 (gtag) — chargé uniquement après consentement
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
     var s = document.createElement('script');
-    s.defer = true;
-    s.setAttribute('data-domain', DOMAIN);
-    s.src = 'https://plausible.io/js/script.outbound-links.tagged-events.js';
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     document.head.appendChild(s);
+    // Les clics déjà instrumentés (data-event) sont transmis à GA
+    window.plausible = function (name) { try { gtag('event', name); } catch (e) {} };
   }
 
   var bannerEl = null;
@@ -71,7 +77,7 @@
 
   function decide(choice) {
     write(choice);
-    if (choice === 'accepted') loadPlausible();
+    if (choice === 'accepted') loadAnalytics();
     removeBanner();
   }
 
@@ -145,7 +151,7 @@
 
   // Décision initiale
   var choice = read();
-  if (choice === 'accepted') { loadPlausible(); return; }
+  if (choice === 'accepted') { loadAnalytics(); return; }
   if (choice === 'refused') { return; }
   buildBanner();
 })();

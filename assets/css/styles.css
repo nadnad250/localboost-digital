@@ -502,6 +502,9 @@ em { font-style: normal; }
   color: var(--fg);
 }
 .nav-mobile a:not(.btn) { padding: 8px 0; border-bottom: 1px solid var(--border); }
+/* CTA jaune : texte toujours sombre (lisible), même en thème sombre */
+.nav-mobile a.btn-primary,
+.nav-mobile a.btn-primary > * { color: var(--accent-ink); }
 
 /* ============================================
    BUTTONS

@@ -3814,3 +3814,139 @@ body.has-wall-hero .nav:not(.scrolled) .burger span { background: #F7F5EF; }
   .svc-checklist { grid-template-columns: 1fr; }
   .svc-cta-row .btn { width: 100%; justify-content: center; }
 }
+
+
+/* ============================================================
+   REFONTE CONVERSION/CRÉDIBILITÉ — garanties, démos, maillage
+   ============================================================ */
+
+/* ── Badge « Site démo » (transparence assumée) ── */
+.tag-demo {
+  background: var(--accent-soft, rgba(245, 197, 24, 0.16)) !important;
+  color: var(--accent-deep) !important;
+  border-color: rgba(245, 197, 24, 0.4) !important;
+  font-weight: 600;
+}
+[data-theme="dark"] .tag-demo { color: var(--accent) !important; }
+
+/* ── Paragraphe SEO sous le titre Réalisations ── */
+.works-seo {
+  max-width: 680px;
+  margin: 10px auto 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--fg-3);
+  text-align: inherit;
+}
+
+/* ── CTA de conversion sous la grille works ── */
+.works-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  margin: var(--sp-6) auto 0;
+  text-align: center;
+}
+.works-cta p {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin: 0;
+}
+
+/* ── Garanties (remplace les témoignages) ── */
+.pledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--sp-4);
+}
+.pledge-card {
+  position: relative;
+  padding: var(--sp-6) var(--sp-5);
+  border-radius: var(--r-xl);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--d-mid) var(--ease), border-color var(--d-mid) var(--ease), box-shadow var(--d-mid) var(--ease);
+}
+[data-theme="dark"] .pledge-card { background: var(--surface-1); }
+.pledge-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-2);
+  box-shadow: 0 20px 50px -22px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(245, 197, 24, 0.12);
+}
+.pledge-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent-deep);
+}
+[data-theme="dark"] .pledge-num { color: var(--accent); }
+.pledge-card h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.18rem;
+  letter-spacing: -0.01em;
+  margin: 10px 0 8px;
+  color: var(--fg);
+}
+.pledge-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--fg-3);
+  margin: 0;
+}
+
+/* ── Ligne comparative anti-abonnement (tarifs) ── */
+.services-compare {
+  max-width: 660px;
+  margin: var(--sp-6) auto 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--fg-2);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px dashed rgba(245, 197, 24, 0.45);
+  border-radius: var(--r-lg);
+  background: var(--accent-soft, rgba(245, 197, 24, 0.08));
+}
+
+/* ── Erreur d'envoi du formulaire ── */
+.form-send-error {
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #b91c1c;
+}
+[data-theme="dark"] .form-send-error { color: #fca5a5; }
+.form-send-error a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Maillage footer : liens services ── */
+.footer-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: var(--sp-3) 0;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+.footer-services a {
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color var(--d-mid) var(--ease);
+}
+.footer-services a:hover { color: var(--accent-deep); }
+[data-theme="dark"] .footer-services a:hover { color: var(--accent); }
+
+@media (max-width: 620px) {
+  .works-cta .btn { width: 100%; justify-content: center; }
+  .services-compare { font-size: 14px; }
+}

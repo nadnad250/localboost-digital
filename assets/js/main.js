@@ -13,7 +13,7 @@
   const I18N = {
     fr: {
       /* Meta */
-      'meta.title': 'Clicboost — Site vitrine pour artisans, livré en 7 jours dès 390 EUR',
+      'meta.title': "Création de site vitrine pour artisans et TPE dès 390 € — livré en 7 jours | Clicboost",
       'meta.desc': 'Studio web freelance. Création de sites vitrines pro pour artisans et TPE partout en France, livrés en 7 jours dès 390 €. SEO local ciblé. Devis gratuit sous 24h.',
 
       /* Brand */
@@ -23,39 +23,43 @@
       'nav.works': 'Réalisations',
       'nav.servicespage': 'Services',
       'nav.about': 'À propos',
-      'nav.testi': 'Avis',
+      'nav.testi': "Garanties",
+      'pledge.title.l1': "Des garanties,",
+      'pledge.title.l2': "pas des promesses.",
+      'pledge.sub': "Clicboost démarre : plutôt que d'afficher de faux avis, voici des engagements concrets — écrits noir sur blanc dans chaque devis.",
+      'pledge.p1.title': "Maquette validée avant le code",
+      'pledge.p1.text': "Vous voyez votre futur site en taille réelle dès le jour 2-3 — rien n'est développé tant que vous n'avez pas validé.",
+      'pledge.p2.title': "Livré en 7 jours",
+      'pledge.p2.text': "Le délai court dès la validation de la maquette et la réception de votre contenu — et il figure sur le devis.",
+      'pledge.p3.title': "Le site vous appartient à 100%",
+      'pledge.p3.text': "Code source, nom de domaine, accès : tout est remis à votre nom à la livraison. Aucun abonnement obligatoire.",
+      'pledge.p4.title': "Paiement en 2× sans frais",
+      'pledge.p4.text': "50 % à la commande, 50 % à la livraison — une fois le site en ligne et validé par vous.",
+      'pledge.note': "Vous serez parmi nos premiers clients — et les premiers avis publiés ici, avec un lien vérifiable vers Google.",
       'nav.services': 'Tarifs',
       'nav.contact': 'Contact',
       'nav.cta': 'Devis gratuit',
 
       /* Hero */
       'hero.eyebrow': 'Partout en France · 100% en ligne',
-      'hero.badge1': 'Devis 24h',
-      'hero.badge2': 'Sans engagement',
-      'hero.badge3': 'Partout en France',
-      'hero.h1.l1': 'Ton site vitrine',
+      'hero.h1.l1': "Votre site vitrine",
       'hero.h1.em1': 'en 7 jours.',
-      'hero.sub': 'Pour artisans et TPE partout en France. Devis gratuit sous 24h.',
+      'hero.sub': "Un site professionnel qui transforme les recherches Google en appels et en demandes de devis. Pour artisans, commerçants et TPE.",
       'hero.price.amount': 'À partir de 390 € TTC',
       'hero.price.terms': 'Paiement en 2× sans frais',
       'hero.cta1': 'Demander un devis gratuit',
-      'hero.cta2': 'Voir 8 sites livrés',
-      'hero.stat1': 'Sites livrés',
-      'hero.stat2': 'Délai moyen',
-      'hero.stat3': '4,9/5 sur Google',
+      'hero.stat3': "8 démos en ligne — jugez sur pièces",
       'hero.scroll': 'Défiler',
-      'hero.photo.tag': '2 projets max ce mois-ci',
-      'hero.showcase.badge': 'Livré en 7 jours',
-      'hero.showcase.metric': 'de demandes de devis',
-      'hero.avail': 'Disponible — 2 projets ce mois-ci',
-      'hero.reply24': 'Réponse sous 24h',
-      'hero.wallstat1': '14 sites livrés',
-      'hero.wallstat2': 'Délai moyen 7 jours',
-
+      'hero.avail': "Studio solo — places limitées chaque mois",
+      'hero.reply24': "Payé une fois, à vous pour toujours",
       /* Works */
       'works.title.l1': 'Réalisations',
       'works.title.l2': 'récentes',
-      'works.sub': 'Huit secteurs. Huit identités visuelles. Une même exigence.',
+      'works.sub': "8 métiers, 8 sites de démonstration en ligne — voici exactement ce que vous auriez pour 390 à 890 €.",
+      'works.seo': "Création de site internet vitrine, référencement local, fiche Google Business : chaque démo ci-dessous est un vrai site en ligne. Cliquez, testez la vitesse — c'est ce niveau que vous recevez.",
+      'work.demo': "Site démo",
+      'works.cta.text': "Votre métier mérite le même niveau de site.",
+      'works.cta.btn': "Demander mon devis gratuit",
       'work.view': 'Voir le site',
       'work.view.live': 'Voir le site live →',
 
@@ -70,91 +74,59 @@
       /* Work cards — descriptions */
       'work.av.tag1': 'Électricien',
       'work.av.tag2': 'Versailles',
-      'work.av.metric': '+47% demandes',
-      'work.av.desc': "Olivier perdait des chantiers parce qu'il ratait des appels en intervention. Son site capture maintenant les devis 24h/24, sans qu'il décroche.",
-      'work.av.result': '+40% de demandes de devis via Google en 3 mois',
-
+      'work.av.metric': "Devis 24h/24",
+      'work.av.desc': "Pensé pour l'électricien qui rate des appels en intervention : le site capture les demandes de devis 24h/24, même quand vous êtes sur un chantier.",
+      'work.av.result': "Formulaire de devis 24h/24 + optimisation Google locale",
       'work.pd.tag1': 'VTC Premium',
       'work.pd.tag2': 'Paris',
       'work.pd.metric': 'Réservation 60s',
-      'work.pd.desc': "Un client haut de gamme te juge en 8 secondes. Hero vidéo cinéma, identité luxe, réservation en 3 clics. Le visiteur réserve.",
-      'work.pd.result': '1ère réservation reçue 48h après mise en ligne',
-
+      'work.pd.desc': "Un client haut de gamme vous juge en 8 secondes. Hero vidéo cinéma, identité luxe, parcours de réservation en 3 clics.",
+      'work.pd.result': "Hero vidéo cinéma + réservation en 3 étapes",
       'work.me.tag1': 'Bien-être',
       'work.me.tag2': 'Paris 8e',
-      'work.me.metric': 'Conversion ×2',
-      'work.me.desc': "Audrey perdait 7 visiteurs sur 10 avant qu'ils voient ses prestations. Refonte éditoriale, vidéo immersive, RDV en ligne.",
-      'work.me.result': 'Taux de remplissage planning +35% en 2 mois',
-
+      'work.me.metric': "RDV en ligne",
+      'work.me.desc': "Conçu pour retenir le visiteur dès le premier écran : ambiance éditoriale, vidéo immersive et prise de RDV en ligne intégrée.",
+      'work.me.result': "Prise de RDV en ligne intégrée + design premium apaisant",
       'work.ap.tag1': 'Plombier 24/7',
       'work.ap.tag2': 'Paris',
-      'work.ap.metric': '#1 Google',
-      'work.ap.desc': "Une fuite à 23h, ton client veut juste appeler vite. Bouton d'urgence permanent, fiches par arrondissement, position #1 sur Google.",
-      'work.ap.result': "#1 sur 'plombier 24h Paris' depuis 4 mois",
-
+      'work.ap.metric': "Urgence 24/7",
+      'work.ap.desc': "Une fuite à 23h : votre client veut appeler tout de suite. Bouton d'urgence permanent, pages par arrondissement, structure pensée pour le référencement local.",
+      'work.ap.result': "Bouton d'urgence permanent + pages par arrondissement",
       'work.cl.tag1': 'Céramique',
       'work.cl.tag2': 'Showroom Paris',
-      'work.cl.metric': 'Trafic ×4',
-      'work.cl.desc': "Un showroom artisanal noyé sous les géants e-commerce. Design éditorial qui présente chaque pièce comme dans un musée.",
-      'work.cl.result': 'Trafic Google multiplié par 4 en 6 mois',
-
+      'work.cl.metric': "Design éditorial",
+      'work.cl.desc': "Pour l'artisan d'art noyé sous les géants du e-commerce : un design éditorial qui présente chaque pièce comme dans une galerie.",
+      'work.cl.result': "Design éditorial galerie + fiches produit soignées",
       'work.vc.tag1': 'Clinique vétérinaire',
       'work.vc.tag2': 'Paris 11e',
       'work.vc.tag3': 'Nouveau',
-      'work.vc.metric': 'Trilingue · 4,9/5',
-      'work.vc.desc': "Camille voulait faciliter les RDV et accueillir une clientèle internationale. Site en français, anglais et espagnol, RDV en 2 minutes, urgences 7j/7.",
-      'work.vc.result': '230 RDV pris en ligne le 1er mois, multilingue actif',
-
+      'work.vc.metric': "Trilingue FR/EN/ES",
+      'work.vc.desc': "Pensé pour une clientèle internationale : site trilingue français, anglais, espagnol, prise de RDV en 2 minutes, urgences 7j/7.",
+      'work.vc.result': "Trilingue FR/EN/ES + RDV en ligne en 2 minutes",
       'work.mt.tag1':   'Coach sportif',
       'work.mt.tag2':   'Paris 8e',
       'work.mt.tag3':   'Nouveau',
-      'work.mt.metric': '+12 clients en file',
-      'work.mt.desc':   "Max voulait un site qui pré-qualifie ses prospects avant le premier appel. Typo massive, garantie résultats affichée, formulaire intégré. Plus de coaching, moins de SAV téléphonique.",
-      'work.mt.result': "87 avis Google 4,9/5 · file d'attente pleine en 2 mois",
-
+      'work.mt.metric': "Formulaire qualifiant",
+      'work.mt.desc': "Un site qui pré-qualifie les prospects avant le premier appel : typographie impact, offre claire, formulaire de sélection intégré.",
+      'work.mt.result': "Formulaire qui pré-qualifie les prospects avant l'appel",
       'work.mo.tag1':   'Salon coiffure',
       'work.mo.tag2':   'Lyon 2ᵉ',
       'work.mo.tag3':   'Nouveau',
       'work.mo.metric': 'Éditorial premium',
-      'work.mo.desc':   "Salon mixte au cœur de Lyon — Sofia voulait un site éditorial qui reflète la qualité du travail. Hero vidéo, galerie filtrée par type de coupe, carousel avis Google, formulaire RDV qui pré-qualifie.",
-      'work.mo.result': "Tarif moyen ×1,4 en 3 mois · Réservations en ligne ×3",
-
+      'work.mo.desc': "Un site éditorial à la hauteur du travail en salon : hero vidéo, galerie filtrée par type de coupe, formulaire de RDV qui pré-qualifie.",
+      'work.mo.result': "Galerie filtrée par coupe + formulaire RDV qualifiant",
       /* Témoignages */
-      'testi.title.l1': 'Ils ont',
-      'testi.title.l2': 'aimé',
-      'testi.title.l3': 'travailler avec moi.',
-      'testi.sub': "Cinq clients, cinq histoires. Voici ce qu'ils en disent.",
-      'testi.google': 'Note moyenne 4,9/5 sur Google',
       'ctabar.cta': 'Devis gratuit — réponse 24h',
-      'testi.t1.quote': "« Mon site rapporte 3 fois plus de devis qu'avant. Le rendu est plus pro que ce que j'avais avec mon ancienne agence à 3 000 €. »",
-      'testi.t1.name': 'Thomas Berger',
-      'testi.t1.role': 'Gérant Artisan Volt',
-      'testi.t1.city': 'Versailles',
-      'testi.t2.quote': "« Mes clients commentent la qualité du site dès le 1er trajet. Un autre standing pour mon entreprise — et ça se voit sur les réservations. »",
-      'testi.t2.name': 'Karim Benali',
-      'testi.t2.role': 'Fondateur Prestige Drive',
-      'testi.t2.city': 'Paris',
-      'testi.t3.quote': "« Le site reflète enfin mon univers. Mes réservations ont doublé en deux mois, et plusieurs clientes parlent directement du site en arrivant. »",
-      'testi.t3.name': 'Sophie Marchand',
-      'testi.t3.role': 'Praticienne Massage Évasion',
-      'testi.t3.city': 'Paris 8e',
-      'testi.t4.quote': "« Le téléphone n'arrête plus depuis la mise en ligne. ROI atteint en 3 semaines — je ne regrette pas l'investissement. »",
-      'testi.t4.name': 'Driss El Amrani',
-      'testi.t4.role': 'Gérant AquaPro Plomberie',
-      'testi.t4.city': 'Paris',
-      'testi.t5.quote': "« Design éditorial sublime, exactement ce que je voulais. Les visites en showroom ont triplé depuis la mise en ligne. »",
-      'testi.t5.name': 'Élodie Vasseur',
-      'testi.t5.role': 'Directrice Storehouse',
-      'testi.t5.city': 'Paris',
-
       /* Services */
       'services.title.l1': 'Choisissez votre',
       'services.title.l2': 'formule',
       'services.sub': "Un site rapide, pensé pour l'expérience utilisateur et le SEO local ciblé — conçu pour transformer vos visiteurs en clients. Partout en France.",
-      'services.stat.leads': 'de demandes de devis',
+      'services.stat.leads': "d'abonnement obligatoire",
       'services.stat.delay': 'pour être en ligne',
       'services.stat.mobile': 'mobile & rapide',
-      'services.stat.hidden': 'de frais caché',
+      'services.stat.hidden': "paiement sans frais",
+      'services.compare': "Un site en abonnement type coûte 50 €/mois, soit plus de 1 800 € sur 3 ans — sans jamais vous appartenir. Ici : payé une fois, à vous pour toujours.",
+      'services.p2.f6': "Textes rédigés avec vous",
       'addons.eyebrow': 'Après la mise en ligne',
       'addons.title': 'Faites vivre votre site',
       'addons.sub': "Restez visible, à jour et bien référencé. Services à la carte, cumulables avec toute formule — sans engagement, résiliables à tout moment.",
@@ -181,9 +153,6 @@
       'addons.trad.range': 'à 250 €',
       'addons.cta': 'Composer mon offre sur mesure',
       'addons.note': 'Sans engagement · résiliable à tout moment',
-      'services.trust.sites': 'sites livrés',
-      'services.trust.deadline': 'tenus en délai',
-      'services.trust.rating': '5/5 satisfaction',
       'sr.recommended': 'Formule recommandée : ',
 
       'services.p1.badge': 'Démarrage',
@@ -224,37 +193,41 @@
       'process.sub': '4 étapes claires, de l\'échange initial à la mise en ligne.',
       'process.s1.time': 'Brief gratuit (Jour 1)',
       'process.s1.title': 'Brief gratuit',
-      'process.s1.text': "On échange 15 min sur ton projet, je te livre un plan. Même si on ne bosse pas ensemble, tu repars avec des pistes concrètes.",
+      'process.s1.text': "Nous échangeons 15 minutes sur votre projet et vous repartez avec un plan clair — même si nous ne travaillons pas ensemble.",
       'process.s2.time': 'Maquette (Jour 2-3)',
       'process.s2.title': 'Maquette',
-      'process.s2.text': "Tu vois ton futur site en taille réelle, on ajuste ensemble. Pas de « tu verras à la fin », tu valides avant qu'on code.",
+      'process.s2.text': "Vous voyez votre futur site en taille réelle et nous ajustons ensemble. Pas de « vous verrez à la fin » : vous validez avant que je code.",
       'process.s3.time': 'Développement (Jour 4-6)',
       'process.s3.title': 'Développement',
-      'process.s3.text': "Je code ton site avec ton contenu validé. HTML sémantique, CSS optimisé, performances natives. Aucune dépendance inutile.",
+      'process.s3.text': "Je code votre site avec votre contenu validé. HTML sémantique, CSS optimisé, performances natives. Aucune dépendance inutile.",
       'process.s4.time': 'Mise en ligne (Jour 7)',
       'process.s4.title': 'Mise en ligne',
-      'process.s4.text': "Site live, formation 30 min pour le mettre à jour seul. Tu n'es jamais bloqué sur quelqu'un d'autre pour modifier un texte.",
-
+      'process.s4.text': "Site en ligne + formation de 30 minutes pour le mettre à jour vous-même. Vous n'êtes jamais bloqué pour modifier un texte.",
       /* FAQ */
       'faq.title.l1': 'Questions',
       'faq.title.l2': 'fréquentes',
       'faq.q1': 'En combien de temps mon site sera-t-il en ligne ?',
-      'faq.a1': 'Ton site est en ligne en 7 jours calendaires après validation de la maquette. Pour la formule Essentiel, c\'est même souvent moins. Le délai commence dès que tu me fournis ton contenu (textes, logo, photos).',
+      'faq.a1': "Votre site est en ligne en 7 jours calendaires après validation de la maquette. Pour la formule Essentiel, c'est souvent moins. Le délai démarre à la réception de votre contenu — et si vous n'avez ni textes ni photos, je m'en occupe avec vous.",
       'faq.q2': 'Comment se passe le paiement ?',
-      'faq.a2': '50% à la commande, 50% à la livraison. Tu peux aussi payer en 2× sans frais sur toutes les formules. Virement bancaire ou PayPal acceptés.',
+      'faq.a2': "50 % à la commande, 50 % à la livraison — une fois le site validé par vous. Paiement en 2× sans frais sur toutes les formules, par virement bancaire ou PayPal.",
       'faq.q3': "Qui s'occupe de l'hébergement et du nom de domaine ?",
-      'faq.a3': "Je m'occupe de tout. L'hébergement 1ère année est offert sur les formules Pro et Premium. Le nom de domaine peut être fourni par toi ou acheté pour toi. À partir de la 2ème année, l'hébergement revient à environ 5€/mois.",
+      'faq.a3': "Je m'occupe de tout. L'hébergement de la 1ère année est offert sur les formules Pro et Premium. Le nom de domaine peut être le vôtre ou acheté pour vous. À partir de la 2ème année, l'hébergement revient à environ 5 €/mois.",
       'faq.q4': 'Puis-je modifier mon site moi-même après la livraison ?',
-      'faq.a4': 'Oui, une formation de 30 minutes est incluse dans chaque formule. Tu apprends à modifier tes textes, tes images et tes coordonnées sans toucher au code. Tu restes autonome.',
+      'faq.a4': "Oui : une formation de 30 minutes est incluse dans chaque formule. Vous apprenez à modifier vos textes, vos images et vos coordonnées sans toucher au code. Vous restez autonome.",
       'faq.q5': 'Est-ce que le site sera visible sur Google ?',
-      'faq.a5': 'Tous mes sites sont optimisés pour le SEO local dès la livraison : balises meta, Schema.org, sitemap, Google My Business (Pro et Premium). Tes clients te trouvent quand ils cherchent ton métier dans ta ville.',
+      'faq.a5': "Tous mes sites sont optimisés pour le référencement local dès la livraison : balises meta, Schema.org, sitemap, fiche Google Business (Pro et Premium). Vos clients vous trouvent quand ils cherchent votre métier dans votre ville.",
       'faq.q6': 'Mon site sera-t-il adapté aux mobiles ?',
-      'faq.a6': 'Oui, tous mes sites sont conçus en mobile-first. Ils s\'adaptent parfaitement à tous les écrans : smartphone, tablette, ordinateur. 60% de tes visiteurs arrivent sur mobile — c\'est ma priorité numéro 1.',
+      'faq.a6': "Oui, tous mes sites sont conçus en mobile-first : ils s'adaptent parfaitement au smartphone, à la tablette et à l'ordinateur. Environ 6 visiteurs sur 10 arrivent sur mobile — c'est ma priorité numéro un.",
       'faq.q7': 'Que se passe-t-il si je veux changer quelque chose après la mise en ligne ?',
-      'faq.a7': 'Les petites modifications (texte, photo, horaire) sont comprises pendant 1 mois après livraison. Au-delà, je facture 40€/heure. La formule Premium inclut 3 mois de maintenance complète.',
+      'faq.a7': "Les petites modifications (texte, photo, horaires) sont comprises pendant 1 mois après la livraison. Ensuite, vous choisissez : à l'heure (40 €) ou en abonnement maintenance dès 39 €/mois. La formule Premium inclut 3 mois de maintenance complète.",
       'faq.q8': 'À qui appartient le site une fois livré ?',
-      'faq.a8': 'Le site t\'appartient à 100% dès la livraison et le paiement final. Tu reçois tous les accès (hébergement, domaine, code source). Aucun abonnement mensuel caché.',
-
+      'faq.a8': "Le site vous appartient à 100 % dès la livraison et le paiement final. Vous recevez tous les accès : hébergement, nom de domaine, code source. Aucun abonnement obligatoire.",
+      'faq.q9': "Je n'ai ni textes, ni logo, ni photos. C'est bloquant ?",
+      'faq.a9': "Non — c'est même le cas le plus fréquent. Les textes sont rédigés avec vous à partir d'un simple échange, et je sélectionne des visuels professionnels libres de droits en attendant vos photos. Vous validez tout avant la mise en ligne.",
+      'faq.q10': "Les abonnements (maintenance, SEO…) sont-ils obligatoires ?",
+      'faq.a10': "Non. Votre site fonctionne parfaitement sans aucun abonnement. Les services mensuels sont optionnels, sans engagement et résiliables à tout moment — le site reste à vous, quoi qu'il arrive.",
+      'faq.q11': "Quelle différence avec les offres de sites par abonnement ?",
+      'faq.a11': "Avec un abonnement, vous louez votre site : si vous arrêtez de payer, il disparaît. Chez Clicboost, vous l'achetez une fois (390 à 890 €) et il vous appartient définitivement — code, domaine et accès inclus. Sur 3 ans, un abonnement à 50 €/mois coûte plus de 1 800 €.",
       /* Contact */
       'contact.title.l1': 'Parlons de',
       'contact.title.l2': 'votre projet',
@@ -264,9 +237,8 @@
       'contact.alt.phone.label': 'Téléphone',
       'contact.alt.wa.label': 'WhatsApp',
       'contact.alt.wa.text': 'Réponse rapide',
-      'contact.alt.cal.label': 'Appel découverte',
-      'contact.alt.cal.text': '15 min — Calendly',
-
+      'contact.alt.cal.label': "Réserver un appel gratuit",
+      'contact.alt.cal.text': "15 minutes, sans engagement",
       /* Formulaire */
       'form.label.name': 'Votre nom *',
       'form.label.email': 'Votre email *',
@@ -279,42 +251,32 @@
       'form.plan.pro': 'Pro — 590 €',
       'form.plan.premium': 'Premium — 890 €',
       'form.plan.custom': 'Sur-mesure',
+      'form.plan.seo': "SEO local — dès 149 €/mois",
+      'form.plan.maint': "Maintenance — dès 39 €/mois",
+      'form.plan.gmb': "Fiche Google Business — dès 49 €/mois",
+      'form.plan.social': "Réseaux sociaux — 39 €/mois",
+      'form.error.send': "L'envoi n'a pas abouti. Réessayez, ou écrivez-moi directement :",
       'form.submit': 'Recevoir mon devis gratuit',
       'form.reassure': '✓ Gratuit · ✓ Réponse sous 24h · ✓ Sans engagement',
-      'form.success.title': 'Message envoyé !',
-      'form.success.text': 'Je vous recontacte sous 24h avec votre devis gratuit.',
+      'form.success.title': "C'est bien reçu !",
+      'form.success.text': "Vous recevrez sous 24h ouvrées un e-mail de contact@clicboost.fr avec un devis chiffré et des recommandations concrètes. Urgent ? Écrivez-moi sur WhatsApp.",
       'form.error.required': 'Ce champ est obligatoire.',
       'form.error.email': 'Adresse email invalide.',
 
       /* À propos */
-      'about.eyebrow': 'Partout en France · 100% en ligne',
-      'about.title': 'Ton site ramène des clients. En 7 jours, livré.',
-      'about.sub': "Les agences te vendent un projet. Wix te vend un template. Ici, tu parles directement à celui qui conçoit et livre ton site — un site qui charge en moins de 2 secondes et capte l'attention avant que le visiteur parte.",
-      'about.stat1.value': '12',
-      'about.stat1.label': 'clients servis',
-      'about.stat2.value': '100%',
-      'about.stat2.label': 'délais respectés',
-      'about.stat3.value': '4,9/5',
-      'about.stat3.label': 'avis Google',
-      'about.trait1': 'Ton site est prêt en 7 jours',
-      'about.trait2': 'Charge en moins de 2 secondes',
-      'about.trait3': 'Tu parles au créateur, pas à un commercial',
-      'about.photo.tag': 'Disponible · Partout en France',
-      'about.photo.card': 'Satisfaction clients',
-
       /* Footer */
       'footer.tag': 'Studio indépendant · Partout en France',
       'footer.rights': 'Tous droits réservés',
       'footer.legal': 'Mentions légales',
       'footer.cookies': 'Gestion des cookies',
       'footer.legalid': 'EI Merouani — SIRET 10720502300016',
-      'footer.avail': 'Disponible 2 projets ce mois-ci · Partout en France',
+      'footer.avail': "Places limitées chaque mois · Partout en France",
       'footer.response': 'Réponse sous 24h',
     },
 
     en: {
       /* Meta */
-      'meta.title': 'Clicboost — Professional showcase website for tradespeople, delivered in 7 days from £390',
+      'meta.title': "Showcase website design for tradespeople & SMBs from €390 — delivered in 7 days | Clicboost",
       'meta.desc': 'Freelance web studio. Professional showcase websites for tradespeople and SMEs across France, delivered in 7 days from EUR 390. Targeted local SEO. Free quote within 24h.',
 
       /* Brand */
@@ -324,39 +286,43 @@
       'nav.works': 'Work',
       'nav.servicespage': 'Services',
       'nav.about': 'About',
-      'nav.testi': 'Reviews',
+      'nav.testi': "Guarantees",
+      'pledge.title.l1': "Guarantees,",
+      'pledge.title.l2': "not promises.",
+      'pledge.sub': "Clicboost is just launching: instead of fake reviews, here are concrete commitments — written in black and white on every quote.",
+      'pledge.p1.title': "Mockup approved before any code",
+      'pledge.p1.text': "You see your future site at full size on day 2-3 — nothing is built until you approve it.",
+      'pledge.p2.title': "Delivered in 7 days",
+      'pledge.p2.text': "The countdown starts once the mockup is approved and your content received — and it is written on the quote.",
+      'pledge.p3.title': "The site is 100% yours",
+      'pledge.p3.text': "Source code, domain name, access: everything is handed over in your name at delivery. No mandatory subscription.",
+      'pledge.p4.title': "Split payment at no cost",
+      'pledge.p4.text': "50% on order, 50% at delivery — once the site is live and approved by you.",
+      'pledge.note': "You will be among our first clients — and the first reviews published here, with a verifiable Google link.",
       'nav.services': 'Pricing',
       'nav.contact': 'Contact',
       'nav.cta': 'Free quote',
 
       /* Hero */
       'hero.eyebrow': 'Across France · 100% online',
-      'hero.badge1': 'Quote in 24h',
-      'hero.badge2': 'No commitment',
-      'hero.badge3': 'Across France',
-      'hero.h1.l1': 'Your business website',
+      'hero.h1.l1': "Your business website",
       'hero.h1.em1': 'in 7 days.',
-      'hero.sub': 'For tradespeople and SMBs across France. Free quote within 24h.',
+      'hero.sub': "A professional website that turns Google searches into calls and quote requests. For tradespeople and small businesses across France.",
       'hero.price.amount': 'From €390 incl. VAT',
       'hero.price.terms': 'Pay in 2× at no extra cost',
       'hero.cta1': 'Request a free quote',
-      'hero.cta2': 'See 8 live sites',
-      'hero.stat1': 'Sites delivered',
-      'hero.stat2': 'Avg. delivery',
-      'hero.stat3': '4.9/5 on Google',
+      'hero.stat3': "8 live demos — judge for yourself",
       'hero.scroll': 'Scroll',
-      'hero.photo.tag': '2 projects max this month',
-      'hero.showcase.badge': 'Delivered in 7 days',
-      'hero.showcase.metric': 'more quote requests',
-      'hero.avail': 'Available — 2 project slots this month',
-      'hero.reply24': 'Reply within 24h',
-      'hero.wallstat1': '14 sites delivered',
-      'hero.wallstat2': '7-day average delivery',
-
+      'hero.avail': "Solo studio — limited slots each month",
+      'hero.reply24': "One payment — yours forever",
       /* Works */
       'works.title.l1': 'Recent',
       'works.title.l2': 'work',
-      'works.sub': 'Eight sectors. Eight identities. One same demand.',
+      'works.sub': "8 trades, 8 live demo sites — exactly what you would get for €390–890.",
+      'works.seo': "Showcase website design, local SEO, Google Business profile: every demo below is a real live site. Click and test the speed — that is the level you get.",
+      'work.demo': "Demo site",
+      'works.cta.text': "Your trade deserves the same level of website.",
+      'works.cta.btn': "Request my free quote",
       'work.view': 'View site',
       'work.view.live': 'View live site →',
 
@@ -371,91 +337,59 @@
       /* Work cards */
       'work.av.tag1': 'Electrician',
       'work.av.tag2': 'Versailles',
-      'work.av.metric': '+47% leads',
-      'work.av.desc': "Olivier was losing jobs because he kept missing calls. His site now captures quote requests 24/7 without him picking up.",
-      'work.av.result': '+40% quote requests via Google in 3 months',
-
+      'work.av.metric': "Quotes 24/7",
+      'work.av.desc': "Built for the electrician who misses calls on site: the website captures quote requests 24/7, even when you are on a job.",
+      'work.av.result': "24/7 quote form + local Google optimisation",
       'work.pd.tag1': 'Premium VTC',
       'work.pd.tag2': 'Paris',
       'work.pd.metric': 'Booking in 60s',
-      'work.pd.desc': "A luxury client judges you in 8 seconds. Cinematic hero, luxe identity, booking in 3 clicks. Visitors book.",
-      'work.pd.result': '1st booking received 48h after launch',
-
+      'work.pd.desc': "A high-end client judges you in 8 seconds. Cinematic video hero, luxury identity, 3-click booking flow.",
+      'work.pd.result': "Cinematic video hero + 3-step booking",
       'work.me.tag1': 'Wellness',
       'work.me.tag2': 'Paris 8th',
-      'work.me.metric': 'Conversion ×2',
-      'work.me.desc': "Audrey was losing 7 out of 10 visitors. Editorial redesign, immersive video, online booking. Visitors stay and book.",
-      'work.me.result': 'Diary fill rate +35% in 2 months',
-
+      'work.me.metric': "Online booking",
+      'work.me.desc': "Designed to hold visitors from the first screen: editorial mood, immersive video and built-in online booking.",
+      'work.me.result': "Built-in online booking + calming premium design",
       'work.ap.tag1': 'Plumber 24/7',
       'work.ap.tag2': 'Paris',
-      'work.ap.metric': '#1 Google',
-      'work.ap.desc': "A leak at 11 PM — your client just wants to call fast. Emergency button, district pages, #1 on Google.",
-      'work.ap.result': "#1 for 'plumber 24h Paris' for 4 months",
-
+      'work.ap.metric': "24/7 emergency",
+      'work.ap.desc': "A leak at 11pm: your client wants to call right now. Permanent emergency button, district pages, structure built for local SEO.",
+      'work.ap.result': "Permanent emergency button + district pages",
       'work.cl.tag1': 'Ceramics',
       'work.cl.tag2': 'Paris showroom',
-      'work.cl.metric': 'Traffic ×4',
-      'work.cl.desc': "An artisan showroom drowning under e-commerce giants. Editorial design that presents each piece like a museum exhibit.",
-      'work.cl.result': 'Google traffic multiplied by 4 in 6 months',
-
+      'work.cl.metric': "Editorial design",
+      'work.cl.desc': "For the craft maker drowned out by e-commerce giants: an editorial design that presents each piece like in a gallery.",
+      'work.cl.result': "Editorial gallery design + refined product pages",
       'work.vc.tag1': 'Veterinary clinic',
       'work.vc.tag2': 'Paris 11th',
       'work.vc.tag3': 'New',
-      'work.vc.metric': 'Trilingual · 4.9/5',
-      'work.vc.desc': "Camille wanted to streamline bookings and welcome international clients. Site in French, English and Spanish, 2-minute booking.",
-      'work.vc.result': '230 online bookings in first month, multilingual active',
-
+      'work.vc.metric': "FR/EN/ES trilingual",
+      'work.vc.desc': "Built for an international clientele: trilingual French, English, Spanish, 2-minute booking, 7/7 emergencies.",
+      'work.vc.result': "FR/EN/ES trilingual + 2-minute online booking",
       'work.mt.tag1':   'Personal trainer',
       'work.mt.tag2':   'Paris 8th',
       'work.mt.tag3':   'New',
-      'work.mt.metric': '+12 clients waitlist',
-      'work.mt.desc':   "Max wanted a site that pre-qualifies prospects before the first call. Bold typography, results guarantee on display, integrated booking. More coaching, less phone screening.",
-      'work.mt.result': "87 Google reviews 4.9/5 · waitlist full within 2 months",
-
+      'work.mt.metric': "Qualifying form",
+      'work.mt.desc': "A site that pre-qualifies prospects before the first call: impact typography, clear offer, built-in screening form.",
+      'work.mt.result': "Form that pre-qualifies prospects before the call",
       'work.mo.tag1':   'Hair salon',
       'work.mo.tag2':   'Lyon 2nd',
       'work.mo.tag3':   'New',
       'work.mo.metric': 'Editorial premium',
-      'work.mo.desc':   "Unisex salon in central Lyon — Sofia wanted an editorial site reflecting craftsmanship. Hero video, cut-style filtered gallery, Google reviews carousel, booking form that pre-qualifies leads.",
-      'work.mo.result': "Average ticket ×1.4 in 3 months · Online bookings ×3",
-
+      'work.mo.desc': "An editorial site that matches the craft in the salon: video hero, gallery filtered by cut, qualifying booking form.",
+      'work.mo.result': "Gallery filtered by cut + qualifying booking form",
       /* Testimonials */
-      'testi.title.l1': 'They loved',
-      'testi.title.l2': 'working',
-      'testi.title.l3': 'with me.',
-      'testi.sub': 'Five clients, five stories. Here\'s what they say.',
-      'testi.google': 'Average rating 4.9/5 on Google',
       'ctabar.cta': 'Free quote — 24h reply',
-      'testi.t1.quote': '« My site brings in 3× more quotes than before. The result is more polished than my previous €3,000 agency. »',
-      'testi.t1.name': 'Thomas Berger',
-      'testi.t1.role': 'Owner Artisan Volt',
-      'testi.t1.city': 'Versailles',
-      'testi.t2.quote': '« My clients comment on the website quality during their very first ride. A whole new standing for my business. »',
-      'testi.t2.name': 'Karim Benali',
-      'testi.t2.role': 'Founder Prestige Drive',
-      'testi.t2.city': 'Paris',
-      'testi.t3.quote': '« The site finally reflects my world. Bookings doubled in two months, and several clients mention it the moment they arrive. »',
-      'testi.t3.name': 'Sophie Marchand',
-      'testi.t3.role': 'Therapist Massage Évasion',
-      'testi.t3.city': 'Paris 8th',
-      'testi.t4.quote': '« My phone hasn\'t stopped ringing since launch. ROI reached in 3 weeks — no regrets. »',
-      'testi.t4.name': 'Driss El Amrani',
-      'testi.t4.role': 'Owner AquaPro Plomberie',
-      'testi.t4.city': 'Paris',
-      'testi.t5.quote': '« Stunning editorial design — exactly what I wanted. Showroom visits tripled since launch. »',
-      'testi.t5.name': 'Élodie Vasseur',
-      'testi.t5.role': 'Director Storehouse',
-      'testi.t5.city': 'Paris',
-
       /* Services */
       'services.title.l1': 'Choose your',
       'services.title.l2': 'package',
       'services.sub': 'A fast website, built for user experience and targeted local SEO — designed to turn your visitors into customers. Anywhere in France.',
-      'services.stat.leads': 'more quote requests',
+      'services.stat.leads': "in mandatory monthly fees",
       'services.stat.delay': 'to go live',
       'services.stat.mobile': 'mobile & fast',
-      'services.stat.hidden': 'hidden fees',
+      'services.stat.hidden': "split payment, no fees",
+      'services.compare': "A typical subscription website costs €50/month — over €1,800 in 3 years, and it is never yours. Here: one payment, yours forever.",
+      'services.p2.f6': "Copy written with you",
       'addons.eyebrow': 'After going live',
       'addons.title': 'Keep your site alive',
       'addons.sub': 'Stay visible, up to date and well ranked. À la carte services, combinable with any package — no commitment, cancel anytime.',
@@ -482,9 +416,6 @@
       'addons.trad.range': 'to €250',
       'addons.cta': 'Build my custom offer',
       'addons.note': 'No commitment · cancel anytime',
-      'services.trust.sites': 'sites delivered',
-      'services.trust.deadline': 'on time',
-      'services.trust.rating': '5/5 satisfaction',
       'sr.recommended': 'Recommended package: ',
 
       'services.p1.badge': 'Starter',
@@ -525,37 +456,41 @@
       'process.sub': '4 clear steps, from initial chat to launch.',
       'process.s1.time': 'Free brief (Day 1)',
       'process.s1.title': 'Free brief',
-      'process.s1.text': "We spend 15 min on your project. You leave with a clear plan — even if we don't end up working together.",
+      'process.s1.text': "We talk 15 minutes about your project and you leave with a clear plan — even if we do not end up working together.",
       'process.s2.time': 'Mockup (Days 2-3)',
       'process.s2.title': 'Mockup',
-      'process.s2.text': "You see your future site full-size, real content. You validate before we code. No 'wait until the end' moments.",
+      'process.s2.text': "You see your future site at full size and we adjust it together. No 'you will see at the end': you approve before I code.",
       'process.s3.time': 'Development (Days 4-6)',
       'process.s3.title': 'Development',
-      'process.s3.text': "I build your site with your validated content. Semantic HTML, optimised CSS, native performance. No bloat.",
+      'process.s3.text': "I build your site with your approved content. Semantic HTML, optimised CSS, native performance. No useless dependencies.",
       'process.s4.time': 'Launch (Day 7)',
       'process.s4.title': 'Launch',
-      'process.s4.text': "Site live, 30-min training so you can update it yourself. You're never locked in to someone else.",
-
+      'process.s4.text': "Site live + 30-minute training to update it yourself. You are never stuck waiting on someone to change a line of text.",
       /* FAQ */
       'faq.title.l1': 'Frequently asked',
       'faq.title.l2': 'questions',
       'faq.q1': 'How soon will my site go live?',
-      'faq.a1': 'Your site is live within 7 calendar days after mockup approval. For the Essential plan, it\'s often sooner. The clock starts when you provide your content (text, logo, photos).',
+      'faq.a1': "Your site is live within 7 calendar days after mockup approval — often sooner for the Essential plan. The clock starts when I receive your content, and if you have no text or photos, I handle it with you.",
       'faq.q2': 'How does payment work?',
-      'faq.a2': '50% upfront, 50% on delivery. You can also split into 2 equal instalments at no extra cost. Bank transfer or PayPal accepted.',
+      'faq.a2': "50% when you order, 50% at delivery — once you have approved the site. Split payment at no extra cost on all plans, by bank transfer or PayPal.",
       'faq.q3': 'Who handles hosting and the domain name?',
-      'faq.a3': 'I take care of everything. The first year of hosting is free on Pro and Premium plans. The domain can be yours or I can buy one for you. From year 2, hosting is around €5/month.',
+      'faq.a3': "I take care of everything. First-year hosting is included with Pro and Premium. The domain can be yours or purchased for you. From year 2, hosting costs about €5/month.",
       'faq.q4': 'Can I edit my site myself after delivery?',
-      'faq.a4': 'Yes — a 30-minute training session is included in every plan. You\'ll learn to update text, images and contact details without touching code. You stay independent.',
+      'faq.a4': "Yes: a 30-minute training session is included with every plan. You learn to edit your text, images and contact details without touching the code. You stay independent.",
       'faq.q5': 'Will my site show up on Google?',
-      'faq.a5': 'All my sites are optimised for local SEO from day one: meta tags, Schema.org, sitemap, Google My Business (Pro & Premium). Your clients find you when they search for your trade in your city.',
+      'faq.a5': "Every site is optimised for local SEO on delivery: meta tags, Schema.org, sitemap, Google Business profile (Pro and Premium). Your clients find you when they search for your trade in your city.",
       'faq.q6': 'Will my site work on mobile?',
-      'faq.a6': 'Yes — all my sites are designed mobile-first. They adapt perfectly to every screen: smartphone, tablet, desktop. 60% of your visitors come from mobile — that\'s my top priority.',
+      'faq.a6': "Yes, all my sites are built mobile-first: they adapt perfectly to phones, tablets and computers. About 6 in 10 visitors browse on mobile — it is my number one priority.",
       'faq.q7': 'What if I want to change something after launch?',
-      'faq.a7': 'Small edits (text, photo, hours) are covered for 1 month after delivery. Beyond that, I charge €40/hour. The Premium plan includes 3 full months of maintenance.',
+      'faq.a7': "Small edits (text, photo, opening hours) are included for 1 month after delivery. After that, you choose: hourly (€40) or a maintenance plan from €39/month. Premium includes 3 months of full maintenance.",
       'faq.q8': 'Who owns the site once it\'s delivered?',
-      'faq.a8': 'You own 100% of the site from day one of final delivery. You receive all access credentials (hosting, domain, source code). No hidden monthly subscription.',
-
+      'faq.a8': "The site is 100% yours upon delivery and final payment. You receive all access: hosting, domain name, source code. No mandatory subscription.",
+      'faq.q9': "I have no text, no logo, no photos. Is that a problem?",
+      'faq.a9': "No — it is actually the most common case. The copy is written with you from a simple conversation, and I select professional royalty-free visuals until you have your own photos. You approve everything before going live.",
+      'faq.q10': "Are the monthly plans (maintenance, SEO…) mandatory?",
+      'faq.a10': "No. Your site works perfectly without any subscription. Monthly services are optional, commitment-free and cancellable anytime — the site stays yours no matter what.",
+      'faq.q11': "How is this different from subscription website offers?",
+      'faq.a11': "With a subscription you rent your site: stop paying and it disappears. With Clicboost you buy it once (€390–890) and it is yours for good — code, domain and access included. Over 3 years, a €50/month subscription costs more than €1,800.",
       /* Contact */
       'contact.title.l1': "Let's talk about",
       'contact.title.l2': 'your project',
@@ -565,9 +500,8 @@
       'contact.alt.phone.label': 'Phone',
       'contact.alt.wa.label': 'WhatsApp',
       'contact.alt.wa.text': 'Fast reply',
-      'contact.alt.cal.label': 'Discovery call',
-      'contact.alt.cal.text': '15 min — Calendly',
-
+      'contact.alt.cal.label': "Book a free call",
+      'contact.alt.cal.text': "15 minutes, no commitment",
       /* Form */
       'form.label.name': 'Your name *',
       'form.label.email': 'Your email *',
@@ -580,36 +514,26 @@
       'form.plan.pro': 'Pro — €590',
       'form.plan.premium': 'Premium — €890',
       'form.plan.custom': 'Custom',
+      'form.plan.seo': "Local SEO — from €149/mo",
+      'form.plan.maint': "Maintenance — from €39/mo",
+      'form.plan.gmb': "Google Business profile — from €49/mo",
+      'form.plan.social': "Social media — €39/mo",
+      'form.error.send': "The message could not be sent. Try again, or contact me directly:",
       'form.submit': 'Get my free quote',
       'form.reassure': '✓ Free · ✓ Reply within 24h · ✓ No commitment',
-      'form.success.title': 'Message sent!',
-      'form.success.text': 'I\'ll get back to you within 24h with your free quote.',
+      'form.success.title': "Message received!",
+      'form.success.text': "Within 24 business hours you will receive an email from contact@clicboost.fr with a priced quote and concrete recommendations. Urgent? Message me on WhatsApp.",
       'form.error.required': 'This field is required.',
       'form.error.email': 'Invalid email address.',
 
       /* About */
-      'about.eyebrow': 'Across France · 100% online',
-      'about.title': 'A site that brings in clients. Delivered in 7 days.',
-      'about.sub': "Agencies sell you a project. Wix sells you a template. Here you talk directly to the person designing and building your site — one that loads in under 2 seconds.",
-      'about.stat1.value': '12',
-      'about.stat1.label': 'clients served',
-      'about.stat2.value': '100%',
-      'about.stat2.label': 'deadlines met',
-      'about.stat3.value': '4.9/5',
-      'about.stat3.label': 'Google reviews',
-      'about.trait1': 'Your site live in 7 days',
-      'about.trait2': 'Loads in under 2 seconds',
-      'about.trait3': 'You talk to the builder, not a sales rep',
-      'about.photo.tag': 'Available · Across France',
-      'about.photo.card': 'Client satisfaction',
-
       /* Footer */
       'footer.tag': 'Independent studio · Across France',
       'footer.rights': 'All rights reserved',
       'footer.legal': 'Legal notice',
       'footer.cookies': 'Cookie settings',
       'footer.legalid': 'Sole trader Merouani — SIRET 10720502300016',
-      'footer.avail': 'Available 2 projects this month · Across France',
+      'footer.avail': "Limited slots each month · Across France",
       'footer.response': 'Response within 24h',
     }
   };
@@ -1175,39 +1099,67 @@
         return;
       }
 
-      /* Simulation envoi (ici: mailto fallback ou fetch API) */
+      /* Envoi réel (FormSubmit AJAX) — le succès n'est affiché
+         qu'après une vraie réponse OK du serveur. */
       const data = new FormData(contactForm);
-      const subject = encodeURIComponent('Nouvelle demande de devis — Clicboost');
-      const body = encodeURIComponent(
-        `Nom : ${data.get('name')}\n` +
-        `Email : ${data.get('email')}\n` +
-        `Téléphone : ${data.get('phone') || 'non renseigné'}\n` +
-        `Formule : ${data.get('plan') || 'non précisé'}\n\n` +
-        `Message :\n${data.get('message')}`
-      );
+      const payload = {
+        name: data.get('name'),
+        email: data.get('email'),
+        telephone: data.get('phone') || 'non renseigné',
+        projet: data.get('plan') || 'non précisé',
+        message: data.get('message'),
+        _subject: 'Nouvelle demande de devis — Clicboost',
+        _template: 'table'
+      };
 
-      /* Chorégraphie d'envoi : état « Envoi… » bref, puis succès —
-         l'utilisateur voit que son action a été prise en compte. */
       const submitBtn = contactForm.querySelector('.form-submit');
       const submitLabel = submitBtn ? submitBtn.querySelector('[data-i18n="form.submit"]') : null;
+      const sendError = document.getElementById('formSendError');
       const isFr = (document.documentElement.lang || 'fr').startsWith('fr');
+      if (sendError) sendError.hidden = true;
       if (submitBtn) {
         submitBtn.disabled = true;
         if (submitLabel) submitLabel.textContent = isFr ? 'Envoi…' : 'Sending…';
       }
 
-      setTimeout(() => {
-        window.location.href = `mailto:contact@clicboost.fr?subject=${subject}&body=${body}`;
-
-        /* Afficher message de succès */
-        if (formSuccess) {
-          formSuccess.classList.add('visible');
-          formSuccess.setAttribute('aria-hidden', 'false');
-          contactForm.setAttribute('aria-hidden', 'true');
-        }
-      }, 700);
+      fetch('https://formsubmit.co/ajax/contact@clicboost.fr', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then((r) => {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(() => {
+          if (formSuccess) {
+            formSuccess.classList.add('visible');
+            formSuccess.setAttribute('aria-hidden', 'false');
+            contactForm.setAttribute('aria-hidden', 'true');
+          }
+          if (typeof window.plausible === 'function') window.plausible('devis_envoye');
+        })
+        .catch(() => {
+          /* Échec réseau/serveur : on rend la main et on propose un canal direct */
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            if (submitLabel) submitLabel.textContent = dict()['form.submit'] || 'Recevoir mon devis gratuit';
+          }
+          if (sendError) sendError.hidden = false;
+        });
     });
   }
+
+  /* ──────────────────────────────────────────────
+     PRÉ-SÉLECTION DE LA FORMULE — les CTA « Choisir X »
+     remplissent le select du formulaire (zéro re-saisie)
+     ────────────────────────────────────────────── */
+  document.querySelectorAll('[data-plan]').forEach((el) => {
+    el.addEventListener('click', () => {
+      const sel = document.getElementById('contactPlan');
+      if (sel) sel.value = el.getAttribute('data-plan');
+    });
+  });
 
   /* ──────────────────────────────────────────────
      PLAUSIBLE — tracking data-event

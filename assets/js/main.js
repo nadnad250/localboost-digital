@@ -1179,4 +1179,43 @@
     });
   }
 
+
+  /* ------------------------------------------------------------
+     CINETIQUE ULTRA - barre de progression de lecture
+     ------------------------------------------------------------ */
+  const scrollProg = document.createElement('div');
+  scrollProg.className = 'scroll-progress';
+  scrollProg.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(scrollProg);
+  let spTick = false;
+  const updateProg = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    const y = window.pageYOffset || doc.scrollTop || 0;
+    scrollProg.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+    spTick = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!spTick) { spTick = true; requestAnimationFrame(updateProg); }
+  }, { passive: true });
+  updateProg();
+
+  /* ------------------------------------------------------------
+     CINETIQUE ULTRA - reveals en cascade dans les grilles
+     (delai --rd pose par index, retire apres la 1re apparition
+      pour ne pas retarder les transitions de hover)
+     ------------------------------------------------------------ */
+  document.querySelectorAll('.works-grid, .services-grid, .process').forEach((grid) => {
+    const items = grid.querySelectorAll(':scope .reveal');
+    items.forEach((el, i) => {
+      el.style.setProperty('--rd', Math.min(i * 80, 400) + 'ms');
+      el.addEventListener('transitionend', function clearDelay(e) {
+        if (e.propertyName === 'opacity' && el.classList.contains('in')) {
+          el.style.setProperty('--rd', '0ms');
+          el.removeEventListener('transitionend', clearDelay);
+        }
+      });
+    });
+  });
+
 })();

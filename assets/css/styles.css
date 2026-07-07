@@ -3252,3 +3252,75 @@ body.has-wall-hero .nav:not(.scrolled) .burger span { background: #F7F5EF; }
   .hw-scroll-bead { animation: none; }
   .wall-parallax { transition: none; }
 }
+
+
+/* ============================================================
+   CINÉTIQUE ULTRA — micro-interactions & motion design
+   (barre de progression, stagger, blur reveal, sheen, tilt)
+   ============================================================ */
+
+/* ── Barre de progression de lecture ── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* ── Reveals en cascade : délai piloté par --rd (posé en JS) ── */
+.reveal { transition-delay: var(--rd, 0ms); }
+
+/* ── Titres de sections : reveal net→flou premium ── */
+.section-head.reveal {
+  filter: blur(7px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), filter 0.9s var(--ease);
+}
+.section-head.reveal.in { filter: blur(0); }
+
+/* ── CTA principal : reflet « sheen » au survol ── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -70%;
+  width: 44%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.65s var(--ease);
+  pointer-events: none;
+}
+.btn-primary:hover::after { left: 130%; }
+
+/* ── Cards réalisations : tilt 3D subtil ── */
+.work-card {
+  transform-style: preserve-3d;
+}
+.work-card:hover {
+  transform: perspective(900px) translateY(-6px) rotateX(1.2deg);
+}
+
+/* ── Cards tarifs : lift enrichi d'une lueur or ── */
+.service-card:hover {
+  box-shadow:
+    0 24px 60px -20px rgba(0, 0, 0, 0.14),
+    0 0 0 1px rgba(245, 197, 24, 0.14);
+}
+
+/* ── Marquee : pause au survol (lisibilité) ── */
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* ── Mouvement réduit : on coupe tout le superflu ── */
+@media (prefers-reduced-motion: reduce) {
+  .section-head.reveal { filter: none; }
+  .btn-primary::after { display: none; }
+  .work-card:hover { transform: none; }
+  .reveal { transition-delay: 0ms; }
+}

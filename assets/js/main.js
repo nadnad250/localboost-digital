@@ -620,9 +620,12 @@
   const applyLang = (lang) => {
     const dict = I18N[lang] || I18N.fr;
     document.documentElement.lang = lang;
-    document.title = dict['meta.title'];
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', dict['meta.desc']);
+    // Les pages avec leur propre <title>/description SEO (services) désactivent l'override
+    if (document.documentElement.getAttribute('data-i18n-meta') !== 'off') {
+      document.title = dict['meta.title'];
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', dict['meta.desc']);
+    }
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');

@@ -297,8 +297,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <!-- Preload critique LCP -->
-<link rel="preload" as="image" href="assets/images/artisan-volt.webp" fetchpriority="high" />
-<link rel="preload" as="style" href="assets/css/styles.css" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/images/wall/artisan-volt.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/images/wall/clay-storehouse.webp" fetchpriority="high" />
+<link rel="preload" as="style" href="assets/css/styles.css?v=7" fetchpriority="high" />
 
 <!-- Fonts chargement non-bloquant -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -322,9 +323,9 @@
   button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 </style>
 
-<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/styles.css?v=7" />
 </head>
-<body>
+<body class="has-wall-hero">
 
 <!-- Skip-link accessibilité WCAG 2.1 AA -->
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -415,122 +416,101 @@
 
 <main id="main" tabindex="-1">
 
-  <!-- HERO -->
-  <section class="hero" id="hero" aria-label="Présentation Clicboost">
-    <!-- Blobs décoratifs hero -->
-    <div class="hero-blobs" aria-hidden="true">
-      <div class="hero-blob hero-blob-1"></div>
-      <div class="hero-blob hero-blob-2"></div>
-    </div>
+  <!-- HERO — Mur incliné (design Claude Design « Hero Mur Incliné ») -->
+  <section class="hero-wall" id="hero" aria-label="Présentation Clicboost">
 
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-eyebrow fade-up">
-          <span class="dot-pulse" aria-hidden="true"></span>
-          <span data-i18n="hero.eyebrow">Paris · Versailles · Île-de-France</span>
-        </div>
-
-        <!-- Badges réassurance -->
-        <div class="hero-badges fade-up d1" aria-label="Garanties">
-          <span class="hero-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="hero.badge1">Devis 24h</span></span>
-          <span class="hero-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="hero.badge2">Sans engagement</span></span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line fade-up d2" data-i18n="hero.h1.l1">Ton site vitrine</span>
-          <span class="line fade-up d3">
-            <em class="hero-italic" data-i18n="hero.h1.em1">en 7 jours.</em>
-          </span>
-        </h1>
-
-        <p class="hero-sub fade-up d4" data-i18n="hero.sub">
-          Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.
-        </p>
-
-        <!-- Pastille prix — l'offre scannable en 2 secondes -->
-        <p class="hero-price-pill fade-up d4">
-          <strong data-i18n="hero.price.amount">À partir de 390&nbsp;€ TTC</strong>
-          <span class="hero-price-sep" aria-hidden="true">·</span>
-          <span data-i18n="hero.price.terms">Paiement en 2× sans frais</span>
-        </p>
-
-        <div class="hero-cta fade-up d5">
-          <a href="#contact" class="btn btn-primary btn-lg" data-event="cta_click_devis">
-            <span data-i18n="hero.cta1">Demander un devis gratuit</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#works" class="btn btn-ghost btn-lg">
-            <span data-i18n="hero.cta2">Voir 8 sites livrés</span>
-          </a>
-        </div>
-
-        <div class="hero-stats fade-up d6">
-          <div class="stat">
-            <span class="stat-num">14</span>
-            <span class="stat-label" data-i18n="hero.stat1">Sites livrés</span>
+    <!-- Mur incliné : 2 colonnes de sites livrés en dérive continue -->
+    <div class="wall-scene" aria-hidden="true">
+      <div class="wall-panel">
+        <div class="wall-parallax" id="wallParallax">
+          <div class="wall-cols">
+            <div class="wall-col">
+              <div class="wall-drift wall-drift-up">
+                <img src="assets/images/wall/artisan-volt.webp" alt="" width="511" height="346" fetchpriority="high" decoding="async" />
+                <img src="assets/images/wall/prestige-drive.webp" alt="" width="495" height="336" decoding="async" />
+                <img src="assets/images/wall/massage-evasion.webp" alt="" width="506" height="342" decoding="async" />
+                <img src="assets/images/wall/aquapro-plomberie.webp" alt="" width="497" height="347" decoding="async" />
+                <img src="assets/images/wall/artisan-volt.webp" alt="" width="511" height="346" loading="lazy" decoding="async" />
+                <img src="assets/images/wall/prestige-drive.webp" alt="" width="495" height="336" loading="lazy" decoding="async" />
+                <img src="assets/images/wall/massage-evasion.webp" alt="" width="506" height="342" loading="lazy" decoding="async" />
+                <img src="assets/images/wall/aquapro-plomberie.webp" alt="" width="497" height="347" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="wall-col wall-col-2">
+              <div class="wall-drift wall-drift-down">
+                <img src="assets/images/wall/clay-storehouse.webp" alt="" width="502" height="310" fetchpriority="high" decoding="async" />
+                <img src="assets/images/wall/clinique-veterinaire.webp" alt="" width="502" height="341" decoding="async" />
+                <img src="assets/images/wall/max-torres-coach.webp" alt="" width="497" height="356" decoding="async" />
+                <img src="assets/images/wall/maison-onde.webp" alt="" width="507" height="352" decoding="async" />
+                <img src="assets/images/wall/clay-storehouse.webp" alt="" width="502" height="310" loading="lazy" decoding="async" />
+                <img src="assets/images/wall/clinique-veterinaire.webp" alt="" width="502" height="341" loading="lazy" decoding="async" />
+                <img src="assets/images/wall/max-torres-coach.webp" alt="" width="497" height="356" loading="lazy" decoding="async" />
+                <img src="assets/images/wall/maison-onde.webp" alt="" width="507" height="352" loading="lazy" decoding="async" />
+              </div>
+            </div>
           </div>
-          <div class="stat-sep" aria-hidden="true"></div>
-          <div class="stat">
-            <span class="stat-num">7<i>j</i></span>
-            <span class="stat-label" data-i18n="hero.stat2">Délai moyen</span>
-          </div>
-          <div class="stat-sep" aria-hidden="true"></div>
-          <a class="stat google-badge" href="#testimonials" aria-label="Voir les avis clients — note 4,9 sur 5 sur Google">
-            <span class="google-badge-row" aria-hidden="true">
-              <svg class="google-g" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-              <span class="google-stars">★★★★★</span>
-            </span>
-            <span class="stat-label" data-i18n="hero.stat3">4,9/5 sur Google</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Aperçu produit : un site livré dans un navigateur (remplace la photo) -->
-      <div class="hero-showcase fade-up d3">
-        <div class="hero-window">
-          <div class="hero-window-bar" aria-hidden="true">
-            <span class="hw-dot"></span><span class="hw-dot"></span><span class="hw-dot"></span>
-            <span class="hw-url">artisan-volt.fr</span>
-          </div>
-          <div class="hero-window-shot">
-            <img src="assets/images/artisan-volt.webp" alt="Exemple de site vitrine livré par Clicboost" width="1200" height="750" fetchpriority="high" decoding="async" />
-          </div>
-        </div>
-        <div class="hero-float hero-float-top">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span data-i18n="hero.showcase.badge">Livré en 7 jours</span>
-        </div>
-        <div class="hero-float hero-float-bottom">
-          <span class="hero-float-metric">+40%</span>
-          <span data-i18n="hero.showcase.metric">de demandes de devis</span>
         </div>
       </div>
     </div>
 
-    <div class="hero-scroll-hint" aria-hidden="true">
+    <!-- Voiles de lisibilité -->
+    <div class="wall-veil" aria-hidden="true"></div>
+
+    <!-- Contenu -->
+    <div class="hero-wall-inner">
+      <div class="hw-avail fade-up">
+        <span class="hw-avail-dot" aria-hidden="true"></span>
+        <span class="hw-avail-label" data-i18n="hero.avail">Disponible — 2 projets ce mois-ci</span>
+      </div>
+      <div class="hw-eyebrow fade-up d1" data-i18n="hero.eyebrow">Paris · Versailles · Île-de-France</div>
+      <h1 class="hw-title">
+        <span class="line fade-up d2" data-i18n="hero.h1.l1">Ton site vitrine</span>
+        <span class="line fade-up d3"><em data-i18n="hero.h1.em1">en 7 jours.</em></span>
+      </h1>
+      <p class="hw-sub fade-up d4" data-i18n="hero.sub">Pour artisans et TPE en Île-de-France. Devis gratuit sous 24h.</p>
+      <div class="hw-cta fade-up d5">
+        <a href="#contact" class="btn btn-primary btn-lg" data-event="cta_click_devis">
+          <span data-i18n="hero.cta1">Demander un devis gratuit</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="hw-price"><span data-i18n="hero.price.amount">À partir de 390 € TTC</span> · <span data-i18n="hero.reply24">Réponse sous 24h</span></span>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="hw-stats fade-up d6">
+      <span><span data-i18n="hero.wallstat1">14 sites livrés</span></span>
+      <span class="hw-stats-sep hw-stat-delay" aria-hidden="true">·</span>
+      <span class="hw-stat-delay"><span data-i18n="hero.wallstat2">Délai moyen 7 jours</span></span>
+      <span class="hw-stats-sep" aria-hidden="true">·</span>
+      <a href="#testimonials" aria-label="Voir les avis clients — note 4,9 sur 5 sur Google">★ <span data-i18n="hero.stat3">4,9/5 sur Google</span></a>
+    </div>
+
+    <!-- Indice de défilement -->
+    <div class="hw-scroll" aria-hidden="true">
       <span data-i18n="hero.scroll">Défiler</span>
-      <span class="scroll-line"></span>
+      <span class="hw-scroll-track"><span class="hw-scroll-bead"></span></span>
     </div>
-  </section>
 
-  <!-- MARQUEE — 4 benefits clés, zero jargon -->
-  <section class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>LIVRAISON 7 JOURS</span><span>·</span>
-      <span>DEVIS GRATUIT 24H</span><span>·</span>
-      <span>PARIS &amp; VERSAILLES</span><span>·</span>
-      <span>4,9/5 SUR GOOGLE</span><span>·</span>
-      <span>LIVRAISON 7 JOURS</span><span>·</span>
-      <span>DEVIS GRATUIT 24H</span><span>·</span>
-      <span>PARIS &amp; VERSAILLES</span><span>·</span>
-      <span>4,9/5 SUR GOOGLE</span><span>·</span>
-      <span>LIVRAISON 7 JOURS</span><span>·</span>
-      <span>DEVIS GRATUIT 24H</span><span>·</span>
-      <span>PARIS &amp; VERSAILLES</span><span>·</span>
-      <span>4,9/5 SUR GOOGLE</span><span>·</span>
+    <!-- Bandeau défilant -->
+    <div class="marquee marquee--hero" aria-hidden="true">
+      <div class="marquee-track">
+        <span>LIVRAISON 7 JOURS</span><span>·</span>
+        <span>DEVIS GRATUIT 24H</span><span>·</span>
+        <span>PARIS &amp; VERSAILLES</span><span>·</span>
+        <span>4,9/5 SUR GOOGLE</span><span>·</span>
+        <span>LIVRAISON 7 JOURS</span><span>·</span>
+        <span>DEVIS GRATUIT 24H</span><span>·</span>
+        <span>PARIS &amp; VERSAILLES</span><span>·</span>
+        <span>4,9/5 SUR GOOGLE</span><span>·</span>
+        <span>LIVRAISON 7 JOURS</span><span>·</span>
+        <span>DEVIS GRATUIT 24H</span><span>·</span>
+        <span>PARIS &amp; VERSAILLES</span><span>·</span>
+        <span>4,9/5 SUR GOOGLE</span><span>·</span>
+      </div>
     </div>
-  </section>
 
+  </section>
 
   <!-- WORKS -->
   <section class="works" id="works" aria-label="Réalisations récentes">
@@ -1398,7 +1378,7 @@
   </a>
 </div>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=7" defer></script>
 
 <!-- Plausible — RGPD friendly, no cookies, no banner needed -->
 <script defer data-domain="clicboost.fr" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>

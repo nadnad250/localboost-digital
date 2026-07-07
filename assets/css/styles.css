@@ -2953,3 +2953,302 @@ html { interpolate-size: allow-keywords; }
 /* Renforcement visuel : btn-primary est déjà position:relative ?
    On s'assure qu'il l'est bien */
 .btn.btn-primary { position: relative; }
+
+
+/* ============================================================
+   HERO WALL — « Mur incliné » (design Claude Design)
+   Fond sombre fixe (identique light/dark), mur 3D de sites
+   livrés en dérive continue + parallax souris.
+   ============================================================ */
+.hero-wall {
+  position: relative;
+  height: 100svh;
+  min-height: 720px;
+  background: #0B0B09;
+  overflow: hidden;
+  color: #F7F5EF;
+}
+
+/* ── Scène 3D ── */
+.wall-scene {
+  position: absolute;
+  inset: 0;
+  perspective: 1700px;
+  perspective-origin: 74% 36%;
+  z-index: 1;
+}
+.wall-panel {
+  position: absolute;
+  right: -9.5vw;
+  top: -260px;
+  width: min(78vw, 1320px);
+  height: 1600px;
+  transform: rotateX(12deg) rotateY(-21deg) rotateZ(3deg);
+}
+.wall-parallax {
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+.wall-cols { display: flex; gap: 30px; }
+.wall-col  { width: min(35vw, 640px); flex: none; }
+.wall-col-2 { margin-top: -180px; }
+.wall-drift-up   { animation: wallUp 56s linear infinite; will-change: transform; }
+.wall-drift-down { animation: wallDown 56s linear infinite; will-change: transform; }
+.wall-drift img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  margin: 0 0 30px;
+}
+@keyframes wallUp   { from { transform: translateY(0); }    to { transform: translateY(-50%); } }
+@keyframes wallDown { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+
+/* ── Voiles de lisibilité ── */
+.wall-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #0B0B09 19%, rgba(11,11,9,0.82) 33%, rgba(11,11,9,0.08) 58%, rgba(11,11,9,0.42) 100%),
+    linear-gradient(180deg, rgba(11,11,9,0.92) 0%, rgba(11,11,9,0) 16%, rgba(11,11,9,0) 78%, #0B0B09 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Contenu ── */
+.hero-wall-inner {
+  position: absolute;
+  left: clamp(24px, 5.5vw, 96px);
+  top: 50%;
+  transform: translateY(-53%);
+  width: min(46vw, 640px);
+  z-index: 5;
+}
+.hw-avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+.hw-avail-dot {
+  width: 7px; height: 7px;
+  border-radius: 99px;
+  background: var(--accent);
+  animation: hwPulse 2.2s ease-out infinite;
+}
+.hw-avail-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+  white-space: nowrap;
+}
+@keyframes hwPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(245, 197, 24, 0.55); }
+  70%  { box-shadow: 0 0 0 9px rgba(245, 197, 24, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 197, 24, 0); }
+}
+.hw-eyebrow {
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.hw-title {
+  margin: 24px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 6.4vw, 104px);
+  line-height: 0.99;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #F7F5EF;
+}
+.hw-title .line { display: block; }
+.hw-title em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  font-size: 1.09em;
+  letter-spacing: -0.01em;
+}
+.hw-sub {
+  margin: 26px 0 0;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.65;
+  color: rgba(247, 245, 239, 0.58);
+  max-width: 420px;
+}
+.hw-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: clamp(28px, 3.2vh, 42px);
+}
+.hw-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -10px rgba(245, 197, 24, 0.45);
+}
+.hw-price {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* ── Stats bas gauche ── */
+.hw-stats {
+  position: absolute;
+  left: clamp(24px, 5.5vw, 96px);
+  bottom: 82px;
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.36);
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 5;
+}
+.hw-stats a { color: inherit; text-decoration: none; transition: color var(--d-mid) var(--ease); }
+.hw-stats a:hover { color: var(--accent); }
+
+/* ── Indice de défilement ── */
+.hw-scroll {
+  position: absolute;
+  right: clamp(24px, 3.5vw, 48px);
+  bottom: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+.hw-scroll > span:first-child {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+.hw-scroll-track {
+  position: relative;
+  width: 1px; height: 34px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+  display: block;
+}
+.hw-scroll-bead {
+  position: absolute;
+  left: 0; top: 0;
+  width: 1px; height: 12px;
+  background: var(--accent);
+  animation: hwScroll 1.8s ease-in-out infinite;
+  display: block;
+}
+@keyframes hwScroll {
+  0%   { transform: translateY(0); opacity: 1; }
+  70%  { transform: translateY(22px); opacity: 0; }
+  100% { transform: translateY(22px); opacity: 0; }
+}
+
+/* ── Marquee intégré au hero ── */
+.marquee--hero {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: none;
+  box-shadow: none;
+  background: rgba(11, 11, 9, 0.72);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  z-index: 6;
+}
+.marquee--hero .marquee-track {
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.38);
+}
+.marquee--hero .marquee-track span:nth-child(even) { color: rgba(245, 197, 24, 0.55); }
+
+/* ── Nav transparente au-dessus du hero sombre ── */
+body.has-wall-hero .nav:not(.scrolled) {
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+body.has-wall-hero .nav:not(.scrolled) .brand-text { color: #F7F5EF; }
+body.has-wall-hero .nav:not(.scrolled) .brand-text em { color: var(--accent); }
+body.has-wall-hero .nav:not(.scrolled) .nav-links a { color: rgba(255, 255, 255, 0.62); }
+body.has-wall-hero .nav:not(.scrolled) .nav-links a:hover { color: #F7F5EF; }
+body.has-wall-hero .nav:not(.scrolled) .theme-toggle { color: rgba(255, 255, 255, 0.72); border-color: rgba(255, 255, 255, 0.16); }
+body.has-wall-hero .nav:not(.scrolled) .lang-toggle button { color: rgba(255, 255, 255, 0.5); }
+body.has-wall-hero .nav:not(.scrolled) .lang-toggle button.on { color: #F7F5EF; }
+body.has-wall-hero .nav:not(.scrolled) .lang-sep { color: rgba(255, 255, 255, 0.3); }
+body.has-wall-hero .nav:not(.scrolled) .burger span { background: #F7F5EF; }
+
+/* ── Responsive ── */
+@media (max-width: 1180px) {
+  .hero-wall-inner { width: min(54vw, 640px); }
+}
+@media (max-width: 1024px) {
+  .hero-wall-inner { width: min(60vw, 640px); }
+  .wall-panel { right: -20vw; }
+  .wall-col { width: min(42vw, 640px); }
+}
+@media (max-width: 760px) {
+  .hero-wall { min-height: 640px; }
+  .wall-scene { opacity: 0.5; }
+  .wall-panel { right: -52vw; top: -180px; width: 150vw; }
+  .wall-col { width: 66vw; }
+  .wall-veil {
+    background:
+      linear-gradient(180deg, rgba(11,11,9,0.9) 0%, rgba(11,11,9,0.55) 34%, rgba(11,11,9,0.62) 72%, #0B0B09 100%);
+  }
+  .hero-wall-inner {
+    left: 20px;
+    right: 20px;
+    width: auto;
+    top: 51%;
+  }
+  .hw-title { font-size: clamp(42px, 12.5vw, 60px); }
+  .hw-sub { font-size: 15px; }
+  .hw-cta { gap: 14px; margin-top: 26px; }
+  .hw-stats {
+    left: 20px;
+    right: 20px;
+    bottom: 62px;
+    white-space: normal;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+  }
+  /* Sur mobile le délai est déjà dans le titre « en 7 jours. » */
+  .hw-stat-delay { display: none; }
+  .hw-scroll { display: none; }
+  .marquee--hero { height: 44px; }
+}
+
+/* ── Accessibilité : mouvement réduit ── */
+@media (prefers-reduced-motion: reduce) {
+  .wall-drift-up, .wall-drift-down { animation: none; }
+  .hw-avail-dot { animation: none; }
+  .hw-scroll-bead { animation: none; }
+  .wall-parallax { transition: none; }
+}

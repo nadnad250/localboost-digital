@@ -46,6 +46,10 @@
       'hero.photo.tag': '2 projets max ce mois-ci',
       'hero.showcase.badge': 'Livré en 7 jours',
       'hero.showcase.metric': 'de demandes de devis',
+      'hero.avail': 'Disponible — 2 projets ce mois-ci',
+      'hero.reply24': 'Réponse sous 24h',
+      'hero.wallstat1': '14 sites livrés',
+      'hero.wallstat2': 'Délai moyen 7 jours',
 
       /* Works */
       'works.title.l1': 'Réalisations',
@@ -308,6 +312,10 @@
       'hero.photo.tag': '2 projects max this month',
       'hero.showcase.badge': 'Delivered in 7 days',
       'hero.showcase.metric': 'more quote requests',
+      'hero.avail': 'Available — 2 project slots this month',
+      'hero.reply24': 'Reply within 24h',
+      'hero.wallstat1': '14 sites delivered',
+      'hero.wallstat2': '7-day average delivery',
 
       /* Works */
       'works.title.l1': 'Recent',
@@ -1140,5 +1148,35 @@
       }
     });
   });
+
+
+  /* ───────────────────────
+     HERO WALL — parallax souris sur le mur incliné
+     (pointeurs fins uniquement, respecte prefers-reduced-motion)
+     ─────────────────────── */
+  const wallParallax = document.getElementById('wallParallax');
+  const wallHero = document.querySelector('.hero-wall');
+  if (
+    wallParallax && wallHero &&
+    window.matchMedia('(pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ) {
+    let wallRaf = null;
+    wallHero.addEventListener('mousemove', (e) => {
+      if (wallRaf) return;
+      wallRaf = requestAnimationFrame(() => {
+        wallRaf = null;
+        const r = wallHero.getBoundingClientRect();
+        const nx = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width) * 2 - 1));
+        const ny = Math.max(-1, Math.min(1, ((e.clientY - r.top) / r.height) * 2 - 1));
+        wallParallax.style.transform =
+          'rotateX(' + (-ny * 1.6).toFixed(2) + 'deg) rotateY(' + (nx * 2.2).toFixed(2) + 'deg)';
+      });
+    }, { passive: true });
+    wallHero.addEventListener('mouseleave', () => {
+      if (wallRaf) { cancelAnimationFrame(wallRaf); wallRaf = null; }
+      wallParallax.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  }
 
 })();

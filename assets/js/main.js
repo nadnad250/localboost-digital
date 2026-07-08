@@ -53,9 +53,9 @@
       'hero.avail': "Studio solo — places limitées chaque mois",
       'hero.reply24': "Payé une fois, à vous pour toujours",
       /* Works */
-      'works.title.l1': 'Réalisations',
-      'works.title.l2': 'récentes',
-      'works.sub': "8 métiers, 8 sites de démonstration en ligne — voici exactement ce que vous auriez pour 390 à 890 €.",
+      'works.title.l1': "Exemples de sites",
+      'works.title.l2': "par métier",
+      'works.sub': "Ces 8 sites sont des démonstrations créées par Clicboost, un par métier — voici exactement ce que vous auriez pour 390 à 890 €.",
       'works.seo': "Création de site internet vitrine, référencement local, fiche Google Business : chaque démo ci-dessous est un vrai site en ligne. Cliquez, testez la vitesse — c'est ce niveau que vous recevez.",
       'work.demo': "Site démo",
       'works.cta.text': "Votre métier mérite le même niveau de site.",
@@ -166,10 +166,10 @@
 
       'services.p2.badge': 'Populaire',
       'services.p2.name': 'Pro',
-      'services.p2.tag': 'Site multipage · livré en 7 jours',
-      'services.p2.f1': 'Site multipage 5 sections',
+      'services.p2.tag': "Site complet jusqu'à 5 pages · livré en 7 jours",
+      'services.p2.f1': "Jusqu'à 5 pages : accueil, services, tarifs, avis, contact",
       'services.p2.f2': 'SEO local optimisé Google',
-      'services.p2.f3': 'Fiche Google My Business',
+      'services.p2.f3': "Fiche d'établissement Google",
       'services.p2.f4': 'Hébergement 1ère année offerte',
       'services.p2.f5': 'Formulaire + bouton WhatsApp',
       'services.p2.cta': 'Choisir Pro',
@@ -272,6 +272,9 @@
       'footer.legalid': 'EI Merouani — SIRET 10720502300016',
       'footer.avail': "Places limitées chaque mois · Partout en France",
       'footer.response': 'Réponse sous 24h',
+      'founder.eyebrow': "Qui est derrière Clicboost ?",
+      'founder.text': "Créateur de sites basé à Versailles, je travaille avec des artisans, des commerçants et des TPE partout en France. Ici, pas d'agence ni de commercial : vous échangez directement avec la personne qui conçoit, code et met en ligne votre site — du premier message à la livraison.",
+      'founder.meta': "Entreprise française · SIRET 10720502300016 · Réponse sous 24h",
     },
 
     en: {
@@ -316,9 +319,9 @@
       'hero.avail': "Solo studio — limited slots each month",
       'hero.reply24': "One payment — yours forever",
       /* Works */
-      'works.title.l1': 'Recent',
-      'works.title.l2': 'work',
-      'works.sub': "8 trades, 8 live demo sites — exactly what you would get for €390–890.",
+      'works.title.l1': "Sample websites",
+      'works.title.l2': "by trade",
+      'works.sub': "These 8 sites are demonstrations created by Clicboost, one per trade — exactly what you would get for €390–890.",
       'works.seo': "Showcase website design, local SEO, Google Business profile: every demo below is a real live site. Click and test the speed — that is the level you get.",
       'work.demo': "Demo site",
       'works.cta.text': "Your trade deserves the same level of website.",
@@ -429,10 +432,10 @@
 
       'services.p2.badge': 'Popular',
       'services.p2.name': 'Pro',
-      'services.p2.tag': 'Multi-page site · delivered in 7 days',
-      'services.p2.f1': 'Multi-page site — 5 sections',
+      'services.p2.tag': "Full site, up to 5 pages · delivered in 7 days",
+      'services.p2.f1': "Up to 5 pages: home, services, pricing, reviews, contact",
       'services.p2.f2': 'Local Google SEO optimised',
-      'services.p2.f3': 'Google My Business listing',
+      'services.p2.f3': "Google Business Profile",
       'services.p2.f4': '1st year hosting included',
       'services.p2.f5': 'Form + WhatsApp button',
       'services.p2.cta': 'Choose Pro',
@@ -535,6 +538,9 @@
       'footer.legalid': 'Sole trader Merouani — SIRET 10720502300016',
       'footer.avail': "Limited slots each month · Across France",
       'footer.response': 'Response within 24h',
+      'founder.eyebrow': "Who is behind Clicboost?",
+      'founder.text': "Website designer based in Versailles, working with tradespeople, shop owners and small businesses across France. No agency, no salespeople: you talk directly to the person who designs, codes and launches your website — from first message to delivery.",
+      'founder.meta': "French company · SIRET 10720502300016 · Reply within 24h",
     }
   };
 

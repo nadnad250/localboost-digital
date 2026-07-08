@@ -4017,3 +4017,18 @@ body.has-wall-hero .nav:not(.scrolled) .burger span { background: #F7F5EF; }
 @media (max-width: 620px) {
   .founder-card { flex-direction: column; text-align: center; gap: var(--sp-4); }
 }
+
+
+/* ============================================================
+   ANCRES — compense la barre de navigation fixe : les sections
+   ciblées par le menu (#works, #services, #contact…) atterrissent
+   sous la nav au lieu d'être masquées par elle.
+   ============================================================ */
+:where(section, div, h1, h2, h3)[id] {
+  scroll-margin-top: 104px;
+}
+@media (max-width: 760px) {
+  :where(section, div, h1, h2, h3)[id] {
+    scroll-margin-top: 88px;
+  }
+}

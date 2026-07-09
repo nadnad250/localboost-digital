@@ -291,7 +291,7 @@
 <!-- Preload critique LCP -->
 <link rel="preload" as="image" href="assets/images/wall/artisan-volt.webp" fetchpriority="high" />
 <link rel="preload" as="image" href="assets/images/wall/clay-storehouse.webp" fetchpriority="high" />
-<link rel="preload" as="style" href="assets/css/styles.css?v=16" fetchpriority="high" />
+<link rel="preload" as="style" href="assets/css/styles.css?v=17" fetchpriority="high" />
 
 <!-- Fonts chargement non-bloquant -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -315,7 +315,7 @@
   button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 </style>
 
-<link rel="stylesheet" href="assets/css/styles.css?v=16" />
+<link rel="stylesheet" href="assets/css/styles.css?v=17" />
 </head>
 <body class="has-wall-hero">
 
@@ -362,6 +362,7 @@
       <a href="#works" data-i18n="nav.works">Réalisations</a>
       <a href="services.html" data-i18n="nav.servicespage">Services</a>
       <a href="#services" data-i18n="nav.services">Tarifs</a>
+      <a href="#apropos" data-i18n="nav.about">À propos</a>
       <a href="#testimonials" data-i18n="nav.testi">Garanties</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
@@ -402,6 +403,7 @@
     <a href="#works" data-i18n="nav.works">Réalisations</a>
     <a href="services.html" data-i18n="nav.servicespage">Services</a>
     <a href="#services" data-i18n="nav.services">Tarifs</a>
+    <a href="#apropos" data-i18n="nav.about">À propos</a>
     <a href="#testimonials" data-i18n="nav.testi">Garanties</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
     <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Devis gratuit</a>
@@ -1122,17 +1124,50 @@
     </div>
   </section>
 
-  <!-- FONDATEUR — présentation courte (confiance) -->
-  <section class="founder" id="fondateur" aria-label="Le fondateur de Clicboost">
+  <!-- À PROPOS — le fondateur (confiance + humanisation) -->
+  <section class="apropos" id="apropos" aria-label="À propos de Clicboost">
     <div class="wrap">
-      <div class="founder-card reveal">
-        <span class="founder-avatar" aria-hidden="true">NM</span>
-        <div class="founder-body">
-          <span class="founder-eyebrow" data-i18n="founder.eyebrow">Qui est derrière Clicboost ?</span>
-          <h2 class="founder-name">Nadir Merouani</h2>
-          <p class="founder-text" data-i18n="founder.text">Créateur de sites basé à Versailles, je travaille avec des artisans, des commerçants et des TPE partout en France. Ici, pas d'agence ni de commercial : vous échangez directement avec la personne qui conçoit, code et met en ligne votre site — du premier message à la livraison.</p>
-          <p class="founder-meta" data-i18n="founder.meta">Entreprise française · SIRET 10720502300016 · Réponse sous 24h</p>
+      <div class="apropos-grid">
+
+        <!-- Photo -->
+        <div class="apropos-photo reveal">
+          <div class="apropos-photo-frame">
+            <img src="assets/images/founder.webp" alt="Nadir Merouani, fondateur de Clicboost, à son bureau" width="900" height="1125" loading="lazy" decoding="async" />
+          </div>
+          <div class="apropos-photo-badge" aria-hidden="true">
+            <span class="apropos-badge-k">Fondateur</span>
+            <span class="apropos-badge-v">&amp; créateur de votre site</span>
+          </div>
         </div>
+
+        <!-- Contenu -->
+        <div class="apropos-body reveal">
+          <span class="apropos-eyebrow" data-i18n="about.eyebrow">À propos de Clicboost</span>
+          <h2 class="apropos-title">
+            <span data-i18n="about.h2.l1">Derrière Clicboost, une seule personne —</span>
+            <em data-i18n="about.h2.l2">et c'est votre avantage.</em>
+          </h2>
+          <p class="apropos-name"><strong>Nadir Merouani</strong> · <span data-i18n="about.role">créateur de sites web, à Versailles</span></p>
+
+          <p class="apropos-p" data-i18n="about.p1">Je conçois des sites vitrines pour les artisans, commerçants et TPE partout en France. Ici, pas d'agence à plusieurs étages ni de commercial intermédiaire : la personne qui vous répond est exactement celle qui dessine, code et met votre site en ligne.</p>
+          <p class="apropos-p" data-i18n="about.p2">Mon obsession : un site rapide, clair et pensé pour vous ramener des clients — pas une jolie vitrine qui prend la poussière. Vous validez chaque étape, vous gardez la main, et le site vous appartient à 100 %.</p>
+
+          <ul class="apropos-points">
+            <li data-i18n="about.pt1">Un interlocuteur unique, joignable directement</li>
+            <li data-i18n="about.pt2">Livré en 7 jours, sans mauvaise surprise</li>
+            <li data-i18n="about.pt3">Sites rapides, optimisés mobile et Google</li>
+            <li data-i18n="about.pt4">Entreprise française déclarée · SIRET vérifiable</li>
+          </ul>
+
+          <div class="apropos-footer">
+            <a href="#contact" class="btn btn-primary" data-event="cta_click_about">
+              <span data-i18n="about.cta">Discutons de votre projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <span class="apropos-sign" data-i18n="about.sign">EI Merouani · SIRET 10720502300016 · Versailles, France</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

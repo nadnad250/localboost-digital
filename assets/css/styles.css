@@ -4327,7 +4327,8 @@ body.has-wall-hero .nav:not(.scrolled) .burger span { background: #F7F5EF; }
   font-size: 13.5px; color: var(--fg-2); line-height: 1.5;
 }
 .calc-payback b { color: var(--fg-1, inherit); white-space: nowrap; }
-.calc-cta { justify-content: center; margin-top: 2px; }
+.calc-cta { justify-content: center; margin-top: 2px; max-width: 100%; min-width: 0; }
+.calc-cta span { white-space: normal; line-height: 1.25; text-align: center; }
 .calc-disclaimer {
   font-size: 11.5px;
   color: var(--fg-3);

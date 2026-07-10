@@ -4279,6 +4279,11 @@ body.has-wall-hero .nav:not(.scrolled) .burger span { background: #F7F5EF; }
   background-position: right 14px center;
 }
 .calc-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Liste déroulante native : suivre le thème (sinon texte blanc sur fond blanc) */
+.calc-select { color-scheme: light; }
+[data-theme="dark"] .calc-select { color-scheme: dark; }
+.calc-select option { color: #16151a; background: #ffffff; }
+[data-theme="dark"] .calc-select option { color: #f0efec; background: #1a191d; }
 .calc input[type="range"] {
   width: 100%;
   accent-color: var(--accent);

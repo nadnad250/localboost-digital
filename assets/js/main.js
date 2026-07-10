@@ -146,6 +146,32 @@
       'addons.group.oneoff': 'Options ponctuelles',
       'addons.permonth': '/mois',
       'addons.details': "Le détail complet →",
+      'calc.eyebrow': "Et si vous aviez un site ?",
+      'calc.title.l1': "Combien de clients",
+      'calc.title.l2': "votre site peut-il vous apporter ?",
+      'calc.sub': "Réglez les curseurs selon votre activité. Estimation immédiate, transparente et volontairement prudente.",
+      'calc.metier': "Votre métier",
+      'calc.m.artisan': "Artisan du bâtiment",
+      'calc.m.plombier': "Plombier",
+      'calc.m.electricien': "Électricien",
+      'calc.m.coiffeur': "Coiffeur / salon",
+      'calc.m.vtc': "Chauffeur VTC",
+      'calc.m.commerce': "Commerçant",
+      'calc.m.autre': "Autre activité",
+      'calc.visitors': "Visiteurs mensuels sur votre site",
+      'calc.visitors.help': "Recherches locales, fiche Google, réseaux sociaux…",
+      'calc.conv': "Part des visiteurs qui vous contactent",
+      'calc.conv.help': "Un site bien conçu convertit 2 à 5 % de ses visiteurs.",
+      'calc.ticket': "Valeur moyenne d'un client",
+      'calc.ticket.help': "Ce que vous rapporte un client en moyenne.",
+      'calc.res.clients': "Nouveaux clients potentiels",
+      'calc.res.permonth': "/ mois",
+      'calc.res.ca.month': "CA supplémentaire estimé",
+      'calc.res.ca.year': "Soit sur un an",
+      'calc.res.payback': "Un site à 390 € serait rentabilisé en",
+      'calc.res.days': "jours",
+      'calc.cta': "Concrétiser ce potentiel — devis gratuit",
+      'calc.disclaimer': "Estimation indicative fondée sur des moyennes du secteur. Le résultat dépend de votre zone, de votre métier et de votre visibilité — ce n'est pas une promesse.",
       'addons.maint.name': 'Maintenance simple',
       'addons.maint.desc': 'Mises à jour, sauvegardes, sécurité et dépannage.',
       'addons.maint.meta': "Point mensuel · dépannage sous 24-48h ouvrées",
@@ -427,6 +453,32 @@
       'addons.group.oneoff': 'One-off options',
       'addons.permonth': '/mo',
       'addons.details': "See full details →",
+      'calc.eyebrow': "What if you had a website?",
+      'calc.title.l1': "How many clients",
+      'calc.title.l2': "could your website bring you?",
+      'calc.sub': "Adjust the sliders to match your business. Instant, transparent and deliberately conservative estimate.",
+      'calc.metier': "Your trade",
+      'calc.m.artisan': "Building tradesperson",
+      'calc.m.plombier': "Plumber",
+      'calc.m.electricien': "Electrician",
+      'calc.m.coiffeur': "Hairdresser / salon",
+      'calc.m.vtc': "Private driver (VTC)",
+      'calc.m.commerce': "Shop owner",
+      'calc.m.autre': "Other business",
+      'calc.visitors': "Monthly visitors on your site",
+      'calc.visitors.help': "Local searches, Google profile, social media…",
+      'calc.conv': "Share of visitors who contact you",
+      'calc.conv.help': "A well-built site converts 2 to 5% of its visitors.",
+      'calc.ticket': "Average value of a client",
+      'calc.ticket.help': "What a new client is worth to you, on average.",
+      'calc.res.clients': "Potential new clients",
+      'calc.res.permonth': "/ month",
+      'calc.res.ca.month': "Estimated extra revenue",
+      'calc.res.ca.year': "That's per year",
+      'calc.res.payback': "A €390 site would pay for itself in",
+      'calc.res.days': "days",
+      'calc.cta': "Turn this into reality — free quote",
+      'calc.disclaimer': "Indicative estimate based on sector averages. Results depend on your area, trade and visibility — this is not a promise.",
       'addons.maint.name': 'Basic maintenance',
       'addons.maint.desc': 'Updates, backups, security and troubleshooting.',
       'addons.maint.meta': "Monthly check · fixes within 24-48 business hours",
@@ -1279,4 +1331,56 @@
     });
   });
 
+})();
+
+/* ══════════ Calculateur de potentiel clients (#calculateur) ══════════ */
+(function () {
+  var root = document.getElementById('calculateur');
+  if (!root) return;
+  var vis = document.getElementById('calcVis');
+  var conv = document.getElementById('calcConv');
+  var ticket = document.getElementById('calcTicket');
+  var metier = document.getElementById('calcMetier');
+  var out = {
+    vis: document.getElementById('calcVisVal'),
+    conv: document.getElementById('calcConvVal'),
+    ticket: document.getElementById('calcTicketVal'),
+    clients: document.getElementById('calcClients'),
+    caMonth: document.getElementById('calcCaMonth'),
+    caYear: document.getElementById('calcCaYear'),
+    payback: document.getElementById('calcPayback')
+  };
+  if (!vis || !conv || !ticket || !metier) return;
+
+  /* Préréglages prudents par métier : [valeur moyenne client €, % contact] */
+  var PRESETS = {
+    artisan: [900, 2], plombier: [180, 3], electricien: [250, 3],
+    coiffeur: [45, 4], vtc: [80, 3], commerce: [35, 4], autre: [150, 3]
+  };
+  var SITE_PRICE = 390;
+
+  function fmtInt(n) { return Math.round(n).toLocaleString('fr-FR'); }
+  function fmtDec(n) { return (+n).toLocaleString('fr-FR'); }
+
+  function update() {
+    var v = +vis.value, c = +conv.value, t = +ticket.value;
+    var clients = v * c / 100;
+    var caMonth = clients * t;
+    out.vis.textContent = fmtInt(v);
+    out.conv.textContent = fmtDec(c);
+    out.ticket.textContent = fmtInt(t);
+    out.clients.textContent = fmtInt(clients);
+    out.caMonth.textContent = fmtInt(caMonth) + '\u00a0€';
+    out.caYear.textContent = fmtInt(caMonth * 12) + '\u00a0€';
+    out.payback.textContent = caMonth > 0 ? fmtInt(Math.max(1, Math.ceil(SITE_PRICE / (caMonth / 30)))) : '—';
+  }
+
+  [vis, conv, ticket].forEach(function (el) { el.addEventListener('input', update); });
+  metier.addEventListener('change', function () {
+    var p = PRESETS[metier.value] || PRESETS.autre;
+    ticket.value = p[0];
+    conv.value = p[1];
+    update();
+  });
+  update();
 })();

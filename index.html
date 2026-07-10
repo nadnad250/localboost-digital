@@ -296,7 +296,7 @@
 <!-- Preload critique LCP -->
 <link rel="preload" as="image" href="assets/images/wall/artisan-volt.webp" fetchpriority="high" />
 <link rel="preload" as="image" href="assets/images/wall/clay-storehouse.webp" fetchpriority="high" />
-<link rel="preload" as="style" href="assets/css/styles.css?v=18" fetchpriority="high" />
+<link rel="preload" as="style" href="assets/css/styles.css?v=19" fetchpriority="high" />
 
 <!-- Fonts chargement non-bloquant -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" />
@@ -320,7 +320,7 @@
   button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 </style>
 
-<link rel="stylesheet" href="assets/css/styles.css?v=18" />
+<link rel="stylesheet" href="assets/css/styles.css?v=19" />
 </head>
 <body class="has-wall-hero">
 
@@ -1336,6 +1336,86 @@
     </div>
   </section>
 
+  <!-- CALCULATEUR — potentiel clients (outil de conversion, estimation honnête) -->
+  <section class="calc" id="calculateur" aria-label="Calculateur de potentiel clients">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="apropos-eyebrow" data-i18n="calc.eyebrow">Et si vous aviez un site ?</span>
+        <h2 class="section-title">
+          <span data-i18n="calc.title.l1">Combien de clients</span>
+          <em><span data-i18n="calc.title.l2">votre site peut-il vous apporter ?</span></em>
+        </h2>
+        <p class="section-sub" data-i18n="calc.sub">Réglez les curseurs selon votre activité. Estimation immédiate, transparente et volontairement prudente.</p>
+      </div>
+
+      <div class="calc-grid reveal">
+        <div class="calc-inputs">
+          <div class="calc-field">
+            <label class="calc-label" for="calcMetier" data-i18n="calc.metier">Votre métier</label>
+            <select id="calcMetier" class="calc-select">
+              <option value="artisan" data-i18n="calc.m.artisan">Artisan du bâtiment</option>
+              <option value="plombier" data-i18n="calc.m.plombier">Plombier</option>
+              <option value="electricien" data-i18n="calc.m.electricien">Électricien</option>
+              <option value="coiffeur" data-i18n="calc.m.coiffeur">Coiffeur / salon</option>
+              <option value="vtc" data-i18n="calc.m.vtc">Chauffeur VTC</option>
+              <option value="commerce" data-i18n="calc.m.commerce">Commerçant</option>
+              <option value="autre" data-i18n="calc.m.autre">Autre activité</option>
+            </select>
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-label-row">
+              <label class="calc-label" for="calcVis" data-i18n="calc.visitors">Visiteurs mensuels sur votre site</label>
+              <b class="calc-val"><span id="calcVisVal">300</span></b>
+            </div>
+            <input type="range" id="calcVis" min="50" max="2000" step="10" value="300" />
+            <span class="calc-help" data-i18n="calc.visitors.help">Recherches locales, fiche Google, réseaux sociaux…</span>
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-label-row">
+              <label class="calc-label" for="calcConv" data-i18n="calc.conv">Part des visiteurs qui vous contactent</label>
+              <b class="calc-val"><span id="calcConvVal">3</span> %</b>
+            </div>
+            <input type="range" id="calcConv" min="1" max="10" step="0.5" value="3" />
+            <span class="calc-help" data-i18n="calc.conv.help">Un site bien conçu convertit 2 à 5 % de ses visiteurs.</span>
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-label-row">
+              <label class="calc-label" for="calcTicket" data-i18n="calc.ticket">Valeur moyenne d'un client</label>
+              <b class="calc-val"><span id="calcTicketVal">900</span> €</b>
+            </div>
+            <input type="range" id="calcTicket" min="30" max="2000" step="10" value="900" />
+            <span class="calc-help" data-i18n="calc.ticket.help">Ce que vous rapporte un client en moyenne.</span>
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div class="calc-res-row calc-res-main">
+            <span class="calc-res-k" data-i18n="calc.res.clients">Nouveaux clients potentiels</span>
+            <span class="calc-res-v"><b id="calcClients">9</b> <em data-i18n="calc.res.permonth">/ mois</em></span>
+          </div>
+          <div class="calc-res-row">
+            <span class="calc-res-k" data-i18n="calc.res.ca.month">CA supplémentaire estimé</span>
+            <span class="calc-res-v"><b id="calcCaMonth">8 100 €</b> <em data-i18n="calc.res.permonth">/ mois</em></span>
+          </div>
+          <div class="calc-res-row">
+            <span class="calc-res-k" data-i18n="calc.res.ca.year">Soit sur un an</span>
+            <span class="calc-res-v"><b id="calcCaYear">97 200 €</b></span>
+          </div>
+          <div class="calc-payback">
+            <span data-i18n="calc.res.payback">Un site à 390 € serait rentabilisé en</span>
+            <b>≈ <span id="calcPayback">2</span> <span data-i18n="calc.res.days">jours</span></b>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-lg calc-cta" data-event="cta_click_calc"><span data-i18n="calc.cta">Concrétiser ce potentiel — devis gratuit</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <p class="calc-disclaimer" data-i18n="calc.disclaimer">Estimation indicative fondée sur des moyennes du secteur. Le résultat dépend de votre zone, de votre métier et de votre visibilité — ce n'est pas une promesse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT — refonte -->
   <section class="contact-section" id="contact" aria-label="Formulaire de contact">
     <div class="wrap">
@@ -1529,7 +1609,7 @@
   </a>
 </div>
 
-<script src="assets/js/main.js?v=18" defer></script>
+<script src="assets/js/main.js?v=19" defer></script>
 <!-- Plausible : chargé par assets/js/consent.js uniquement après consentement (RGPD) -->
 <script src="assets/js/consent.js?v=3" defer></script>
 </body>

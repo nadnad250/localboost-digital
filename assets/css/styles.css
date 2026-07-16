@@ -2460,7 +2460,7 @@ html { interpolate-size: allow-keywords; }
   margin-right: 12px;
 }
 .footer-tag { color: var(--fg-mute); }
-.footer-links { display: flex; gap: 16px; align-items: center; }
+.footer-links { display: flex; gap: 10px 16px; align-items: center; flex-wrap: wrap; }
 .footer-links a:hover { color: var(--accent-deep); }
 [data-theme="dark"] .footer-links a:hover { color: var(--accent); }
 
